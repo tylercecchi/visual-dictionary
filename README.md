@@ -26,28 +26,35 @@ The dictionary presents options; the designer decides.
 
 ## Install
 
-**Claude Code (project):** clone; sessions in the repo pick up `CLAUDE.md`
-and the in-repo skill automatically.
-
-**Claude Code (everywhere):** copy `.claude/skills/visual-dictionary/SKILL.md`
-to `~/.claude/skills/visual-dictionary/SKILL.md` and replace repo-relative
-paths with your clone's absolute path.
-
-**MCP — no clone required (Claude Code / Desktop / Cursor / any client):**
+**MCP — one command, no clone, no npm (recommended).** Works in Claude
+Code, Claude Desktop, Cursor, or any MCP client; requires only Node ≥18.
 
 ```sh
-claude mcp add visual-dictionary -s user -- npx -y visual-dictionary-mcp
+claude mcp add visual-dictionary -s user -- npx -y github:tylercecchi/visual-dictionary
 ```
 
-Claude Desktop (`claude_desktop_config.json`):
+Claude Desktop / Cursor — add to the MCP config instead:
 
 ```json
-"visual-dictionary": { "command": "npx", "args": ["-y", "visual-dictionary-mcp"] }
+"visual-dictionary": { "command": "npx", "args": ["-y", "github:tylercecchi/visual-dictionary"] }
 ```
 
-The npm package bundles the full dictionary; content updates ship as
-package versions. (Developing against a clone instead? `node server.mjs`
-serves your working copy live.)
+Notes:
+- npx fetches the repo into its cache and runs `server.mjs` via the
+  `bin` entry in `package.json` — the dictionary content ships inside.
+- Untagged, users run the latest default branch. To pin a release, tag
+  it and install `github:tylercecchi/visual-dictionary#v0.1.0`.
+
+
+**Claude Code skill (optional power-up for Claude Code users):** copy
+`.claude/skills/visual-dictionary/SKILL.md` to
+`~/.claude/skills/visual-dictionary/SKILL.md` and replace the
+repo-relative paths with a local clone's absolute path. This adds
+auto-triggering and the full protocol; the MCP alone already exposes
+everything on demand.
+
+**Claude Code (working in this repo):** clone; sessions here pick up
+`CLAUDE.md` and the in-repo skill automatically.
 
 **Managed Agents:** mount this repo as a `github_repository` resource —
 the skill in `.claude/skills/` is discovered at session start.
