@@ -464,3 +464,46 @@ inspiration, never cloning another product's signature moment; the human
 supplies the eyes. Delight is also the easiest register to overdose:
 every spell shown passed a real product's restraint filter — one
 well-placed spell per surface, per [[motion-ceremony]]'s budget law.
+
+## recent.design (registered 2026-08-30)
+
+Daily-updated curated gallery of recently published design work — web,
+app/interface, branding, illustration, motion, 3D, print, product, and
+packaging — formerly "Godly." Each item carries maker attribution, a
+written one-sentence description, and style tags (Dark/Minimal/Vibrant/
+Experimental/Editorial/etc.), pulled from an embedded JSON payload
+rather than rendered markup — plain fetches of the page return almost no
+readable text, but the descriptions/tags are extractable from the page's
+script-tag data if a naive read comes back empty (verify the payload
+shape at use time; this is unversioned client-rendering internals, not a
+stable API).
+
+**Use as:** the **broadest-breadth register calibration gallery** in this
+registry — where mesh3d is 3D/WebGL-only, 60fps is production motion
+only, and designspells is delight-only, this spans every wardrobe and
+structural register the dictionary covers in one feed, refreshed daily.
+Two distinct uses: (1) the same visual-target/ceiling-reference role as
+its siblings (find 1-2 pieces in the target register, agree on one,
+name its dials) — cross-cutting fits span nearly the whole dictionary,
+notably [[scene-staging]] and [[gaussian-splatting]] (3D/captured-scene
+work is a large share of the feed), [[iridescence]] / [[refraction-displacement]]
+(glass and prismatic shader pieces recur), [[border-stroke]] (animated
+borders as a current accent trend), [[kinetic-type]], and the full
+wardrobe family under UI foundations; and (2) **trend-scouting for gaps
+in the dictionary itself** — because item descriptions are real text
+(unlike mesh3d/60fps/designspells' pure visuals), they can be scanned in
+bulk for named techniques or registers with no matching entry, which is
+how [[gaussian-splatting]] was found and added. Pull multiple category
+filters (`?category=<slug>`; confirmed slugs include web, interface, 3d,
+motion, illustration, print, branding, product, packaging, typography —
+others 404 to an empty-state page of the same byte size, which is how to
+tell a real category from a guess) rather than just the mixed front
+page, for a representative sample.
+
+**Cautions:** same reference-gallery laws as its siblings — attribute to
+the maker, never present a showcased piece as the agent's own work; the
+agent cannot see the screenshots themselves, only text metadata plus
+thumbnail image URLs, so the human still supplies visual judgment for
+the actual look. Text-scanning is a research/trend-scouting technique
+described here for reproducibility, not a standing capability — its
+JSON shape is internal and can change without notice.

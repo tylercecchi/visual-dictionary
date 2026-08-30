@@ -84,6 +84,9 @@ CASES = [
     ("dreamlike floating objects magritte", ["surrealism"]),
     ("mad men era 50s style", ["mid-century-modern"]),
     ("saul bass cut paper look", ["mid-century-modern"]),
+    ("scanned the room and it renders all fuzzy up close", ["gaussian-splatting"]),
+    ("phone scan of a real object turned into a 3d splat", ["gaussian-splatting"]),
+    ("photoreal capture that looks like a soft point cloud", ["gaussian-splatting"]),
 ]
 
 STOP = set("the a an is are should be like when with on at of and or it its that make look looks feel feels vibe vibes style old new for in to they there".split())

@@ -1,6 +1,6 @@
 # Visual Attribute Dictionary
 
-A UX/UI design-quality dictionary for AI agents: ~178 entries mapping vague
+A UX/UI design-quality dictionary for AI agents: ~179 entries mapping vague
 design language ("feels off", "make it frosted", "recipe card, but gothic")
 to canonical terms, tunable **dials**, layout/surface **contracts**, and
 vetted implementation paths.

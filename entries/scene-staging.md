@@ -59,4 +59,6 @@ toy, or laboratory specimen. Staging *is* the look; models are interchangeable.
 their staging), [[reflections]] (the floor), [[depth-of-field]] +
 [[vignette]] + [[film-grain]] (the camera stack), [[volumetric-light]]
 (atmosphere register), [[mesh-gradient]] (limbo backdrops),
-[[scroll-choreography]] (scroll-scrubbed turntables).
+[[scroll-choreography]] (scroll-scrubbed turntables),
+[[gaussian-splatting]] (a captured asset needs the same staging discipline
+as a modeled one, once it's cleaned up).

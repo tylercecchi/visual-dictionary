@@ -1,7 +1,7 @@
 {
   "name": "visual-dictionary-mcp",
   "version": "0.1.0",
-  "description": "UX/UI design-quality dictionary as an MCP server: ~178 entries mapping vague design language to canonical terms, dials, contracts, and implementation paths. Structure × wardrobe composition model.",
+  "description": "UX/UI design-quality dictionary as an MCP server: ~179 entries mapping vague design language to canonical terms, dials, contracts, and implementation paths. Structure × wardrobe composition model.",
   "type": "module",
   "bin": { "visual-dictionary-mcp": "server.mjs" },
   "files": ["server.mjs", "entries", "INDEX.md", "CLAUDE.md", "LAYOUT.md", "LIBRARIES.md", "TEMPLATE.md", "README.md"],

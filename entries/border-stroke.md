@@ -2,7 +2,7 @@
 name: border-stroke
 title: Border / Stroke Language
 category: ui-foundations
-aliases: [borders, outlines, dividers, rules, hairline, keyline, stroke, separator, inset border, ring, focus ring]
+aliases: [borders, outlines, dividers, rules, hairline, keyline, stroke, separator, inset border, ring, focus ring, border beam, animated border, glowing border, star border]
 media: [css, svg]
 ---
 

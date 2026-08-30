@@ -27,6 +27,7 @@ layout variable matrix that fronts the layout category.
 - [Reflections](entries/reflections.md) — mirror floors, wet ground, scene-content reflections
 - [Caustics](entries/caustics.md) — light focused by water/glass into dancing filaments
 - [3D Scene Staging](entries/scene-staging.md) — lighting, environment, and ground; the photography layer of 3D
+- [Gaussian Splatting](entries/gaussian-splatting.md) — captured scenes as soft view-dependent splats; photoreal fuzz, not mesh
 - [Time of Day / Sky Moods](entries/time-of-day.md) — golden hour, dusk, night; the hour as a light system
 - [Underwater](entries/underwater.md) — the composed submerged-scene recipe; murk, caustics, sway
 - [Light on Flat UI](entries/light-on-flat.md) — one imaginary light source unifying gradients, sheens, shadows
