@@ -1,0 +1,148 @@
+// Findability harness: scores realistic vague phrasings through the SAME
+// resolver the MCP server uses (lib/resolve.mjs). Run: node tools/findability-audit.mjs
+// PASS = expected entry ranked first; TOP3 = within the top three; FAIL = absent.
+// Fix misses by adding aliases or a synonym rule — never by weakening the phrase.
+import { readFileSync, readdirSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { parseEntry, resolve } from "../lib/resolve.mjs";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const entries = readdirSync(join(ROOT, "entries"))
+  .filter((f) => f.endsWith(".md"))
+  .map((f) => parseEntry(f.replace(/\.md$/, ""), readFileSync(join(ROOT, "entries", f), "utf8")));
+
+export const CASES = [
+  ["the colors are splitting at the edges", ["chromatic-aberration"]],
+  ["background like the northern lights", ["mesh-gradient"]],
+  ["milky see-through panel", ["frosted-glass"]],
+  ["old newspaper print vibe", ["halftone", "print-artifacts", "newspaper-editorial"]],
+  ["looks burned in like an old monitor", ["crt-scanlines"]],
+  ["text like the matrix rain", ["terminal-aesthetic", "ascii-rendering"]],
+  ["shiny like a soap bubble", ["iridescence"]],
+  ["brushed aluminum feel", ["specular-metallic"]],
+  ["wet floor with the lights reflecting", ["reflections"]],
+  ["melting gooey blobs", ["liquid-ripple"]],
+  ["like light through a pool", ["caustics"]],
+  ["make it look frozen over", ["ice-frost"]],
+  ["old worn leather book", ["material-texture"]],
+  ["rusty weathered metal", ["weathering-patina"]],
+  ["soft fuzzy like velvet", ["velvet-plush"]],
+  ["like liquid mercury", ["liquid-metal"]],
+  ["cracked pottery repaired with gold", ["ceramic-glaze"]],
+  ["sunlight through blinds on the wall", ["gobo-shadows"]],
+  ["cozy candlelit glow", ["firelight-flicker"]],
+  ["light glowing through wax", ["subsurface-scattering"]],
+  ["blacklight poster look", ["blacklight-uv"]],
+  ["dark at the edges like a spotlight", ["vignette"]],
+  ["confetti when they finish", ["particles"]],
+  ["the numbers should tick up", ["animated-numbers"]],
+  ["words appear one letter at a time", ["kinetic-type"]],
+  ["text typing itself out", ["kinetic-type"]],
+  ["old vhs tape look", ["crt-scanlines", "glitch"]],
+  ["8 bit retro game style", ["pixelation", "pixel-art-technique"]],
+  ["make it look hand drawn", ["hatching-sketch"]],
+  ["like an architect's blueprint", ["blueprint"]],
+  ["y2k chrome vibes", ["period-looks"]],
+  ["dreamy soft focus background", ["depth-of-field"]],
+  ["long flat shadows like airport signage", ["long-shadow-isometric"]],
+  ["screen glitches when there's an error", ["glitch"]],
+  ["homepage sections zig zag left right", ["alternating-rows"]],
+  ["pinterest style grid", ["masonry"]],
+  ["apple style feature boxes", ["bento-grid"]],
+  ["filters on the left with results", ["faceted-browse"]],
+  ["a trello style view", ["board-kanban"]],
+  ["panel slides up from the bottom", ["sheet-drawer"]],
+  ["little popup when you hover", ["popover-menu", "hover-response"]],
+  ["toast when saved", ["toast-notification"]],
+  ["cmd k search", ["command-palette"]],
+  ["expandable faq", ["disclosure"]],
+  ["instagram story style", ["stories-format"]],
+  ["chat like chatgpt", ["conversation-layout"]],
+  ["pricing page with three plans", ["comparison-columns"]],
+  ["login screen", ["focus-page"]],
+  ["guide new users around the app", ["coach-marks"]],
+  ["cards shuffle smoothly when filtered", ["layout-motion"]],
+  ["everything looks the same nothing stands out", ["visual-hierarchy"]],
+  ["feels cramped", ["spacing-density"]],
+  ["buttons feel dead when clicked", ["interaction-feel", "control-language"]],
+  ["page change feels jarring", ["page-transitions"]],
+  ["profile page with a cover photo", ["profile-header"]],
+  ["video controls keep disappearing", ["media-chrome"]],
+  ["gatsby style party invite", ["art-deco"]],
+  ["mucha style poster with flowing hair", ["art-nouveau"]],
+  ["bauhaus poster with primary colors", ["bauhaus-swiss"]],
+  ["trippy 60s concert poster", ["psychedelia"]],
+  ["squiggles and confetti shapes 80s", ["memphis-style"]],
+  ["moroccan tile pattern", ["ornament-traditions"]],
+  ["celtic knot border", ["ornament-traditions"]],
+  ["rough carved block print look", ["woodcut-linocut"]],
+  ["steampunk brass and gears", ["retro-futurism"]],
+  ["gothic dark academia vibe", ["historical-ornate"]],
+  ["cottagecore cozy farmhouse feel", ["soft-aesthetics"]],
+  ["kawaii cute mascot with a face", ["cute-naive"]],
+  ["old whiskey label design", ["historical-ornate"]],
+  ["make it look like a newspaper front page", ["newspaper-editorial"]],
+  ["vogue style fashion layout", ["fashion-editorial"]],
+  ["should read like a classic book", ["book-design"]],
+  ["tufte style margin notes", ["academic-paper"]],
+  ["latex research paper look", ["academic-paper"]],
+  ["david carson chaotic type", ["type-composition"]],
+  ["comic book style with speech bubbles", ["comics-panels"]],
+  ["restaurant menu with dot leaders", ["menu-design"]],
+  ["ikea style assembly instructions", ["instructional-manual"]],
+  ["recipe card with ingredients and steps", ["recipe-editorial"]],
+  ["spray paint tag lettering with drips", ["graffiti-street"]],
+  ["dreamlike floating objects magritte", ["surrealism"]],
+  ["mad men era 50s style", ["mid-century-modern"]],
+  ["saul bass cut paper look", ["mid-century-modern"]],
+  ["scanned the room and it renders all fuzzy up close", ["gaussian-splatting"]],
+  ["phone scan of a real object turned into a 3d splat", ["gaussian-splatting"]],
+  ["photoreal capture that looks like a soft point cloud", ["gaussian-splatting"]],
+  ["glowing blob that reacts when the assistant is listening", ["ai-orb"]],
+  ["siri style orb for our voice mode", ["ai-orb"]],
+  ["little swirl next to the reply while the ai is thinking", ["ai-orb"]],
+  ["airport departure board letters flipping", ["animated-numbers"]],
+  ["make the pricing page look like a parts catalog with sku codes", ["engineering-datasheet", "comparison-columns"]],
+  ["spec sheet vibe like a component datasheet", ["engineering-datasheet"]],
+  ["that usgraphics berkeley mono site look", ["engineering-datasheet"]],
+  ["make the pass look like a boarding pass you can tear", ["paper-ephemera"]],
+  ["receipt style order summary with a barcode", ["paper-ephemera"]],
+  ["score bug in the corner like a tv broadcast", ["broadcast-graphics"]],
+  ["news ticker crawl along the bottom", ["broadcast-graphics"]],
+  ["gov uk style form one question per page", ["civic-design"]],
+  ["plain government website look", ["civic-design"]],
+  ["inventory grid with rarity colors like an rpg", ["game-ui-registers"]],
+  ["health bar and ornate fantasy frame", ["game-ui-registers"]],
+  ["national park poster vibe with topo lines", ["outdoor-expedition"]],
+  ["vintage camping badge logo feel", ["outdoor-expedition"]],
+  ["airport signage style with pictograms and arrows", ["wayfinding-signage"]],
+  ["subway map line colors with lettered discs", ["wayfinding-signage"]],
+  // adversarial: short, generic, or foundation-shaped phrases
+  ["card", ["card"]],
+  ["glass", ["frosted-glass"]],
+  ["dark mode", ["color-roles"]],
+  ["settings page", ["form-grammar", "navigation-language", "app-shell"]],
+  ["modern clean dashboard", ["dashboard-tiles"]],
+  ["premium", ["visual-hierarchy", "elevation", "typographic-voice", "spacing-density"]],
+  ["make it pop", ["visual-hierarchy", "color-roles"]],
+  ["wet look", ["reflections", "liquid-ripple"]],
+  ["feels off", ["visual-hierarchy", "spacing-density", "text-block-grammar", "color-roles"]],
+  ["the fonts feel generic", ["typographic-voice"]],
+  ["needs more polish", ["visual-hierarchy", "spacing-density", "elevation", "motion-ceremony"]],
+  ["bento", ["bento-grid"]],
+  ["kanban", ["board-kanban"]],
+  ["a modal", ["modal-dialog"]],
+  ["skeleton loading", ["loading-language"]],
+];
+
+let pass = 0, top3 = 0, fail = 0;
+for (const [phrase, expected] of CASES) {
+  const r = resolve(entries, phrase, 3).map((x) => x.name);
+  const i = r.findIndex((n) => expected.includes(n));
+  const status = i === 0 ? "PASS" : i > 0 ? "TOP3" : "FAIL";
+  if (status === "PASS") pass++; else if (status === "TOP3") top3++; else fail++;
+  if (status !== "PASS") console.log(`${status.padEnd(5)}| ${JSON.stringify(phrase)} -> want ${JSON.stringify(expected)}\n        got: ${r.join(", ") || "(nothing)"}`);
+}
+console.log(`\n${pass} PASS / ${top3} TOP3 / ${fail} FAIL of ${CASES.length}`);
+if (fail) process.exit(1);
