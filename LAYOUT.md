@@ -126,6 +126,30 @@ toast-storms are contract violations, not designs).
 - `layered` overlap + `dense` — overlap needs breathing room to read as
   intentional; dense layering reads as broken rendering.
 
+## Structure × wardrobe tensions
+
+Wardrobes that carry structural pressure. `compose()` surfaces the row for
+any named wardrobe; name the tension to the designer rather than silently
+bending either pick. Absent from this table = no known pressure.
+
+| Wardrobe | Structural pressure | Watch with |
+|---|---|---|
+| [[fashion-editorial]] | implies sparse density and large type; fights `dense` coordinates and [[dashboard-tiles]] | [[spacing-density]] |
+| [[newspaper-editorial]] | carries its own deck system — as a *wardrobe* it drags column rules and nameplates into any structure | strip to costume only: type, rules, palette |
+| [[brutalism]] | visible borders on everything collides with [[elevation]]-based surface separation and [[card]] hierarchies | [[border-stroke]] separation strategy: pick one |
+| [[terminal-aesthetic]] | monospace character grid resists fluid/responsive tracks and proportional type scales | [[grid-systems]], collapse behavior |
+| [[engineering-datasheet]] | dense + flat: rejects hero hierarchy and [[bento-grid]] size-as-importance | hierarchy shape must be `egalitarian`/`tiered` |
+| [[civic-design]] | one-thing-per-page: rejects multi-column and layered surfaces above tier 1 | [[focus-page]], contract law |
+| [[game-ui-registers]] | nine-slice frames add fixed chrome per panel; fights `airy` density and [[card]] elevation | frame weight dial, `framed` panes |
+| [[broadcast-graphics]] | corner bugs and crawls reserve edge real estate permanently | safe-area margins, [[media-chrome]] |
+| [[wayfinding-signage]] | viewing-distance type sizes blow up any dense coordinate | use for hero/signage bands only |
+| [[paper-ephemera]] | object shapes (tickets, receipts) fix aspect ratios; resists fluid width | [[card]] anatomy, collapse |
+| [[type-composition]] | (structure that behaves like a wardrobe) — type as material overrides the wardrobe's type voice | [[typographic-voice]] |
+| [[soft-aesthetics]] | large radii and low contrast soften [[table-design]] and dense data | [[shape-language]] radius on data surfaces |
+| [[historical-ornate]] / [[art-nouveau]] | ornament consumes the whitespace dense layouts need | ornament budget dial |
+| [[bauhaus-swiss]] | demands a visible grid; fights `scattered` placement | [[grid-systems]] |
+| [[skeuomorphism]] | object-realism needs room per control; fights `dense` forms | [[control-language]] density |
+
 ## Couplings (not illegal, just linked)
 
 - `radial` implies `hero` — the center always wins.

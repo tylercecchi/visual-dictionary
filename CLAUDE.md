@@ -15,9 +15,11 @@ separately and composed (see the doctrine under the layout section).
 When the user describes a visual quality they want ("frosted", "the colors
 split at the edges", "old-print texture", "soft light leaking off the button"):
 
-1. **Resolve the term.** Grep `entries/` for the user's words — every entry
-   lists `aliases` and *perceptual cues* precisely so vague descriptions land
-   on the canonical name. If nothing matches, check `INDEX.md` by category.
+1. **Resolve the term.** Use the MCP `resolve()` tool (or grep `entries/`
+   for the user's words) — every entry lists `aliases` and *perceptual
+   cues* precisely so vague descriptions land on the canonical name, and
+   `resolve()` flags a **close call** when candidates are within 2 points.
+   If nothing matches, `browse()` / `INDEX.md` by category.
 
    **Vague critique with no nameable look** ("feels off", "too busy",
    "looks cheap", "needs polish") is diagnosed, not grepped: audit the
@@ -38,7 +40,9 @@ split at the edges", "old-print texture", "soft light leaking off the button"):
 4. **Find the library.** Entries list *starting points* (known libraries and
    reference implementations) but these go stale. Also check `LIBRARIES.md` —
    the registry of cross-cutting libraries that implement many entries at
-   once (e.g. Canvas UI's HTML-in-canvas effect components). Run the entry's
+   once (e.g. Canvas UI's HTML-in-canvas effect components); the MCP
+   `libraries_for(entry)` tool returns just the registry rows that cover
+   one entry. Run the entry's
    **search queries** against current sources (npm, GitHub, Shadertoy) and
    verify the library is maintained and fits the project's stack before
    recommending it.
@@ -88,12 +92,37 @@ content is organized: deck systems, two-zone contracts, chapter
 ceremony, panel grids) and **wardrobe** (an aesthetic register — how
 it's dressed: art-deco, soft-aesthetics, historical-ornate, brutalism…).
 Resolve them separately and compose — any structure can wear any
-wardrobe. Editorial entries are the default structural baseline. Two
+wardrobe (the MCP `compose(structure, wardrobe)` tool assembles the
+pair). Editorial entries are the default structural baseline. Two
 cautions: some entries are both (newspaper-editorial carries its own
 costume — strip it to the deck system when only structure is wanted),
 and some wardrobes carry structural pressure (fashion-editorial implies
-sparse density) — name the tension when the picks fight, and let the
-designer resolve it.
+sparse density; `LAYOUT.md` keeps the structure × wardrobe tension
+table) — name the tension when the picks fight, and let the designer
+resolve it.
+
+**When no wardrobe matches — the custom wardrobe.** Original work
+usually matches no named register, and that is the expected case, not a
+failure. A wardrobe entry is only a *preset bundle of dial settings*
+across the `foundations` entries (`color-roles`, `typographic-voice`,
+`shape-language`, `elevation`, `spacing-density`, `border-stroke`,
+`iconography-style`, `image-treatment`, `illustration-style`,
+`motion-ceremony`…) plus the effect/material entries it habitually
+reaches for. So when nothing fits:
+1. Resolve each of the designer's phrases to *attribute* entries
+   individually ("frosted panels" → `frosted-glass`; "warm paper" →
+   `material-texture`).
+2. Set every foundation entry's dials explicitly for this project — that
+   dial sheet *is* the wardrobe. `compose()` with a comma-separated
+   list of entries returns the sheet and names the foundations still
+   unset.
+3. Cite the nearest named wardrobes as **calibration references**, not
+   constraints ("closest to `soft-aesthetics`, with
+   `engineering-datasheet`'s data type"). Never force the nearest
+   costume onto a brief that didn't ask for it.
+4. Vague critique on a custom wardrobe is diagnosed the same way as
+   always — against the foundation dials, which the sheet has now made
+   explicit.
 
 ## Structure
 
@@ -101,16 +130,27 @@ designer resolve it.
 - `TEMPLATE.md` — the entry format. New entries must follow it.
 - `LAYOUT.md` — the layout matrix and interaction-surface contracts.
 - `LIBRARIES.md` — registry of cross-cutting libraries spanning many entries.
-- `entries/` — one file per attribute, flat; category lives in frontmatter.
+- `entries/` — one file per attribute, flat; category lives in frontmatter
+  (`foundations`, `components`, `editorial`, `wardrobe`, `layout`, and the
+  effect/material categories).
+- `lib/resolve.mjs` — the one resolver (parsing + scoring + synonym rules)
+  shared by the MCP server, the audit, and the static site.
+- `tools/` — `lint.mjs` (structure, links, counts, registry staleness),
+  `findability-audit.mjs` (routing regression), `e2e-test.mjs` (MCP
+  smoke test), `build-site.mjs` (human-readable site with live resolve).
 
 ## Adding entries
 
 When the user names a look that has no entry, offer to add one. Research the
 canonical terminology first (the graphics-programming name, not just the
 design-trend name — e.g. "glassmorphism" is the trend, `backdrop blur` +
-`refraction` are the techniques). Follow `TEMPLATE.md`, then add a line to
-`INDEX.md`. After a batch of new entries, run
-`python3 tools/findability-audit.py` — the findability harness scoring
-~56 realistic vague phrasings against aliases/cues; add each new entry's
-expected phrasings to its CASES list, and fix misses by adding aliases,
-not by weakening the phrase.
+`refraction` are the techniques). Follow `TEMPLATE.md` (including the
+one-line `summary:`), then add a line to `INDEX.md`. After a batch of new
+entries run `npm test`, i.e. `node tools/lint.mjs` and
+`node tools/findability-audit.mjs` — the findability harness scores ~120
+realistic vague phrasings (including adversarial one-word and
+foundation-shaped ones) through the same resolver the server uses; add
+each new entry's expected phrasings to its CASES list, and fix misses by
+adding aliases or a synonym rule in `lib/resolve.mjs`, not by weakening
+the phrase. Aliases match as whole words, so include the variants people
+actually type.

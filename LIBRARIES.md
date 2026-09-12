@@ -155,10 +155,19 @@ Modal, Toast Stack, Bottom Sheet, Dock, Dynamic Island, Command
 Palette, Tilt Card), complementing React Bits' text/background depth;
 reach for it when animating [[modal-dialog]]/[[sheet-drawer]]/
 [[toast-notification]]/[[command-palette]] surfaces. **Rare UI
-(rareui.com):** ~14 one-file novelty components (Fluid Orb, Gravity
-Letters, Folder) — a garnish source, browse-not-depend. Both follow
-this entry's model and caveats (demo-calibrated; check reduced-motion
-and ceremony budgets).
+(rareui.com; verified 2026-09-11):** 19+ one-file React components
+(Motion-animated, shadcn-registry install `npx shadcn@latest add
+swamimalode07/rare-ui/<name>`, free/open source, ~1k stars, honors
+`prefers-reduced-motion`), grouped as Display (Folder, Code Block,
+Gravity Letters, GitHub activity, Step player, Animated counter →
+[[animated-numbers]]), **AI kit** (Fluid Orb, Matrix orb, Grid Reveal →
+[[ai-orb]]), Navigation (Bounce / Hook / Proximity sidebars, Scroll
+Progress, Gooey nav → [[navigation-language]], [[liquid-ripple]]),
+Inputs (Duration Picker, OTP Input, Delete button → [[control-language]]),
+Feedback (Emoji reaction, Notification bell → [[toast-notification]],
+[[chips-badges-avatars]]). A garnish source, browse-not-depend. Both
+follow this entry's model and caveats (demo-calibrated; check
+reduced-motion and ceremony budgets).
 
 **When to prefer it:** React projects wanting a proven, tuned implementation
 of a text/background/interaction effect faster than hand-building the
@@ -209,15 +218,22 @@ parameters onto the entry's dial names in your report.
 
 ---
 
-## ThreeUI — threeui.com (registered 2026-08)
+## ThreeUI — threeui.com (registered 2026-08; verified 2026-09-11)
 
 **What:** copy-ready **three.js** components, WebGL backgrounds, hero
 sections, and complete website templates — composed scenes, not just
-single effects. Catalog samples: ASCII fields, glass materials, halftone
-blooms, CRT/cathode sets, particle & audio wordmarks, brand orbs, planet
-globes, product/book showcases. **Freemium:** MIT-licensed free items
-alongside paid "pro" items — check the item's license and tier before
-vendoring.
+single effects. By Meng To (DesignCode); repo `MengTo/threeui`;
+"ThreeUI for React" variants; ships its own **MCP server** (threeui.com/mcp)
+so an agent can query the catalog directly. Catalog is organized in nine
+sections — Backgrounds, Buttons, CSS, Hero, Landing Pages, Motion
+Design, Text Animation, Three.js, UI Elements — with technique tags
+(glsl, shader, postprocessing, refraction, halftone, crt, isometric,
+point-cloud, flow-field, fluid, particles, physics, parallax, scroll /
+scrolltrigger, gsap, canvas2d, tailwind). ~500 sitemap URLs at
+verification, many as variant sets under one item (e.g. `landscape/
+{night,noon,rain,snow,storm,sunrise,sunset}`). **Freemium:** free items
+alongside Pro (yearly / lifetime) — check the item's license and tier
+before vendoring.
 
 **Install model:** copy-ready source into an existing three.js project.
 **Stack-rule class: structural-leaning** — everything presumes three.js;
@@ -225,28 +241,37 @@ in a project that already has three.js/R3F this is effectively moderate
 (vendored components), but in a project without it, using ThreeUI *is*
 the structural three.js adoption decision and must be surfaced to the
 user, with a no-new-stack alternative offered (Canvas UI, Radiant, or
-the entry's cheaper-medium techniques).
+the entry's cheaper-medium techniques). Its **CSS section** (animated
+top dock, performance gauges, koi studies, sketchbook, uplink loader)
+is the exception — no three.js, moderate class.
 
-**Coverage map** (samples → dictionary entries):
+**Coverage map** (catalog → dictionary entries):
 
 | Catalog family | Entries |
 |---|---|
-| ASCII Field variants | [[ascii-rendering]] |
-| Advanced Glass Material | [[frosted-glass]], [[refraction-displacement]] |
-| Halftone sets (Amber, Bloom) | [[halftone]], [[glow-bloom]] |
-| CRT / Cathode Workstation | [[crt-scanlines]] |
-| Particle / Audio Wordmarks | [[kinetic-type]], [[particles]], [[audio-reactive]] |
-| Brand Orbs, Globes | [[scene-staging]], [[specular-metallic]], [[iridescence]] |
-| Product/book showcases, templates | [[scene-staging]] (composed heroes — the full staging recipe pre-built) |
+| ASCII page transition, matrix-field, structure-flow fields | [[ascii-rendering]], [[terminal-aesthetic]], [[generative-art]] (flow/point fields), [[particles]] |
+| Advanced Glass Material, liquid-form, liquid-clock | [[frosted-glass]], [[refraction-displacement]], [[liquid-ripple]] |
+| Halftone sets (halftone-bloom, halftone-keyboard, predictive-arc/amber-halftone) | [[halftone]], [[glow-bloom]] |
+| CRT / Cathode sets, retro-metallic | [[crt-scanlines]], [[specular-metallic]], [[period-looks]] |
+| Elements (flame, lightning, water, condensation), emberline, warp-field | [[fire-smoke]], [[weather-effects]], [[motion-blur-trails]] |
+| Landscape / sunset-valley / temple-night / nocturne / sylva | [[time-of-day]], [[scene-staging]], [[volumetric-light]] |
+| Brand orbs, orb-gallery, energy-orb, thinking-button | [[ai-orb]], [[scene-staging]], [[iridescence]] |
+| Isometric illustration / motion grid, iso-mail-lightshafts | [[long-shadow-isometric]], [[volumetric-light]] |
+| Woven cloth, 3d-paper, wood icons, engraved certificate, holographic-glitter card | [[material-texture]], [[velvet-plush]], [[origami-fold]], [[hatching-sketch]], [[lenticular]] |
+| Liquid-metal button, star-portal buttons, gradient-beam / spinning-border CTAs | [[liquid-metal]], [[control-language]], [[border-stroke]] (animated), [[glow-bloom]] |
+| Text animation (particle/audio wordmarks, typography-vortex, semantic-bloom) | [[kinetic-type]], [[particles]], [[audio-reactive]] |
+| Skeuomorphic toggle, performance gauges, diagnostics panel | [[skeuomorphism]], [[control-language]], [[fui]] |
+| Hero sections, landing-page templates | [[scene-staging]], [[centered-stack]] (composed heroes — the full staging recipe pre-built) |
 
 **When to prefer it:** the project already runs three.js/R3F and wants a
 *composed scene* (hero, showcase, background) rather than a single
 effect — it's the only registry resource at scene granularity. Prefer
 Radiant/Canvas UI when there's no three.js and none is warranted; prefer
 the entry's own techniques when the needed dials aren't exposed.
-**Cautions:** creator/maintenance unverified at registration — apply the
-standard currency check; paid items may block an agent mid-task (surface
-the paywall to the user, as with 21st.dev).
+**Cautions:** paid items may block an agent mid-task (surface the paywall
+to the user, as with 21st.dev); the site is a fully client-rendered
+SPA (Supabase-backed) — plain fetches return an empty shell; use the
+MCP server or `sitemap.xml` to enumerate the catalog.
 
 ---
 
@@ -293,6 +318,111 @@ verify currency — this space is young and moving fast.
 
 ---
 
+## Libraries.dev — libraries.dev (registered 2026-09-11)
+
+**What:** five small, single-purpose React effect libraries by Jakub
+Antalik (with Alexandr Brinza, Martin Petercak), each a standalone npm
+package with zero runtime deps (except `img-fx`, which peers on three),
+~83 KB gzipped all together, MIT, React 18+. Built explicitly for
+coding agents: every library page has a **Copy prompt** button that
+hands the agent the install line, usage, and the full prop vocabulary.
+`theme="auto"` resolves data-theme / dark class / `prefers-color-scheme`
+live. Verified on npm at registration:
+
+| Package | What it does | Entries |
+|---|---|---|
+| `border-beam` 1.3.0 | rainbow glow riding any element's border | [[border-stroke]] (animated/border-beam register) |
+| `thinking-orbs` 0.3.1 | dotted thought-orb loaders for AI/agent UIs, nine tuned states, two sizes; React Native + SwiftUI ports in-repo (unpublished) | [[ai-orb]], [[loading-language]] |
+| `liquid-gooey` 0.2.1 | Morph (gooey merge, jelly shape change, contact dissolve) and Move effects | [[liquid-ripple]], [[morphing]], [[shape-language]] |
+| `metal-fx` 2.0.10 | liquid-metal WebGL rings, buttons, metal text and badges with glow | [[liquid-metal]], [[specular-metallic]], [[control-language]] |
+| `img-fx` 0.5.1 | WebGL image-generation / loader effect for cards | [[loading-language]], [[dissolve-disintegration]], [[pixelation]] |
+
+**Install model:** `npm install <package>` (or paste the prompt).
+**Stack-rule class: trivial** for four of them (zero-dep micro-libraries);
+`img-fx` is moderate-to-structural because it pulls three — apply the
+structural check in a project without WebGL.
+
+**Caveats:** the free libraries are MIT; **Pro** unlocks a "Studio"
+(deeper per-library configuration + config export) and presets — a
+paywall an agent can hit when the public playground's props aren't
+enough; surface it rather than work around. Same demo-calibration
+caveats as React Bits (check ceremony budgets, reduced motion). Its
+`thinking-orbs` sits alongside Orbkit, Murmur, and `orbloom` as the
+current [[ai-orb]] implementation set — compare materials (dotted vs
+glass vs shader) before picking.
+
+**When to prefer it:** a React project wanting exactly one of these
+five effects with the smallest possible footprint and an agent-friendly
+install; prefer React Bits / Rare UI when the need is broader than the
+five, and the entry's own techniques when the project isn't React.
+
+---
+
+# Craft Rules & Tuning Tools
+
+Not effect libraries — *quality-rule sets* and *dial-tuning tools*.
+They don't implement an entry; they enforce the foundation entries'
+laws or make an entry's dials adjustable live. Use them at the
+implementation and iteration steps of the protocol, not at resolution.
+
+## userinterface.wiki — a rules skill (registered 2026-09-11)
+
+**What:** "A living manual for better interfaces" by Raphael Salaja —
+articles with live demos (12 Principles of Animation, Laws of UX,
+Animating Container Bounds, Morphing Icons, Mastering AnimatePresence,
+Sounds on the Web, To Spring or Not To Spring, Pseudo Elements,
+Generating Sounds with AI) distilled into **152 rules across 12
+categories**, packaged as an Agent Skill (`npx skills add
+raphaelsalaja/userinterface-wiki`; repo MIT, ~900 stars). Rule prefixes
+map onto dictionary entries:
+
+| Rule category (prefixes) | Entries it enforces |
+|---|---|
+| Animation Principles (`timing-`, `physics-`, `staging-`), Timing Functions (`spring-`, `easing-`, `duration-`, `none-`) | [[motion-ceremony]] (the 300ms law, ease-out entrance / ease-in exit, linear only for progress), [[interaction-feel]] (springs for gestures/interruptible motion) |
+| Exit Animations (`exit-`, `presence-`, `mode-`, `nested-`), Container Animation (`container-`) | [[layout-motion]] (enter/exit, animated bounds), [[disclosure]] |
+| Morphing Icons (`morphing-`) | [[morphing]], [[iconography-style]] |
+| CSS Pseudo Elements (`pseudo-`, `transition-`, `native-`) | [[page-transitions]] (View Transitions), [[border-stroke]] (pseudo-element hit-area/rings) |
+| Laws of UX (`ux-`), Predictive Prefetching (`prefetch-`) | [[visual-hierarchy]], [[spacing-density]] (proximity/common region), [[control-language]] (Fitts target sizing), [[loading-language]] (Doherty / perceived speed) |
+| Typography (`type-`) | [[typographic-voice]] (tabular/oldstyle nums, optical sizing, `text-wrap: balance/pretty`, no font-synthesis) |
+| Visual Design (`visual-`) | [[shape-language]] (concentric radii), [[elevation]] (layered shadows), [[border-stroke]] (alpha borders), [[spacing-density]] |
+| Audio Feedback, Sound Synthesis (`a11y-`, `appropriate-`, `impl-`, `context-`, `envelope-`, `design-`, `param-`) | outside the dictionary's visual scope — the one place a UI *sound* language is codified; pair with [[interaction-feel]] and [[visible-accessibility]] (must have a visual equivalent and a toggle) |
+
+**Use as:** the review/lint pass after implementing any motion or
+typography entry — it catches the mechanical mistakes (missing `exit`
+keys, linear easing, context-menu entrance animations, un-tabular data
+numerals) the dictionary's dial vocabulary assumes are already right.
+Install the skill when a project is motion-heavy; otherwise consult the
+rule files as a checklist. **Cautions:** rules are Motion/Framer-Motion-
+and React-flavored in their code examples (the principles port); the
+sound categories have no dictionary counterpart, so don't invent one —
+route them to the skill.
+
+## DialKit — dialkit.dev (registered 2026-09-11)
+
+**What:** MIT, open-source floating control panel for **live dial
+tuning** — sliders, toggles, color pickers, spring editors, easing
+curves, keyboard shortcuts, presets, and a Timeline feature, wired
+directly to your UI values and auto-generated from a config object.
+React, Solid, Svelte 5, Vue 3; depends on Motion. By Josh Puckett (ex
+Wealthfront/Dropbox); his paid **Interface Craft** library
+(interfacecraft.dev, $249 lifetime; 40+ articles, interactive
+walkthroughs, videos, skill files — the "Means & Methods" and
+"Interface Kit" collections; 3 previews free) is the education layer
+around it.
+
+**Use as:** the in-app counterpart to Radiant's configurator — the
+mechanism that closes the dial loop for *any* entry: expose the entry's
+dials (threshold, blur passes, spring stiffness, stagger) as DialKit
+controls, let the designer tune in the running product, then bake the
+exported values. Reach for it whenever the protocol's "report in dial
+vocabulary" step turns into more than two rounds of guess-and-check.
+**Stack-rule class: trivial** (dev-time panel; strip before ship; adds
+Motion if absent — moderate then). **Cautions:** Interface Craft is
+paywalled — surface it as a learning resource, never scrape; verify
+DialKit's framework adapters at use time.
+
+---
+
 # Discovery Sources
 
 Not libraries — *search surfaces* for finding component implementations.
@@ -315,6 +445,37 @@ block the agent mid-task; surface that to the user rather than working
 around it), per-item licensing varies, quality varies widely — the
 dictionary's dial vocabulary and content contracts are the evaluation
 rubric for anything found here.
+
+---
+
+## builtbydesigners.com (registered 2026-09-11)
+
+Curated directory of ~80 shipped products, tools, and experiments
+**built by designers** (tagline "No Explanation Needed"), each with a
+screenshot, one-paragraph description, maker attribution, platform, and
+one of seven categories (Creative Tools, Development, Play, Lifestyle,
+Productivity, Collections, Discovery). A React SPA — the catalog lives
+in the JS bundle as plain object literals, not in the HTML, so a plain
+fetch shows only the tagline.
+
+**Use as:** two things. (1) A **discovery source for small effect
+libraries and tools** that never reach npm's front page — at
+registration its Development/Creative Tools rows included Orbkit and
+Murmur ([[ai-orb]]), Drawably (hand-drawn React controls →
+[[hatching-sketch]]'s napkin-UI register), ShaderGradient
+([[mesh-gradient]] for Figma/Framer/React), Textures (25 tactile image
+filters, Risograph to Cyanotype → [[print-artifacts]], [[blueprint]]),
+Holo Sticker (Figma plugin → [[stickers-badges]] + [[iridescence]]),
+ASCIInator ([[ascii-rendering]]), Design Your Sunset ([[time-of-day]]
+CSS presets), Weather OS ([[weather-effects]] playground), Jelly Dice
+([[inflatable]] + [[interaction-feel]]), FlipNote (split-flap display →
+[[animated-numbers]]), DialKit and Toolcraft (tuning/tooling). (2) A
+**whole-product craft reference** — the Play/Lifestyle rows are the
+"designed with care" ceiling for small products, complementing
+designspells at product rather than moment granularity. **Cautions:**
+per-item licensing and maintenance vary (many are weekend projects);
+evaluate each find against the entry's dials before recommending, and
+treat the directory's own quality bar as curation, not vetting.
 
 ---
 
@@ -471,12 +632,13 @@ Daily-updated curated gallery of recently published design work — web,
 app/interface, branding, illustration, motion, 3D, print, product, and
 packaging — formerly "Godly." Each item carries maker attribution, a
 written one-sentence description, and style tags (Dark/Minimal/Vibrant/
-Experimental/Editorial/etc.), pulled from an embedded JSON payload
+Experimental/Editorial/etc.), pulled from an embedded script payload
 rather than rendered markup — plain fetches of the page return almost no
 readable text, but the descriptions/tags are extractable from the page's
 script-tag data if a naive read comes back empty (verify the payload
 shape at use time; this is unversioned client-rendering internals, not a
-stable API).
+stable API — it changed from escaped-JSON strings to plain JS object
+literals between the 2026-08-30 and 2026-09-11 pulls).
 
 **Use as:** the **broadest-breadth register calibration gallery** in this
 registry — where mesh3d is 3D/WebGL-only, 60fps is production motion

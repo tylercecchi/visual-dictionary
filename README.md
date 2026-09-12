@@ -1,6 +1,6 @@
 # Visual Attribute Dictionary
 
-A UX/UI design-quality dictionary for AI agents: ~179 entries mapping vague
+A UX/UI design-quality dictionary for AI agents: ~187 entries mapping vague
 design language ("feels off", "make it frosted", "recipe card, but gothic")
 to canonical terms, tunable **dials**, layout/surface **contracts**, and
 vetted implementation paths.
@@ -12,17 +12,16 @@ The dictionary presents options; the designer decides.
 
 ## Contents
 
-- `CLAUDE.md` — the agent protocol (resolution, diagnosis, stack rule, doctrine)
-- `entries/` — one file per attribute; aliases + cues + dials + techniques
-- `INDEX.md` — category index (incl. the editorial cluster)
-- `LAYOUT.md` — the layout matrix + interaction-surface contracts
-- `LIBRARIES.md` — resource registry (libraries / discovery / galleries) + failure policy
+- `CLAUDE.md` — the agent protocol (resolution, diagnosis, stack rule, doctrine, custom wardrobes)
+- `entries/` — one file per attribute; summary + aliases + cues + dials + techniques
+- `INDEX.md` — category index (foundations · components · editorial · wardrobe · layout · effects)
+- `LAYOUT.md` — the layout matrix, interaction-surface contracts, structure × wardrobe tensions
+- `LIBRARIES.md` — resource registry (libraries / rules & tuning tools / discovery / galleries) + failure policy
 - `TEMPLATE.md` — entry format for growth
-- `tools/findability-audit.py` — the alias regression harness
-- `server.mjs` — the MCP server (npm-published as `visual-dictionary-mcp`)
-- `tools/e2e-test.mjs` — end-to-end MCP test (`node tools/e2e-test.mjs`)
-- `.claude/skills/visual-dictionary/` — the skill (auto-discovered in-project
-  and by Managed Agents repo mounts)
+- `lib/resolve.mjs` — the shared resolver (server, audit, and site all use it)
+- `server.mjs` — the MCP server: `resolve`, `get_entry`, `browse`, `compose`, `libraries_for`, `protocol`, `layout_system`, `libraries`
+- `tools/lint.mjs` · `tools/findability-audit.mjs` · `tools/e2e-test.mjs` — `npm test` runs all three
+- `tools/build-site.mjs` — builds `site/index.html`, a self-contained browsable site with a live resolve box (`npm run build:site`)
 
 ## Install
 
@@ -46,21 +45,18 @@ Notes:
   it and install `github:tylercecchi/visual-dictionary#v0.1.0`.
 
 
-**Claude Code skill (optional power-up for Claude Code users):** copy
-`.claude/skills/visual-dictionary/SKILL.md` to
-`~/.claude/skills/visual-dictionary/SKILL.md` and replace the
-repo-relative paths with a local clone's absolute path. This adds
-auto-triggering and the full protocol; the MCP alone already exposes
-everything on demand.
-
 **Claude Code (working in this repo):** clone; sessions here pick up
-`CLAUDE.md` and the in-repo skill automatically.
+`CLAUDE.md` automatically. The MCP tools expose the same protocol on
+demand from any other project.
 
-**Managed Agents:** mount this repo as a `github_repository` resource —
-the skill in `.claude/skills/` is discovered at session start.
+**Humans:** `npm run build:site` and open `site/index.html` — the whole
+dictionary with a live resolve box (no server needed).
 
 ## Maintenance
 
-After adding entries: update `INDEX.md`, add expected phrasings to the
-findability harness, run `python3 tools/findability-audit.py`, and fix
-misses by adding aliases. Verify wiki-links resolve (see `CLAUDE.md`).
+After adding entries: update `INDEX.md`, add expected phrasings to
+`tools/findability-audit.mjs`, then `npm test` (lint → audit → e2e). Fix
+routing misses by adding aliases or a synonym rule in `lib/resolve.mjs`,
+never by weakening the phrase. Lint flags dangling links, missing
+summaries, entry-count drift, and registry entries not verified in six
+months.
