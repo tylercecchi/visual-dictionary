@@ -1,6 +1,7 @@
 ---
 name: ambient-occlusion
 title: Ambient Occlusion / Contact Shadows
+summary: "crevice darkening and grounding pools"
 category: light-and-depth
 aliases: [ao, contact shadow, crevice shadow, corner darkening, grounding shadow, soft shadow pooling, ssao, dirt shading, proximity shadow]
 media: [css, svg, canvas, webgl]

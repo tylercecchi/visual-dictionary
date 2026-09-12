@@ -1,6 +1,7 @@
 ---
 name: glitch
 title: Glitch
+summary: "digital breakage: slices, block corruption, datamosh"
 category: distortion-and-lens
 aliases: [glitch art, datamosh, corruption, digital artifact, slice glitch, signal loss, broken tv, error aesthetic, jpeg artifacts]
 media: [css, canvas, webgl]

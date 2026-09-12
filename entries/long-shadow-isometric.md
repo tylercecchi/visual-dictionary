@@ -1,6 +1,7 @@
 ---
 name: long-shadow-isometric
 title: Long Shadows / Isometric
+summary: "45° extruded shadows; parallel-projection scenes"
 category: light-and-depth
 aliases: [long shadow, isometric, 2.5d illustration, axonometric, flat design shadow, 45 degree shadow, dimetric, game map view]
 media: [css, svg, canvas, webgl]

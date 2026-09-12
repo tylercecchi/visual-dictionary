@@ -1,7 +1,8 @@
 ---
 name: surrealism
 title: Surrealism
-category: ui-foundations
+summary: "one impossibility, rendered sincerely"
+category: wardrobe
 aliases: [surreal, dreamlike, dali style, magritte style, impossible scene, floating objects, melting clocks, dream imagery, uncanny, absurdist visuals, juxtaposition]
 media: [css, svg, canvas, webgl]
 ---

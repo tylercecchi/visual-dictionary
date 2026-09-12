@@ -1,7 +1,8 @@
 ---
 name: chart-voice
 title: Chart Voice / Data-Ink
-category: ui-foundations
+summary: "dataviz identity; scaffolding restraint, series palettes"
+category: foundations
 aliases: [dataviz style, chart style, data-ink, chart design, graph aesthetics, dashboard look, chart colors, minimal charts]
 media: [css, svg, canvas]
 ---

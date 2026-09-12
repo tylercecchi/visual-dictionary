@@ -1,6 +1,7 @@
 ---
 name: map-list-sync
 title: Map–List Sync
+summary: "one result set, two views; pins and cards linked"
 category: layout
 aliases: [map and list, airbnb layout, map results, split map view, listings map, geo search, pins and cards, store locator, map browse]
 media: [css]

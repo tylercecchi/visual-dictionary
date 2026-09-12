@@ -1,7 +1,8 @@
 ---
 name: image-treatment
 title: Image Treatment
-category: ui-foundations
+summary: "house rules for photos; crop, tone, mask, scrim"
+category: foundations
 aliases: [photo style, image style, photo grading, image masking, photo crop, editorial images, image consistency, photography direction]
 media: [css, svg, canvas]
 ---

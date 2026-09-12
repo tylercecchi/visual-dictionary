@@ -1,7 +1,8 @@
 ---
 name: shape-language
 title: Shape Language
-category: ui-foundations
+summary: "radius, squircles, organic vs angular geometry"
+category: foundations
 aliases: [border radius, rounded, sharp, geometry, corner radius, pill, squircle, blob, angular, soft]
 media: [css, svg, webgl]
 ---

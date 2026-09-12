@@ -1,6 +1,7 @@
 ---
 name: hover-response
 title: Hover Response
+summary: "lift, zoom-within, tilt, magnify; how targets answer pointer attention"
 category: motion
 aliases: [hover effect, zoom on hover, enlarge on hover, hover zoom, image zoom, dock magnification, hover lift, hover reveal, tilt on hover, hover state, grow on hover]
 media: [css, canvas, webgl]

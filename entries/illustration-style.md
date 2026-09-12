@@ -1,7 +1,8 @@
 ---
 name: illustration-style
 title: Illustration Style
-category: ui-foundations
+summary: "the drawing system for product art; empty states, mascots"
+category: foundations
 aliases: [illustrations, empty state art, spot illustration, hero illustration, mascot, corporate memphis, character style, doodles, iconographic illustration]
 media: [css, svg, canvas]
 ---

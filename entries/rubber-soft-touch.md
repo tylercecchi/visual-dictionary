@@ -1,6 +1,7 @@
 ---
 name: rubber-soft-touch
 title: Rubber / Soft-Touch
+summary: "matte elastomers; molded forms, damped squish"
 category: surface-and-material
 aliases: [rubber, silicone, soft touch, matte finish, rubberized, tpu, squishy solid, gasket, grippy, tool grip, matte black hardware]
 media: [css, svg, canvas, webgl]

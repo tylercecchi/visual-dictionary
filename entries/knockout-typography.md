@@ -1,7 +1,8 @@
 ---
 name: knockout-typography
 title: Knockout / Masked Typography
-category: ui-foundations
+summary: "type as window, hole, or path"
+category: foundations
 aliases: [knockout text, text mask, text as window, image in text, text on path, outline text, hollow text, video in text, cutout letters, text clipping]
 media: [css, svg, canvas, webgl]
 ---

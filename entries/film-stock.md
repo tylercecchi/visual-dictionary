@@ -1,6 +1,7 @@
 ---
 name: film-stock
 title: Film Stock / Analog Photo
+summary: "halation, light leaks, Polaroid frames, stock grades"
 category: color-and-tone
 aliases: [halation, light leak, polaroid, film look, kodachrome, lomo, expired film, 35mm look, disposable camera, film border, super 8]
 media: [css, canvas, webgl]

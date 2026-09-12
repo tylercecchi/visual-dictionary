@@ -1,6 +1,7 @@
 ---
 name: rim-light
 title: Rim Light / Backlight
+summary: "bright silhouette contours; kickers, fresnel edges"
 category: light-and-depth
 aliases: [rim lighting, edge light, backlight, silhouette glow, kicker, hair light, fresnel glow, edge highlight, outline glow, contre-jour]
 media: [css, svg, canvas, webgl]

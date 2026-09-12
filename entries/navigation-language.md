@@ -1,7 +1,8 @@
 ---
 name: navigation-language
 title: Navigation Language
-category: ui-foundations
+summary: "tabs, breadcrumbs, pagination, steppers; wayfinding"
+category: components
 aliases: [tabs, breadcrumbs, pagination, stepper, wizard, nav menu, menubar, segmented control, navigation patterns, back button, wayfinding]
 media: [css]
 ---

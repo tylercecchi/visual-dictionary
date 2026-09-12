@@ -1,6 +1,7 @@
 ---
 name: shimmer-sheen
 title: Shimmer / Sheen
+summary: "light band sweeping a surface; glints, loading shimmer"
 category: motion
 aliases: [shine sweep, light sweep, skeleton shimmer, glint, sparkle, catch the light, loading shimmer, sheen]
 media: [css, svg, canvas, webgl]

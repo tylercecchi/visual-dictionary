@@ -1,7 +1,8 @@
 ---
 name: recipe-editorial
 title: Recipe Editorial
-category: ui-foundations
+summary: "the two-zone contract, scaling, cook mode"
+category: editorial
 aliases: [recipe layout, recipe card, cookbook style, ingredients list, cooking steps, food blog recipe, recipe page, mise en place, cook mode]
 media: [css]
 ---

@@ -1,6 +1,7 @@
 ---
 name: stained-glass
 title: Stained Glass / Backlit Mosaic
+summary: "jewel panes in dark leading, glowing as if backlit"
 category: surface-and-material
 aliases: [stained glass, cathedral glass, leaded glass, backlit panels, glowing mosaic, tiffany lamp, rose window, luminous tiles, glass mosaic]
 media: [css, svg, canvas, webgl]

@@ -1,8 +1,9 @@
 ---
 name: toast-notification
 title: Toast / Notification
+summary: "the system's transient voice; routing, stacks, undo"
 category: layout
-aliases: [toast, snackbar, notification, alert banner, flash message, status message, undo toast, notification stack, growl]
+aliases: [toast, snackbar, notification, alert banner, flash message, status message, undo toast, notification stack, growl, dynamic island, live activity pill, morphing status pill]
 media: [css]
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: procedural-noise
 title: Procedural Noise
+summary: "perlin/simplex/fBm; the organic-randomness primitive"
 category: pattern-and-texture
 aliases: [perlin noise, simplex noise, fbm, fractal noise, organic randomness, turbulence, clouds, smoke, flow field]
 media: [svg, canvas, webgl]

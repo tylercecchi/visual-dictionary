@@ -1,7 +1,8 @@
 ---
 name: period-looks
 title: Period Looks (Y2K / Frutiger Aero / Vaporwave)
-category: ui-foundations
+summary: "Y2K, Frutiger Aero, vaporwave, web 1.0 as recipes"
+category: wardrobe
 aliases: [y2k, frutiger aero, vaporwave, web 1.0, memphis design, 70s retro, aesthetic nostalgia, skeuomorphic era, dot com era, windows xp aesthetic, y2k chrome, chrome blobs era, synthwave, kitsch nostalgia]
 media: [css, svg, canvas, webgl]
 ---

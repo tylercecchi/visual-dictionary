@@ -1,6 +1,7 @@
 ---
 name: lenticular
 title: Lenticular / Holographic Print
+summary: "tilt-flip frames, prismatic foil, depth cards"
 category: distortion-and-lens
 aliases: [lenticular print, tilt card, flip image, holographic card, prismatic foil, 3d postcard, wiggle stereo, motion print, security hologram]
 media: [css, canvas, webgl]

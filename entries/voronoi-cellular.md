@@ -1,6 +1,7 @@
 ---
 name: voronoi-cellular
 title: Voronoi / Cellular
+summary: "organic cells, cracks, water caustics"
 category: pattern-and-texture
 aliases: [worley noise, cellular noise, cells, cracked, mosaic, stained glass, water caustics, honeycomb, organic tiles]
 media: [canvas, webgl]

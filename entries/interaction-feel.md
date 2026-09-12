@@ -1,6 +1,7 @@
 ---
 name: interaction-feel
 title: Interaction Feel / Haptic Texture
+summary: "drag physics, rubber-banding, snap; how manipulation feels"
 category: motion
 aliases: [drag physics, rubber banding, momentum scroll, overscroll, snap, resistance, elasticity, juicy ui, tactile ui, pull to refresh, swipe feel, feels dead, unresponsive clicks, click feedback, button feedback]
 media: [css, canvas]

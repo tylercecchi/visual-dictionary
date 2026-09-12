@@ -1,8 +1,9 @@
 ---
 name: fui
 title: Sci-Fi FUI / Holograms
-category: ui-foundations
-aliases: [fui, fictional ui, hud, hologram, sci-fi interface, iron man ui, cyberpunk ui, futuristic dashboard, tactical display, heads up display]
+summary: "glowing linework, HUDs, hologram materials"
+category: wardrobe
+aliases: [fui, fictional ui, hud, hologram, sci-fi interface, iron man ui, jarvis ui, cyberpunk ui, futuristic dashboard, tactical display, heads up display, radar dashboard, computer vision overlay, bounding box overlay, pose skeleton overlay, depth map overlay, instrument panel readouts]
 media: [css, svg, canvas, webgl]
 ---
 

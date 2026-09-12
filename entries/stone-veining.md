@@ -1,6 +1,7 @@
 ---
 name: stone-veining
 title: Marble / Stone Veining
+summary: "domain-warped veins, marbled paper, backlit onyx"
 category: surface-and-material
 aliases: [marble, veined stone, granite, onyx, malachite, agate, marbled paper, suminagashi, luxury stone, marble texture, terrazzo]
 media: [css, canvas, webgl]

@@ -1,6 +1,7 @@
 ---
 name: glow-bloom
 title: Glow / Bloom
+summary: "light spilling past bright edges; neon, halos"
 category: light-and-depth
 aliases: [glow, bloom, halo, neon, light bleed, luminous, radiant, aura, hdr glow]
 media: [css, svg, canvas, webgl]

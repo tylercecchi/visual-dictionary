@@ -1,6 +1,7 @@
 ---
 name: pcb-circuit
 title: Circuit Board / PCB Traces
+summary: "routed traces, vias, pulse choreography"
 category: pattern-and-texture
 aliases: [circuit board, pcb, traces, circuitry, motherboard, chip, tech pattern, circuit lines, electronic pattern, data flow lines]
 media: [css, svg, canvas, webgl]

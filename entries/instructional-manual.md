@@ -1,7 +1,8 @@
 ---
 name: instructional-manual
 title: Instructional Manual
-category: ui-foundations
+summary: "one-action steps, arrow vocabulary, warning ladder"
+category: editorial
 aliases: [ikea style, assembly instructions, how to guide, step by step diagram, safety card, user manual, wordless instructions, numbered steps, exploded diagram, quick start guide]
 media: [css, svg]
 ---

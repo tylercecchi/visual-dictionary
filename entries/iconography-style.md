@@ -1,7 +1,8 @@
 ---
 name: iconography-style
 title: Iconography Style
-category: ui-foundations
+summary: "shared drawing rules for icons; stroke, fill, grid"
+category: foundations
 aliases: [icons, icon set, icon style, stroke icons, filled icons, glyph, pictogram, icon weight, emoji style, rebus, pictogram wordplay]
 media: [css, svg]
 ---

@@ -1,6 +1,7 @@
 ---
 name: audio-reactive
 title: Audio-Reactive Visuals
+summary: "waveforms, spectra, and effects wired to sound"
 category: motion
 aliases: [audio visualizer, music visualization, waveform, spectrum, sound reactive, beat detection, vu meter, oscilloscope, equalizer bars]
 media: [canvas, webgl]

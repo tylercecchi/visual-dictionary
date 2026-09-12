@@ -1,7 +1,8 @@
 ---
 name: graffiti-street
 title: Graffiti / Street
-category: ui-foundations
+summary: "tags to wildstyle; can physics and the wall ecosystem"
+category: wardrobe
 aliases: [graffiti, street art, spray paint, tag lettering, wildstyle, throw-up, stencil art, wheat paste, urban style, drips, bubble letters, banksy style, mural]
 media: [css, svg, canvas]
 ---

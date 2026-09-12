@@ -1,6 +1,7 @@
 ---
 name: lens-flare
 title: Lens Flare
+summary: "ghost discs, starbursts, anamorphic streaks"
 category: light-and-depth
 aliases: [flare, sun flare, anamorphic streak, light streak, starburst, ghosting artifacts, jj abrams flare]
 media: [css, svg, canvas, webgl]

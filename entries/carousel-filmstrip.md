@@ -1,6 +1,7 @@
 ---
 name: carousel-filmstrip
 title: Carousel / Filmstrip
+summary: "horizontal strip with a peek"
 category: layout
 aliases: [carousel, slider, filmstrip, horizontal scroll, swiper, gallery strip, card rail, scroll snap row, overflow scroll]
 media: [css]

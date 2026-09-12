@@ -1,6 +1,7 @@
 ---
 name: toon-outline
 title: Toon / Outline Shading
+summary: "cel-shaded flat bands and ink lines; NPR"
 category: light-and-depth
 aliases: [cel shading, toon shader, cartoon, outlines, ink lines, npr, comic shading, flat shading, borderlands look]
 media: [svg, canvas, webgl]

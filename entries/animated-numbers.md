@@ -1,8 +1,9 @@
 ---
 name: animated-numbers
 title: Animated Numbers
+summary: "count-ups, odometer rolls; digits as quantities in motion"
 category: motion
-aliases: [count up, countup, odometer, rolling numbers, number ticker, animated counter, stat animation, number transition, digit roll, live values]
+aliases: [count up, countup, odometer, rolling numbers, number ticker, animated counter, stat animation, number transition, digit roll, live values, split-flap, split flap, solari board, flip clock, departure board, flipboard display]
 media: [css, canvas]
 ---
 
@@ -22,7 +23,7 @@ animating them makes change legible — or fakes precision, when done wrong.
 
 ## Dials
 
-- **transition style** — *count-up* (interpolate the whole value; the marketing-stat register), *odometer roll* (per-digit vertical roll, only changed digits move; the live-value register), *slot/scramble* (digits spin before settling; playful, [[terminal-aesthetic]]/[[fui]] adjacent), *crossfade* (old fades to new; the quietest, for values where trajectory doesn't matter)
+- **transition style** — *count-up* (interpolate the whole value; the marketing-stat register), *odometer roll* (per-digit vertical roll, only changed digits move; the live-value register), *split-flap* (Solari departure-board flip: each character a hinged card that flips top-to-bottom with a clatter-cascade; the retro-mechanical register, works for letters too — [[period-looks]]/[[skeuomorphism]] adjacent), *slot/scramble* (digits spin before settling; playful, [[terminal-aesthetic]]/[[fui]] adjacent), *crossfade* (old fades to new; the quietest, for values where trajectory doesn't matter)
 - **duration & easing** — ease-out, always (fast start, landing readable); duration by *occasion*, not magnitude — count-ups cap at ~1.5-2s regardless of delta (per-unit timing makes big numbers absurd); live updates 300-500ms; the final value must rest long before anyone reads it
 - **direction semantics** — odometer digits roll *up* for increases, *down* for decreases — the roll direction is data; paired delta indicators (▲ +12%) follow [[color-roles]] semantics (and [[chart-voice]]'s good/bad-vs-up/down caution)
 - **trigger discipline** — *on-view, once* (scroll-triggered stats: [[scroll-choreography]] trigger register, never re-fire per pass), *on-update* (live values: animate only actual changes, [[dashboard-tiles]]' calm law — no fanfare per tick), never on mere re-render
@@ -38,6 +39,12 @@ animating them makes change legible — or fakes precision, when done wrong.
 - **Odometer** — each digit a vertical strip of 0-9 in an
   `overflow:hidden` cell, translated to the target digit; changed
   digits only; CSS transitions do the rolling.
+- **Split-flap** — each cell two half-height cards (top/bottom) with
+  `transform-style: preserve-3d`; the top half rotates down (`rotateX`)
+  over a fixed lower half showing the next glyph, cycling through
+  intermediate characters with a stagger across cells; hinge shadow and
+  a slight overshoot sell the mechanism. Cap cycle count so long
+  strings don't clatter for seconds.
 - **CSS `@property` counters** — registered custom property +
   `counter()` display for dependency-free count-ups; verify support.
 - **number-flow** — the current best-in-class web component/React

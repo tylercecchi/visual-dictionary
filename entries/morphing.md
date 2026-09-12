@@ -1,6 +1,7 @@
 ---
 name: morphing
 title: Morphing / Shape Interpolation
+summary: "one shape becoming another; shared-element continuity"
 category: motion
 aliases: [shape morph, blob morph, svg morph, transform between shapes, shapeshifting, tweening paths, icon morph, crossfade]
 media: [css, svg, canvas, webgl]

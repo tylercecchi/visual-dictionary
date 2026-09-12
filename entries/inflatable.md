@@ -1,6 +1,7 @@
 ---
 name: inflatable
 title: Balloon / Inflatable
+summary: "taut glossy volumes with seams; puffy type, squish"
 category: surface-and-material
 aliases: [balloon, inflated, puffy, blow up, bubble letters, 3d bubble text, squishy, air filled, pool float, pillow, quilted]
 media: [css, svg, canvas, webgl]

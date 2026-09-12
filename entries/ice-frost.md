@@ -1,6 +1,7 @@
 ---
 name: ice-frost
 title: Ice / Frost
+summary: "crystal lace, cracked depth, freeze-over events"
 category: surface-and-material
 aliases: [frozen, frost, icicles, frozen glass, ice crystals, frosted window, winter effect, freeze, crystallize, frozen over]
 media: [css, svg, canvas, webgl]

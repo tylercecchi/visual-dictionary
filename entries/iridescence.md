@@ -1,6 +1,7 @@
 ---
 name: iridescence
 title: Iridescence / Holographic
+summary: "angle-shifting rainbow; oil slick, holo foil"
 category: surface-and-material
 aliases: [holographic, oil slick, soap bubble, pearlescent, thin film, rainbow sheen, foil, opalescent, y2k chrome]
 media: [css, canvas, webgl]

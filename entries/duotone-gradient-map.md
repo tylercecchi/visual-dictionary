@@ -1,6 +1,7 @@
 ---
 name: duotone-gradient-map
 title: Duotone / Gradient Map
+summary: "luminance remapped onto a color ramp"
 category: color-and-tone
 aliases: [duotone, gradient map, color grading, two-tone, tritone, colorize, spotify look, false color]
 media: [css, svg, canvas, webgl]

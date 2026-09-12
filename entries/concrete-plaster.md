@@ -1,6 +1,7 @@
 ---
 name: concrete-plaster
 title: Concrete / Plaster
+summary: "architectural neutrals; mottle, formwork, trowel marks"
 category: surface-and-material
 aliases: [concrete, cement, plaster, stucco, brutalist concrete, board formed, limewash, venetian plaster, gallery wall, raw wall, mineral surface]
 media: [css, svg, canvas, webgl]

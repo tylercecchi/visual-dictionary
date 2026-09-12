@@ -1,6 +1,7 @@
 ---
 name: embroidery
 title: Embroidery / Stitched Texture
+summary: "imagery made of thread; satin, cross-stitch, patches"
 category: surface-and-material
 aliases: [stitched, embroidered, cross stitch, patch, knit, woven badge, thread texture, needlepoint, sampler, yarn, textile art]
 media: [css, svg, canvas, webgl]

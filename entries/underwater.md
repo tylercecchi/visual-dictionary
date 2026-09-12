@@ -1,6 +1,7 @@
 ---
 name: underwater
 title: Underwater
+summary: "the composed submerged-scene recipe; murk, caustics, sway"
 category: light-and-depth
 aliases: [under the sea, submerged, deep sea, ocean scene, aquarium, diving, sunken, beneath the surface, murky depths]
 media: [canvas, webgl]

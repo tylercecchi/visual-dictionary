@@ -1,7 +1,8 @@
 ---
 name: book-design
 title: Book Design
-category: ui-foundations
+summary: "the page canon, chapter ceremony, running furniture"
+category: editorial
 aliases: [book layout, book typography, chapter opener, classic book style, novel layout, folio, running head, title page, colophon, penguin classics, reads like a book, poetry layout, verse setting, poem line breaks]
 media: [css]
 ---

@@ -1,6 +1,7 @@
 ---
 name: dithering
 title: Dithering
+summary: "patterned pixels faking color depth; retro/1-bit"
 category: color-and-tone
 aliases: [dither, ordered dither, bayer, retro pixel shading, stippling, blue noise, 1-bit look, game boy look]
 media: [canvas, webgl]

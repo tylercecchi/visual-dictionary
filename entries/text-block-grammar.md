@@ -1,7 +1,8 @@
 ---
 name: text-block-grammar
 title: Text-Block Grammar
-category: ui-foundations
+summary: "alignment, proximity, and attachment rules between text blocks"
+category: foundations
 aliases: [text alignment, rag, paragraph spacing, heading spacing, caption placement, indentation, text layout rules, micro typography, proximity, label placement, orphans widows]
 media: [css]
 ---

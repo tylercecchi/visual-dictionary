@@ -1,6 +1,7 @@
 ---
 name: radial-orbital
 title: Radial / Orbital
+summary: "satellites around a hub; distance as relationship"
 category: layout
 aliases: [circular layout, orbit layout, radial menu, hub and spoke, ring layout, ecosystem diagram, satellite layout, pie menu, circular nav]
 media: [css, svg, canvas]

@@ -1,6 +1,7 @@
 ---
 name: faceted-browse
 title: Faceted Browse
+summary: "filter rail + results + applied chips; the finding machine"
 category: layout
 aliases: [filter sidebar, search results page, facets, filter panel, ecommerce category page, refine results, filter chips, sort dropdown, search layout]
 media: [css]

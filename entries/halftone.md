@@ -1,6 +1,7 @@
 ---
 name: halftone
 title: Halftone
+summary: "sized print dots; comic, newsprint, riso"
 category: color-and-tone
 aliases: [ben-day dots, comic book dots, newsprint, screen print, cmyk dots, pop art dots, risograph, pointillism, seurat dots]
 media: [css, svg, canvas, webgl]

@@ -1,6 +1,7 @@
 ---
 name: caustics
 title: Caustics
+summary: "light focused by water/glass into dancing filaments"
 category: light-and-depth
 aliases: [water light, pool light, light through glass, focused light patterns, dancing light, underwater light web, glass shadow rainbow]
 media: [canvas, webgl]

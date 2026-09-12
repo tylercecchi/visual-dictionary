@@ -1,6 +1,7 @@
 ---
 name: bounce-light
 title: Bounce Light / Color Bleed
+summary: "indirect illumination; surfaces tinting neighbors"
 category: light-and-depth
 aliases: [indirect light, radiosity, color bleed, reflected light, fill light, global illumination, gi, light spill, ambient bounce, screen glow room]
 media: [css, svg, canvas, webgl]

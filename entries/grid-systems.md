@@ -1,7 +1,8 @@
 ---
 name: grid-systems
 title: Grid Systems
-category: ui-foundations
+summary: "columns, baselines, and the broken-grid statement"
+category: foundations
 aliases: [layout grid, columns, baseline grid, swiss grid, broken grid, modular grid, 12 column, asymmetric layout, editorial layout, magazine layout]
 media: [css]
 ---

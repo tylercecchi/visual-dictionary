@@ -1,6 +1,7 @@
 ---
 name: centered-stack
 title: Centered Stack
+summary: "the landing-page spine; section rhythm"
 category: layout
 aliases: [landing page layout, hero stack, centered column, single column, vertical sections, marketing page, section stack, one column layout]
 media: [css]

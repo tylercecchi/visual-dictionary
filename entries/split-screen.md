@@ -1,6 +1,7 @@
 ---
 name: split-screen
 title: Split Screen
+summary: "two full-height panes; one cut, two worlds"
 category: layout
 aliases: [50 50 layout, two panel, side by side, half and half, sticky split, duo layout, comparison layout, text image split]
 media: [css]

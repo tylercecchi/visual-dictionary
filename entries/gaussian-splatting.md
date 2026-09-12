@@ -1,6 +1,7 @@
 ---
 name: gaussian-splatting
 title: Gaussian Splatting
+summary: "captured scenes as soft view-dependent splats; photoreal fuzz, not mesh"
 category: light-and-depth
 aliases: [3D gaussian splatting, 3DGS, splat, splats, splat scene, radiance field, NeRF-style capture, photogrammetry render, captured 3D scan, room scan, scanned room, point cloud, point cloud fuzz, fuzzy scan, volumetric photo scan, splat viewer, scanned scene]
 media: [webgl]

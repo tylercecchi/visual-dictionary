@@ -1,6 +1,7 @@
 ---
 name: crt-scanlines
 title: CRT / Scanlines
+summary: "cathode-ray display stack; scanlines, phosphor, VHS misbehavior"
 category: color-and-tone
 aliases: [crt, scanlines, retro monitor, vhs, old tv, terminal glow, phosphor, screen curvature, rolling static, arcade monitor, burn-in, old monitor, old tv screen]
 media: [css, canvas, webgl]

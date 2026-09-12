@@ -1,6 +1,7 @@
 ---
 name: ceramic-glaze
 title: Ceramic / Glaze
+summary: "body-under-film optics; pooling, crackle, kintsugi"
 category: surface-and-material
 aliases: [porcelain, ceramic, glazed pottery, china, enamel, kintsugi, crackle glaze, celadon, terracotta, pottery, glossy white ceramic]
 media: [css, svg, canvas, webgl]

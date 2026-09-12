@@ -1,6 +1,7 @@
 ---
 name: kinetic-type
 title: Kinetic Type
+summary: "staggered reveals, variable-font motion, marquees; type in motion"
 category: motion
 aliases: [animated text, text animation, text reveal, split text, staggered letters, typewriter effect, scrolling text, marquee, variable font animation, word by word, lyric video, typing effect, text typing itself out, typing animation]
 media: [css, svg, canvas, webgl]

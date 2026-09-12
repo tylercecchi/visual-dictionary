@@ -1,6 +1,7 @@
 ---
 name: spatial-canvas
 title: Spatial Canvas
+summary: "pan/zoom surface where position is meaning"
 category: layout
 aliases: [infinite canvas, node graph, mind map, whiteboard layout, node editor, graph layout, figma style canvas, flowchart canvas, pan zoom canvas]
 media: [css, svg, canvas, webgl]

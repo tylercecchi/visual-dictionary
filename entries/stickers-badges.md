@@ -1,6 +1,7 @@
 ---
 name: stickers-badges
 title: Stickers / Badges
+summary: "die-cut borders, scatter rotation, collage energy"
 category: surface-and-material
 aliases: [sticker, die-cut, badge, patch, pin, label, tag, sticker sheet, white outline, emoji sticker, laptop sticker]
 media: [css, svg, canvas]

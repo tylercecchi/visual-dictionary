@@ -1,6 +1,7 @@
 ---
 name: sheet-drawer
 title: Sheet / Drawer
+summary: "edge-attached panels; detents, gestures, peek"
 category: layout
 aliases: [bottom sheet, side drawer, slide over, panel drawer, detail drawer, tray, pull up sheet, off canvas, detents, half sheet]
 media: [css]

@@ -1,6 +1,7 @@
 ---
 name: focus-page
 title: Focus Page
+summary: "the one-job page; login, 404, checkout; chrome removed"
 category: layout
 aliases: [login page, signup page, auth layout, 404 page, error page, checkout page, paywall, maintenance page, verification page, single task page, centered card page]
 media: [css]

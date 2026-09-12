@@ -1,6 +1,7 @@
 ---
 name: type-composition
 title: Type Composition
+summary: "typography as the layout's primary material; the poster register"
 category: layout
 aliases: [typographic layout, poster typography, type driven design, big type, oversized headline, display composition, type as image, text wall, stacked type, typographic hero, kinetic poster, david carson, deconstructed typography, ray gun style, experimental editorial]
 media: [css, svg, canvas, webgl]

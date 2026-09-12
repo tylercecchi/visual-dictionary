@@ -1,7 +1,8 @@
 ---
 name: fashion-editorial
 title: Fashion Editorial
-category: ui-foundations
+summary: "didone display, type-photo interleave, luxury air"
+category: editorial
 aliases: [vogue style, high fashion layout, fashion magazine, glossy editorial, luxury magazine, model spread, couture layout, harpers bazaar style, editorial glamour]
 media: [css]
 ---

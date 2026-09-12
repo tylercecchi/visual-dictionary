@@ -1,6 +1,7 @@
 ---
 name: sdf-rendering
 title: SDF Rendering
+summary: "distance-field shapes and raymarching; the procedural-shape engine"
 category: pattern-and-texture
 aliases: [signed distance field, signed distance function, raymarching, distance field, sdf shapes, procedural shapes, smooth min]
 media: [canvas, webgl]

@@ -1,7 +1,8 @@
 ---
 name: table-design
 title: Table Design
-category: ui-foundations
+summary: "dense truth; alignment law, density, responsive collapse"
+category: components
 aliases: [data table, tables, grid view, spreadsheet ui, data grid, table density, zebra stripes, sortable table, sticky header, rows and columns]
 media: [css]
 ---

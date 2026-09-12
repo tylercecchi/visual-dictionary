@@ -1,6 +1,7 @@
 ---
 name: fire-smoke
 title: Fire / Smoke / Fluid
+summary: "flames, fog, and fluid simulation registers"
 category: motion
 aliases: [fire, flames, smoke, fog, fluid simulation, ink in water, wisps, steam, plasma, embers]
 media: [canvas, webgl]

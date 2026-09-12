@@ -1,6 +1,7 @@
 ---
 name: gradients
 title: Gradients
+summary: "the color-transition fundamentals; interpolation space, easing, banding"
 category: color-and-tone
 aliases: [linear gradient, radial gradient, conic gradient, color ramp, fade, ombre, gradient banding, gradient text]
 media: [css, svg, canvas, webgl]

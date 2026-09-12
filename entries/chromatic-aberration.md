@@ -1,6 +1,7 @@
 ---
 name: chromatic-aberration
 title: Chromatic Aberration
+summary: "RGB channels splitting at edges"
 category: distortion-and-lens
 aliases: [rgb split, color fringing, rgb shift, glitch colors, prism edges, lens fringe, colors splitting at the edges]
 media: [css, svg, canvas, webgl]

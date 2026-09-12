@@ -1,6 +1,7 @@
 ---
 name: light-on-flat
 title: Light on Flat UI
+summary: "one imaginary light source unifying gradients, sheens, shadows"
 category: light-and-depth
 aliases: [fake lighting, studio light on ui, lit interface, light source ui, gradient lighting, sheen lighting, ambient light ui, lighting direction]
 media: [css, svg, webgl]

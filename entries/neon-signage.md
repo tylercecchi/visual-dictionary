@@ -1,6 +1,7 @@
 ---
 name: neon-signage
 title: Neon Signage
+summary: "tubes, routing, flicker; the sign as an object"
 category: light-and-depth
 aliases: [neon sign, neon tube, neon text, open sign, neon flicker, storefront sign, cyberpunk neon, neon glow sign, tube lighting]
 media: [css, svg, canvas, webgl]

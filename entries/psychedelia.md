@@ -1,7 +1,8 @@
 ---
 name: psychedelia
 title: Psychedelia
-category: ui-foundations
+summary: "liquid lettering, vibrating complements, horror vacui"
+category: wardrobe
 aliases: [psychedelic, 60s poster, concert poster, liquid lettering, trippy, vibrating colors, fillmore poster, groovy, tie dye, hippie aesthetic, melting text]
 media: [css, svg, canvas, webgl]
 ---

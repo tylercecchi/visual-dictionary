@@ -1,6 +1,7 @@
 ---
 name: board-kanban
 title: Board / Kanban
+summary: "columns of cards; moving a card is the state change"
 category: layout
 aliases: [kanban, kanban board, trello board, columns of cards, pipeline view, stage board, swimlanes, drag and drop board, status columns]
 media: [css]

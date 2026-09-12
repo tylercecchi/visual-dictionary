@@ -1,6 +1,7 @@
 ---
 name: comparison-columns
 title: Comparison Columns
+summary: "pricing tables; columns as competitors, one hero"
 category: layout
 aliases: [pricing table, pricing page, plan comparison, tier comparison, feature matrix, versus layout, compare plans, pricing cards]
 media: [css]

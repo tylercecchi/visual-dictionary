@@ -1,6 +1,7 @@
 ---
 name: particles
 title: Particles
+summary: "dust, sparks, confetti, swarms, flow fields"
 category: motion
 aliases: [particle system, dust, sparks, confetti, floating dots, swarm, fireflies, snow, embers, particle field]
 media: [canvas, webgl]

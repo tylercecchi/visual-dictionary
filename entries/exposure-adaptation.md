@@ -1,6 +1,7 @@
 ---
 name: exposure-adaptation
 title: Exposure / Adaptation
+summary: "blown highlights, eye adjustment, tone mapping over time"
 category: light-and-depth
 aliases: [overexposure, blown highlights, eye adaptation, auto exposure, hdr, tone mapping, blinding light, tunnel exit, brightness adjustment, camera exposure, washed out, tenebrism, chiaroscuro, low-key dramatic lighting]
 media: [css, canvas, webgl]

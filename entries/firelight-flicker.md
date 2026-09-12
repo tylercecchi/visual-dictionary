@@ -1,6 +1,7 @@
 ---
 name: firelight-flicker
 title: Firelight / Candlelight Flicker
+summary: "breathing warm light and wandering shadows"
 category: light-and-depth
 aliases: [candlelight, fireplace glow, campfire light, warm flicker, torch light, cozy glow, dancing light, hearth, lantern light]
 media: [css, svg, canvas, webgl]

@@ -1,7 +1,8 @@
 ---
 name: elevation
 title: Elevation / Depth
-category: ui-foundations
+summary: "the shadow/layering system; what floats above what"
+category: foundations
 aliases: [shadows, layering, depth, floating, raised, lifted, z-axis, card shadow, neumorphism]
 media: [css, webgl]
 ---

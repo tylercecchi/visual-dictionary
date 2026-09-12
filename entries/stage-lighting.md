@@ -1,6 +1,7 @@
 ---
 name: stage-lighting
 title: Stage / Concert Lighting
+summary: "washes, beams, strobes, mirror balls; the theatrical rig"
 category: light-and-depth
 aliases: [concert lighting, club lighting, spotlights, light beams, colored gels, moving heads, strobe, disco ball, laser show, theatrical lighting, rave]
 media: [css, canvas, webgl]

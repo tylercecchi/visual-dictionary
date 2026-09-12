@@ -1,6 +1,7 @@
 ---
 name: cursor-effects
 title: Cursor / Pointer Effects
+summary: "followers, magnetism, spotlights, trails"
 category: motion
 aliases: [custom cursor, cursor follower, magnetic buttons, hover spotlight, cursor trail, pointer glow, mouse effects]
 media: [css, canvas, webgl]

@@ -1,6 +1,7 @@
 ---
 name: popover-menu
 title: Popover / Menu
+summary: "anchored ephemerals; placement, light dismiss"
 category: layout
 aliases: [popover, dropdown, tooltip, context menu, select menu, combobox, flyout, hover card, anchored overlay, menu placement]
 media: [css]

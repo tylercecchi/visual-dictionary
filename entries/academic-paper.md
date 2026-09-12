@@ -1,7 +1,8 @@
 ---
 name: academic-paper
 title: Academic Paper
-category: ui-foundations
+summary: "journal and Tufte registers; numbering, citations, sidenotes"
+category: editorial
 aliases: [latex style, journal article, tufte style, sidenotes, two column paper, research paper layout, citations, footnotes, arxiv style, scientific paper look, monograph]
 media: [css]
 ---

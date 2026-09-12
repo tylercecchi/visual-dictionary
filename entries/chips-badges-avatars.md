@@ -1,7 +1,8 @@
 ---
 name: chips-badges-avatars
 title: Chips, Badges & Avatars
-category: ui-foundations
+summary: "the small-matter layer; status, tokens, identity"
+category: components
 aliases: [chip, badge, tag, pill, label, status indicator, avatar, initials, presence dot, avatar stack, notification badge, count badge, identity display]
 media: [css]
 ---

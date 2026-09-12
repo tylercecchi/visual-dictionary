@@ -1,6 +1,7 @@
 ---
 name: forced-perspective
 title: Forced Perspective / Anamorphosis
+summary: "perspective as a trick; impossible objects, trompe-l'œil"
 category: distortion-and-lens
 aliases: [anamorphic illusion, perspective illusion, impossible geometry, escher, penrose, trompe loeil, street art 3d, fake 3d, axonometric illusion]
 media: [css, svg, canvas, webgl]

@@ -1,6 +1,7 @@
 ---
 name: bento-grid
 title: Bento Grid
+summary: "mixed-size cells on one grid; size encodes importance"
 category: layout
 aliases: [bento, bento box layout, mixed grid, feature grid, apple style grid, mosaic grid, spanning cards, tile collage]
 media: [css]

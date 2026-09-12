@@ -1,6 +1,7 @@
 ---
 name: reflections
 title: Reflections
+summary: "mirror floors, wet ground, scene-content reflections"
 category: light-and-depth
 aliases: [mirror, mirror floor, reflective surface, screen-space reflections, ssr, wet floor, glossy floor, mirrored text]
 media: [css, canvas, webgl]

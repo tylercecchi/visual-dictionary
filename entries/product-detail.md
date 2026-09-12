@@ -1,6 +1,7 @@
 ---
 name: product-detail
 title: Product Detail
+summary: "gallery + sticky buy box + evidence tail; the decision compound"
 category: layout
 aliases: [pdp, product page, product detail page, buy box, product gallery, add to cart layout, ecommerce detail, variant selector, listing detail]
 media: [css]

@@ -1,6 +1,7 @@
 ---
 name: modal-dialog
 title: Modal / Dialog
+summary: "the blocking interruption; scrim, focus, earned use"
 category: layout
 aliases: [modal, dialog, popup, confirmation dialog, lightbox, overlay window, alert dialog, dialog box, center overlay]
 media: [css]

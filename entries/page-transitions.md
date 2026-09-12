@@ -1,6 +1,7 @@
 ---
 name: page-transitions
 title: Page Transitions
+summary: "navigation choreography; view transitions, wipes, shared elements"
 category: motion
 aliases: [route transitions, view transitions, navigation animation, page swipe, wipe, curtain, page load animation, spa transitions, jarring page change, abrupt navigation, route change animation, smooth page change]
 media: [css, canvas, webgl]

@@ -1,6 +1,7 @@
 ---
 name: scene-staging
 title: 3D Scene Staging
+summary: "lighting, environment, and ground; the photography layer of 3D"
 category: light-and-depth
 aliases: [product shot, studio lighting, hero 3d, environment lighting, hdri, three point lighting, turntable, product render, soft studio]
 media: [webgl]

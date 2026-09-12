@@ -1,7 +1,8 @@
 ---
 name: bauhaus-swiss
 title: Bauhaus / Swiss Modernism
-category: ui-foundations
+summary: "primitives and primaries; grid, Helvetica, whitespace"
+category: wardrobe
 aliases: [bauhaus, swiss style, international style, constructivism, modernist poster, helvetica era, geometric primitives, primary colors design, mid-century modern graphic, de stijl]
 media: [css, svg]
 ---

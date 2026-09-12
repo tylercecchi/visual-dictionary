@@ -1,6 +1,7 @@
 ---
 name: weather-effects
 title: Weather Effects
+summary: "rain, snow, lightning, fog; the sky's repertoire"
 category: motion
 aliases: [rain, rain on glass, snow, snowfall, lightning, storm, drizzle, raindrops, snow accumulation, wind, fog bank]
 media: [css, canvas, webgl]

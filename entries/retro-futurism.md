@@ -1,7 +1,8 @@
 ---
 name: retro-futurism
 title: Retro-Futurism
-category: ui-foundations
+summary: "steampunk, atompunk, cassette futurism; imagined pasts' futures"
+category: wardrobe
 aliases: [steampunk, dieselpunk, atompunk, rocketpunk, atomic age, raygun gothic, googie, cassette futurism, cybercore, retrofuture, jules verne style, 50s space age]
 media: [css, svg, canvas, webgl]
 ---

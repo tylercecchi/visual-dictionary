@@ -1,6 +1,7 @@
 ---
 name: material-texture
 title: Material Texture (Paper / Fabric / Wood)
+summary: "paper, fabric, wood; tactile surface claims"
 category: surface-and-material
 aliases: [paper texture, fabric, linen, canvas texture, wood grain, leather, cardboard, tactile, physical material, pbr texture, leather book, old book cover, worn paper]
 media: [css, canvas, webgl]

@@ -1,6 +1,7 @@
 ---
 name: magazine-spread
 title: Magazine Spread
+summary: "art-directed article; spine + interruptions"
 category: layout
 aliases: [editorial layout, magazine layout, feature article layout, spread design, art directed article, pull quote layout, editorial hero, kinfolk style, indie magazine, lookbook, minimalist editorial, interview layout, q and a format]
 media: [css]

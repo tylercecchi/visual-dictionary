@@ -1,7 +1,8 @@
 ---
 name: loading-language
 title: Loading & Progress Language
-category: ui-foundations
+summary: "spinners, skeletons, and arrival choreography"
+category: components
 aliases: [loading state, spinner, skeleton screen, progress bar, loading animation, splash screen, perceived performance, optimistic ui, empty loading]
 media: [css, svg, canvas]
 ---
@@ -41,6 +42,10 @@ strongest lever on *perceived* speed.
   (bytes, steps); smooth with easing toward targets, never backward.
 - **Staged data + optimistic UI** — render what's known immediately, fill
   in the rest; the best loading state is less loading.
+- **AI thinking states** — generation waits are open-ended and
+  stateful (listening / thinking / speaking), which spinners can't
+  express; the [[ai-orb]] is this entry's AI-native register, under the
+  same honesty and duration laws.
 
 ## Starting points
 
@@ -62,4 +67,4 @@ strongest lever on *perceived* speed.
 stagger budget), [[illustration-style]] (long-wait narratives lean on it),
 [[morphing]] (loader-to-content continuity), [[visual-hierarchy]] (skeletons
 must sketch the real hierarchy), [[page-transitions]] (transitions often
-*are* loading cover).
+*are* loading cover), [[ai-orb]] (the AI thinking/listening register).

@@ -1,6 +1,7 @@
 ---
 name: liquid-metal
 title: Liquid Metal
+summary: "mercury blobs, chrome fluid, ferrofluid; metal that flows"
 category: surface-and-material
 aliases: [mercury, chrome blob, molten metal, ferrofluid, metal fluid, t-1000, liquid chrome, gallium, quicksilver, chrome liquid text]
 media: [css, svg, canvas, webgl]

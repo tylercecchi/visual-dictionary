@@ -1,7 +1,8 @@
 ---
 name: form-grammar
 title: Form Grammar
-category: ui-foundations
+summary: "layout, validation timing, error and success language"
+category: components
 aliases: [form design, form layout, form validation, error messages, field errors, label placement, form ux, inline validation, required fields, success feedback]
 media: [css]
 ---

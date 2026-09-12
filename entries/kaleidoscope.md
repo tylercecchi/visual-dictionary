@@ -1,6 +1,7 @@
 ---
 name: kaleidoscope
 title: Kaleidoscope / Symmetry
+summary: "mirror-folded mandalas and wallpaper tilings"
 category: pattern-and-texture
 aliases: [mandala, radial symmetry, mirror pattern, sacred geometry, tiling, psychedelic pattern, fractal pattern, wallpaper group]
 media: [css, svg, canvas, webgl]

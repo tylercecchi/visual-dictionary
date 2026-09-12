@@ -1,6 +1,7 @@
 ---
 name: volumetric-light
 title: Volumetric Light
+summary: "god rays, light shafts, visible atmosphere"
 category: light-and-depth
 aliases: [god rays, light shafts, crepuscular rays, light through fog, atmosphere, dusty light, beams]
 media: [canvas, webgl]

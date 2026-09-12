@@ -1,6 +1,7 @@
 ---
 name: cutaway-xray
 title: Cutaway / X-Ray Views
+summary: "interiors revealed in place; sections, ghosts, lenses"
 category: light-and-depth
 aliases: [cutaway, cross section, see through, transparent view, ghosted view, exploded interior, x-ray view, section view, internal view, product teardown]
 media: [css, svg, canvas, webgl]

@@ -1,6 +1,7 @@
 ---
 name: dashboard-tiles
 title: Dashboard Tile Field
+summary: "scannable data tiles; the 5-second read"
 category: layout
 aliases: [dashboard layout, widget grid, kpi grid, stat tiles, admin dashboard, monitoring layout, card dashboard, control room]
 media: [css]

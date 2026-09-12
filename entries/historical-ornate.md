@@ -1,7 +1,8 @@
 ---
 name: historical-ornate
 title: Historical Ornate (Gothic / Baroque / Victorian)
-category: ui-foundations
+summary: "Gothic, Baroque, Victorian, Neoclassical grandeur"
+category: wardrobe
 aliases: [gothic, baroque, rococo, victorian, neoclassical, blackletter, medieval, ornate vintage, heraldic, dark academia, old world, antique label, romantasy, light academia]
 media: [css, svg, canvas]
 ---

@@ -1,6 +1,7 @@
 ---
 name: liquid-ripple
 title: Liquid / Ripple
+summary: "water waves, gooey blobs, jelly wobble"
 category: distortion-and-lens
 aliases: [water effect, ripple, wave distortion, fluid, gooey, melting, wobble, jelly]
 media: [svg, canvas, webgl]

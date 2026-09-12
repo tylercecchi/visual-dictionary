@@ -1,6 +1,7 @@
 ---
 name: alternating-rows
 title: Alternating Rows
+summary: "media/text ping-pong feature rows"
 category: layout
 aliases: [zigzag layout, alternating features, media object rows, left right sections, feature rows, z pattern sections, ping pong layout]
 media: [css]

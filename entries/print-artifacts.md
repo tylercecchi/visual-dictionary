@@ -1,6 +1,7 @@
 ---
 name: print-artifacts
 title: Print Artifacts (Riso / Photocopy / Misregistration)
+summary: "riso, photocopy, misregistration; the zine aesthetic"
 category: color-and-tone
 aliases: [risograph, photocopy, xerox, zine, misregistration, ink bleed, offset print, screen print texture, overprint, punk flyer, grunge, punk collage, distressed texture]
 media: [css, svg, canvas, webgl]

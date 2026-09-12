@@ -1,6 +1,7 @@
 ---
 name: timeline-feed
 title: Timeline / Feed
+summary: "time-ordered single column; spines, live edges"
 category: layout
 aliases: [feed layout, activity stream, chat layout, changelog, vertical timeline, news feed, message list, history view, log view]
 media: [css]

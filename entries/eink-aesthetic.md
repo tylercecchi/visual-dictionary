@@ -1,6 +1,7 @@
 ---
 name: eink-aesthetic
 title: E-Ink / Paper Display
+summary: "grayscale calm; dithered images, refresh flashes"
 category: color-and-tone
 aliases: [e-ink, eink, kindle look, e-reader, epaper, grayscale ui, page refresh flash, calm tech, digital paper, reMarkable look]
 media: [css, canvas]

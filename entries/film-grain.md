@@ -1,6 +1,7 @@
 ---
 name: film-grain
 title: Film Grain / Noise Texture
+summary: "analog grit over surfaces and gradients"
 category: surface-and-material
 aliases: [grain, noise texture, grainy, analog texture, static, gritty, textured gradient, paper texture]
 media: [css, svg, canvas, webgl]

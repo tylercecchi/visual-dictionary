@@ -1,6 +1,7 @@
 ---
 name: ascii-rendering
 title: ASCII Rendering
+summary: "imagery rebuilt from text glyphs"
 category: color-and-tone
 aliases: [ascii art, text mode, character rendering, terminal art, ansi art, matrix rain, typographic image]
 media: [canvas, webgl]

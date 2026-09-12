@@ -1,7 +1,8 @@
 ---
 name: terminal-aesthetic
 title: Terminal / Code Aesthetic
-category: ui-foundations
+summary: "character grids, box-drawing, ANSI palettes"
+category: wardrobe
 aliases: [terminal ui, tui, command line look, hacker aesthetic, monospace ui, code editor look, ncurses, box drawing, man page, developer tool design]
 media: [css, canvas]
 ---
@@ -69,4 +70,5 @@ dialect; distinct from [[crt-scanlines]] (the display) and
 (images in this world), [[typographic-voice]] (mono maximal),
 [[color-roles]] (ANSI as a role system), [[brutalism]] (kin in rawness),
 [[fui]] (the fictional cousin), [[chart-voice]] (sparklines in block
-characters ▁▃▆█ — the native dataviz).
+characters ▁▃▆█ — the native dataviz), [[engineering-datasheet]] (mono
+for data only, grotesque for prose — the documented-hardware neighbor).

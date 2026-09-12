@@ -1,7 +1,8 @@
 ---
 name: mid-century-modern
 title: Mid-Century Modern
-category: ui-foundations
+summary: "cut-paper Bass, kidney shapes, earthed optimism"
+category: wardrobe
 aliases: [mid century, mcm, saul bass style, eames era, 1950s design, atomic pattern, retro 50s 60s, kidney shapes, boomerang pattern, mad men era, organic modernism]
 media: [css, svg]
 ---

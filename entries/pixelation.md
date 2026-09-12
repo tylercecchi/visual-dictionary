@@ -1,6 +1,7 @@
 ---
 name: pixelation
 title: Pixelation / Mosaic
+summary: "deliberate low resolution; 8-bit, mosaic blocks"
 category: color-and-tone
 aliases: [pixelate, pixel art, mosaic, 8-bit, blocky, low-res, chunky pixels, censored blur blocks, minecraft look]
 media: [css, canvas, webgl]

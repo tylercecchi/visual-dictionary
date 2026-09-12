@@ -1,7 +1,8 @@
 ---
 name: skeuomorphism
 title: Skeuomorphism / Neumorphism
-category: ui-foundations
+summary: "object-realism as a system; soft emboss, clay"
+category: wardrobe
 aliases: [skeuomorphic, neumorphism, soft ui, realistic controls, physical buttons, embossed, debossed, 3d buttons, claymorphism]
 media: [css, webgl]
 ---

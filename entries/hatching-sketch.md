@@ -1,6 +1,7 @@
 ---
 name: hatching-sketch
 title: Hatching / Sketch
+summary: "tone from drawn strokes; hand-drawn wobble"
 category: pattern-and-texture
 aliases: [crosshatch, sketch, hand-drawn, pencil, ink drawing, engraving, etching, doodle, wobbly lines, napkin sketch, pointillism stipple]
 media: [css, svg, canvas, webgl]

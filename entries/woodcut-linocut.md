@@ -1,6 +1,7 @@
 ---
 name: woodcut-linocut
 title: Woodcut / Linocut
+summary: "carved-block printmaking; white cuts out of black"
 category: pattern-and-texture
 aliases: [woodcut, linocut, block print, printmaking, carved lines, relief print, expressionist print, gig poster woodcut, rough carved look, ex libris]
 media: [css, svg, canvas]

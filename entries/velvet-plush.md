@@ -1,6 +1,7 @@
 ---
 name: velvet-plush
 title: Velvet / Plush
+summary: "pile fabrics; nap-direction sheen, edge glow"
 category: surface-and-material
 aliases: [velvet, plush, fur, suede, felt, velour, soft pile, fuzzy, brushed fabric, teddy, luxury fabric, nap]
 media: [css, svg, canvas, webgl]

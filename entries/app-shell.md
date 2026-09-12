@@ -1,6 +1,7 @@
 ---
 name: app-shell
 title: App Shell
+summary: "framed chrome panes wrapping a content layout"
 category: layout
 aliases: [application layout, sidebar layout, holy grail, admin layout, nav shell, chrome, three pane, docs layout, master detail]
 media: [css]

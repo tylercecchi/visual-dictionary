@@ -1,6 +1,7 @@
 ---
 name: specular-metallic
 title: Specular / Metallic
+summary: "reflection, chrome, gloss vs matte"
 category: surface-and-material
 aliases: [metallic, chrome, shiny, reflective, polished, brushed metal, specular highlight, glossy, mirror finish]
 media: [css, canvas, webgl]

@@ -1,6 +1,7 @@
 ---
 name: mosaic-tile
 title: Mosaic Tile
+summary: "tesserae with grout; roman flow, azulejo, terrazzo"
 category: surface-and-material
 aliases: [ceramic tile, tesserae, roman mosaic, tile art, grout, subway tile, azulejo, penny tile, tiled mural, byzantine mosaic]
 media: [css, svg, canvas, webgl]

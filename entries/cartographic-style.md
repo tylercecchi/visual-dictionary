@@ -1,7 +1,8 @@
 ---
 name: cartographic-style
 title: Cartographic Style
-category: ui-foundations
+summary: "basemap voice, labels, terrain; map identity"
+category: wardrobe
 aliases: [map style, map design, basemap, terrain map, vintage map, transit map, choropleth style, map labels, hillshade, contour lines]
 media: [css, svg, canvas, webgl]
 ---

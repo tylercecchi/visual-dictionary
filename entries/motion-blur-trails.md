@@ -1,6 +1,7 @@
 ---
 name: motion-blur-trails
 title: Motion Blur / Trails
+summary: "smears, afterimages, light-painting streaks"
 category: motion
 aliases: [motion blur, trails, ghosting, speed lines, smear, afterimage, streaks, feedback loop, echo]
 media: [css, canvas, webgl]

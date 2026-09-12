@@ -1,6 +1,7 @@
 ---
 name: progressive-blur
 title: Progressive Blur
+summary: "blur ramping across space; soft edges as material"
 category: surface-and-material
 aliases: [gradient blur, graduated blur, blur fade, variable blur, blur hierarchy, soft edge blur, ios blur edge]
 media: [css, canvas, webgl]

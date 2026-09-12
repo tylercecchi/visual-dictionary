@@ -1,7 +1,8 @@
 ---
 name: art-deco
 title: Art Deco
-category: ui-foundations
+summary: "sunbursts, stepped forms, gold on black; ruler-built glamour"
+category: wardrobe
 aliases: [deco, gatsby style, 1920s glamour, sunburst pattern, gold and black, roaring twenties, chrysler building style, deco poster, stepped forms, gatsby]
 media: [css, svg, canvas]
 ---

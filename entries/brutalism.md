@@ -1,7 +1,8 @@
 ---
 name: brutalism
 title: Brutalism / Anti-Design
-category: ui-foundations
+summary: "raw structure and hard shadows; neo and true registers"
+category: wardrobe
 aliases: [brutalist, neo-brutalism, neubrutalism, anti-design, raw web, default styling, ugly on purpose, punk web, web 1.0 revival]
 media: [css]
 ---

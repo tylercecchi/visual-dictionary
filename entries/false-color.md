@@ -1,6 +1,7 @@
 ---
 name: false-color
 title: False Color / Thermal
+summary: "thermal, night-vision, X-ray; sensor-palette looks"
 category: color-and-tone
 aliases: [thermal camera, heat map look, infrared, night vision, predator vision, x-ray, ultraviolet, satellite imagery, false colour, sensor look]
 media: [css, canvas, webgl]

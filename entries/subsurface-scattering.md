@@ -1,6 +1,7 @@
 ---
 name: subsurface-scattering
 title: Subsurface Scattering
+summary: "light glowing through wax, skin, leaves; thickness-driven"
 category: light-and-depth
 aliases: [sss, skin glow, wax glow, translucency, light through skin, backlit leaves, jade, candle wax, glowing from within, translucent material]
 media: [css, svg, canvas, webgl]

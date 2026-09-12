@@ -1,7 +1,8 @@
 ---
 name: color-roles
 title: Color Roles
-category: ui-foundations
+summary: "palette organized by job; surfaces, accents, semantics"
+category: foundations
 aliases: [color system, palette, accent color, semantic colors, surface colors, brand color, muted, saturation, color tokens, theming]
 media: [css]
 ---

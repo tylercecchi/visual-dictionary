@@ -1,7 +1,8 @@
 ---
 name: border-stroke
 title: Border / Stroke Language
-category: ui-foundations
+summary: "lines vs shadows vs space as separation; focus rings"
+category: foundations
 aliases: [borders, outlines, dividers, rules, hairline, keyline, stroke, separator, inset border, ring, focus ring, border beam, animated border, glowing border, star border]
 media: [css, svg]
 ---

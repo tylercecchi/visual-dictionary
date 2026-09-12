@@ -1,6 +1,7 @@
 ---
 name: time-of-day
 title: Time of Day / Sky Moods
+summary: "golden hour, dusk, night; the hour as a light system"
 category: light-and-depth
 aliases: [day night cycle, sunset, golden hour, dusk, dawn, night mode scene, blue hour, sky gradient, sun position, moonlight]
 media: [css, canvas, webgl]

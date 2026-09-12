@@ -1,7 +1,8 @@
 ---
 name: art-nouveau
 title: Art Nouveau
-category: ui-foundations
+summary: "whiplash curves, vine frames, Mucha halos; grown ornament"
+category: wardrobe
 aliases: [nouveau, mucha style, whiplash curves, organic frames, jugendstil, tiffany style, vine borders, 1900s poster, flowing hair poster, botanical ornament]
 media: [css, svg, canvas]
 ---

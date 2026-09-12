@@ -1,6 +1,7 @@
 ---
 name: origami-fold
 title: Origami / Paper Fold
+summary: "creased facets, unfold choreography, low-poly"
 category: surface-and-material
 aliases: [paper fold, folded paper, crease, unfold animation, low poly, faceted, paper craft, papercraft, fold transition, accordion fold]
 media: [css, svg, canvas, webgl]

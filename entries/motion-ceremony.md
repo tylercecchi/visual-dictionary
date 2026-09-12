@@ -1,6 +1,7 @@
 ---
 name: motion-ceremony
 title: Motion Ceremony
+summary: "duration, easing, and how much celebration interactions get"
 category: motion
 aliases: [animation feel, easing, springy, snappy, bouncy, fluid, transitions, micro-interactions, juice, how much animation]
 media: [css, canvas, webgl]

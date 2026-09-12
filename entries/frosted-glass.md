@@ -1,6 +1,7 @@
 ---
 name: frosted-glass
 title: Frosted Glass
+summary: "backdrop blur panels; glassmorphism"
 category: surface-and-material
 aliases: [glassmorphism, backdrop blur, translucent panel, milky glass, acrylic, vibrancy, blur-behind]
 media: [css, webgl]

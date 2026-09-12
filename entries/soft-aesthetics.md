@@ -1,7 +1,8 @@
 ---
 name: soft-aesthetics
 title: Soft Aesthetics (Cottagecore / Boho / Ethereal)
-category: ui-foundations
+summary: "cottagecore, boho, Japandi, ethereal; the gentleness family"
+category: wardrobe
 aliases: [cottagecore, bohemian, boho, shabby chic, coquette, japandi, ethereal, dreamy, cozy aesthetic, farmhouse, romantic soft, wabi sabi, dried flowers]
 media: [css, svg, canvas]
 ---

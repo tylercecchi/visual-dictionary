@@ -1,6 +1,7 @@
 ---
 name: collage-scatter
 title: Collage / Scatter
+summary: "freeform placement held by balance"
 category: layout
 aliases: [scattered layout, moodboard, polaroids on a table, freeform layout, overlapping cards, pinboard, scrapbook layout, tossed layout, mixed media]
 media: [css, svg, canvas]

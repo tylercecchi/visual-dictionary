@@ -1,6 +1,7 @@
 ---
 name: mesh-gradient
 title: Mesh Gradient / Aurora
+summary: "soft drifting multi-color fields; ambient backgrounds"
 category: surface-and-material
 aliases: [aurora background, blurry blobs, gradient blur, stripe gradient, animated gradient, lava lamp, ambient background, soft gradient field, northern lights, aurora borealis background]
 media: [css, canvas, webgl]

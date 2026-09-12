@@ -1,6 +1,7 @@
 ---
 name: blacklight-uv
 title: Blacklight / UV Fluorescence
+summary: "violet darkness, blazing reactive palette, hidden reveals"
 category: light-and-depth
 aliases: [blacklight, uv light, fluorescent glow, neon reactive, glow in the dark, uv poster, club lighting uv, security ink, highlighter glow, phosphorescent]
 media: [css, svg, canvas, webgl]

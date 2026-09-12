@@ -1,6 +1,7 @@
 ---
 name: profile-header
 title: Profile / Entity Header
+summary: "cover, avatar overlap, stats, tab handoff"
 category: layout
 aliases: [profile page, user profile, cover photo, profile header, entity page, account page, repo page, company page, channel page, bio header]
 media: [css]

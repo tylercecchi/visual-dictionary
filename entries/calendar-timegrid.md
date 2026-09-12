@@ -1,6 +1,7 @@
 ---
 name: calendar-timegrid
 title: Calendar / Time Grid
+summary: "position = time; month, week, agenda, gantt registers"
 category: layout
 aliases: [calendar, month view, week view, day view, agenda, schedule, gantt, timeline chart, time grid, event calendar, booking calendar]
 media: [css]

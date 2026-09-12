@@ -1,6 +1,7 @@
 ---
 name: chalk-blackboard
 title: Chalk / Blackboard
+summary: "dusty ragged strokes on slate; café-menu warmth"
 category: surface-and-material
 aliases: [chalkboard, blackboard, chalk drawing, chalk text, cafe menu board, dusty chalk, slate, whiteboard marker, hand lettered board]
 media: [css, svg, canvas]

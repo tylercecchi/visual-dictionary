@@ -1,7 +1,8 @@
 ---
 name: spacing-density
 title: Spacing / Density
-category: ui-foundations
+summary: "whitespace system; compact vs airy register"
+category: foundations
 aliases: [whitespace, padding, breathing room, cramped, airy, compact, dense, negative space, spacing scale, gutters]
 media: [css]
 ---

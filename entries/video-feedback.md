@@ -1,6 +1,7 @@
 ---
 name: video-feedback
 title: Video Feedback
+summary: "output fed back as input; tunnels, echoes, Droste"
 category: distortion-and-lens
 aliases: [feedback loop, infinity tunnel, camera pointed at screen, droste effect, recursive video, feedback tunnel, echo tunnel, analog feedback]
 media: [canvas, webgl]

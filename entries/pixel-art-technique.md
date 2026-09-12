@@ -1,6 +1,7 @@
 ---
 name: pixel-art-technique
 title: Pixel Art Technique
+summary: "sprite craft; authored low-res, HD-2D staging"
 category: pattern-and-texture
 aliases: [sprites, sprite art, pixel perfect, 8-bit art, 16-bit, dot art, low-res art, pixel animation, sub-pixel animation, hd-2d, retro game style, video game graphics]
 media: [css, canvas, webgl]

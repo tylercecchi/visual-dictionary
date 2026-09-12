@@ -1,6 +1,7 @@
 ---
 name: scroll-choreography
 title: Scroll Choreography
+summary: "reveals, pinning, scrubbing; the scroll-driven system"
 category: motion
 aliases: [scrollytelling, reveal on scroll, scroll animation, scroll-driven, pinned sections, scrub animation, fade in on scroll, apple product page scroll]
 media: [css, canvas, webgl]

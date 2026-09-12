@@ -1,6 +1,7 @@
 ---
 name: masonry
 title: Masonry
+summary: "variable-height columns; the browse waterfall"
 category: layout
 aliases: [pinterest layout, waterfall grid, brick layout, variable height grid, staggered grid, photo wall, cascading grid]
 media: [css]

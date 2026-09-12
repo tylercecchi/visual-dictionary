@@ -1,7 +1,8 @@
 ---
 name: visible-accessibility
 title: Visible Accessibility Design
-category: ui-foundations
+summary: "focus rings, forced colors, reduced motion as design language"
+category: foundations
 aliases: [high contrast mode, focus visible, forced colors, accessible design language, wcag aesthetic, focus ring design, reduced motion design, large text mode]
 media: [css]
 ---

@@ -1,7 +1,8 @@
 ---
 name: memphis-style
 title: Memphis Style
-category: ui-foundations
+summary: "squiggles, confetti geometry, pattern collision"
+category: wardrobe
 aliases: [memphis design, memphis group, 80s geometric, squiggles, confetti shapes, postmodern design, saved by the bell style, terrazzo shapes, playful geometric, 90s patterns]
 media: [css, svg]
 ---

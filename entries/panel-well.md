@@ -1,6 +1,7 @@
 ---
 name: panel-well
 title: Panel / Well
+summary: "non-repeating grouping surfaces; raised, flush, sunken"
 category: layout
 aliases: [panel, well, inset, section container, group box, fieldset, callout box, aside box, sunken area, container styling, code block container]
 media: [css]

@@ -1,6 +1,7 @@
 ---
 name: visual-composition
 title: Visual Composition / Balance
+summary: "weight, balance, negative space; the off-grid organizing law"
 category: layout
 aliases: [composition, visual weight, balance, asymmetric balance, negative space, tension, focal point, rule of thirds, eye path, dynamic layout]
 media: [css, svg, canvas]

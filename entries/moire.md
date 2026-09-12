@@ -1,6 +1,7 @@
 ---
 name: moire
 title: Moiré / Interference
+summary: "overlaid patterns breeding a third; op-art vibration"
 category: pattern-and-texture
 aliases: [moire pattern, interference pattern, op art, line interference, wave interference, ripple interference, vibrating pattern, bridget riley]
 media: [css, svg, canvas, webgl]

@@ -1,6 +1,7 @@
 ---
 name: parallax
 title: Parallax
+summary: "layers moving at different rates; scroll/pointer depth"
 category: motion
 aliases: [depth scrolling, layers moving at different speeds, 2.5d, tilt effect, scroll effects, depth on scroll, mouse parallax]
 media: [css, canvas, webgl]

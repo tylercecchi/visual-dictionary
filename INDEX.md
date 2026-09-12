@@ -5,7 +5,7 @@ unknown; use this page when browsing by family. See `CLAUDE.md` for the
 lookup protocol, `TEMPLATE.md` to add entries, and `LAYOUT.md` for the
 layout variable matrix that fronts the layout category.
 
-**Editorial cluster** (high-traffic; spans two categories): mechanics —
+**Editorial cluster** (high-traffic; spans the editorial and layout categories): mechanics —
 [magazine-spread](entries/magazine-spread.md),
 [text-block-grammar](entries/text-block-grammar.md),
 [type-composition](entries/type-composition.md),
@@ -124,30 +124,64 @@ layout variable matrix that fronts the layout category.
 - [Layout Motion / Reflow Choreography](entries/layout-motion.md) — FLIP, enter/exit, shared morphs; layouts rearranging as matter
 - [Hover Response](entries/hover-response.md) — lift, zoom-within, tilt, magnify; how targets answer pointer attention
 
-## UI foundations
+## Foundations
+The systems every UI has whether designed or not. The diagnosis path for
+vague critique audits against these, and a **custom wardrobe** — the normal case
+for original work — is an explicit dial sheet across them (see CLAUDE.md).
 - [Elevation / Depth](entries/elevation.md) — the shadow/layering system; what floats above what
 - [Shape Language](entries/shape-language.md) — radius, squircles, organic vs angular geometry
 - [Visual Hierarchy](entries/visual-hierarchy.md) — contrast system ranking attention
 - [Color Roles](entries/color-roles.md) — palette organized by job; surfaces, accents, semantics
 - [Typographic Voice](entries/typographic-voice.md) — the personality carried by type
 - [Text-Block Grammar](entries/text-block-grammar.md) — alignment, proximity, and attachment rules between text blocks
+- [Spacing / Density](entries/spacing-density.md) — whitespace system; compact vs airy register
+- [Iconography Style](entries/iconography-style.md) — shared drawing rules for icons; stroke, fill, grid
+- [Border / Stroke Language](entries/border-stroke.md) — lines vs shadows vs space as separation; focus rings
+- [Image Treatment](entries/image-treatment.md) — house rules for photos; crop, tone, mask, scrim
+- [Chart Voice / Data-Ink](entries/chart-voice.md) — dataviz identity; scaffolding restraint, series palettes
+- [Illustration Style](entries/illustration-style.md) — the drawing system for product art; empty states, mascots
+- [Knockout / Masked Typography](entries/knockout-typography.md) — type as window, hole, or path
+- [Grid Systems](entries/grid-systems.md) — columns, baselines, and the broken-grid statement
+- [Visible Accessibility Design](entries/visible-accessibility.md) — focus rings, forced colors, reduced motion as design language
+
+## Components
+Component families: contracts, registers, and the small-matter layer.
 - [Control Language](entries/control-language.md) — buttons, inputs, toggles, sliders as one designed family
 - [Navigation Language](entries/navigation-language.md) — tabs, breadcrumbs, pagination, steppers; wayfinding
 - [Table Design](entries/table-design.md) — dense truth; alignment law, density, responsive collapse
 - [Form Grammar](entries/form-grammar.md) — layout, validation timing, error and success language
 - [Chips, Badges & Avatars](entries/chips-badges-avatars.md) — the small-matter layer; status, tokens, identity
-- [Spacing / Density](entries/spacing-density.md) — whitespace system; compact vs airy register
-- [Iconography Style](entries/iconography-style.md) — shared drawing rules for icons; stroke, fill, grid
-- [Border / Stroke Language](entries/border-stroke.md) — lines vs shadows vs space as separation; focus rings
-- [Skeuomorphism / Neumorphism](entries/skeuomorphism.md) — object-realism as a system; soft emboss, clay
-- [Image Treatment](entries/image-treatment.md) — house rules for photos; crop, tone, mask, scrim
-- [Chart Voice / Data-Ink](entries/chart-voice.md) — dataviz identity; scaffolding restraint, series palettes
-- [Sci-Fi FUI / Holograms](entries/fui.md) — glowing linework, HUDs, hologram materials
 - [Loading & Progress Language](entries/loading-language.md) — spinners, skeletons, and arrival choreography
-- [Illustration Style](entries/illustration-style.md) — the drawing system for product art; empty states, mascots
+- [AI Orb / Presence Indicator](entries/ai-orb.md) — the assistant's animated sphere; idle, listening, thinking, speaking states
+
+## Editorial (structure)
+Document-structure registers — the default structural baseline. Most carry
+their own costume; strip to the deck system when only structure is wanted.
+- [Newspaper Editorial](entries/newspaper-editorial.md) — nameplates, column rules, deck hierarchy; the daily-paper wardrobe
+- [Fashion Editorial](entries/fashion-editorial.md) — didone display, type-photo interleave, luxury air
+- [Book Design](entries/book-design.md) — the page canon, chapter ceremony, running furniture
+- [Academic Paper](entries/academic-paper.md) — journal and Tufte registers; numbering, citations, sidenotes
+- [Menu Design](entries/menu-design.md) — dot leaders, price psychology, register wardrobe
+- [Instructional Manual](entries/instructional-manual.md) — one-action steps, arrow vocabulary, warning ladder
+- [Recipe Editorial](entries/recipe-editorial.md) — the two-zone contract, scaling, cook mode
+
+## Wardrobe
+Aesthetic registers: preset dial bundles over the foundations. Any structure
+can wear any wardrobe. When nothing here fits, don't force the nearest
+costume — build the custom dial sheet and cite the nearest entries as
+calibration references.
+- [Skeuomorphism / Neumorphism](entries/skeuomorphism.md) — object-realism as a system; soft emboss, clay
+- [Sci-Fi FUI / Holograms](entries/fui.md) — glowing linework, HUDs, hologram materials
 - [Brutalism / Anti-Design](entries/brutalism.md) — raw structure and hard shadows; neo and true registers
 - [Cartographic Style](entries/cartographic-style.md) — basemap voice, labels, terrain; map identity
 - [Terminal / Code Aesthetic](entries/terminal-aesthetic.md) — character grids, box-drawing, ANSI palettes
+- [Engineering Datasheet / Industrial Catalog](entries/engineering-datasheet.md) — grotesque prose + mono data, part numbers on everything, exposed state
+- [Civic / Public-Service Design](entries/civic-design.md) — GOV.UK/USWDS register; one typeface, one action color, one question per page
+- [Wayfinding / Transit Signage](entries/wayfinding-signage.md) — panel colors as category, pictograms, arrow grammar, route discs
+- [Broadcast / Sports Graphics](entries/broadcast-graphics.md) — score bugs, lower thirds, tickers; change as the event
+- [Game UI Registers](entries/game-ui-registers.md) — nine-slice frames, slot grids, segmented bars, rarity colors; fantasy to cozy
+- [Paper Ephemera](entries/paper-ephemera.md) — tickets, passes, receipts, stamps; perforations and barcodes as furniture
+- [Outdoor / Expedition](entries/outdoor-expedition.md) — WPA posters, topo contours, patch badges, field-notes kraft
 - [Period Looks](entries/period-looks.md) — Y2K, Frutiger Aero, vaporwave, web 1.0 as recipes
 - [Art Deco](entries/art-deco.md) — sunbursts, stepped forms, gold on black; ruler-built glamour
 - [Art Nouveau](entries/art-nouveau.md) — whiplash curves, vine frames, Mucha halos; grown ornament
@@ -161,17 +195,7 @@ layout variable matrix that fronts the layout category.
 - [Graffiti / Street](entries/graffiti-street.md) — tags to wildstyle; can physics and the wall ecosystem
 - [Surrealism](entries/surrealism.md) — one impossibility, rendered sincerely
 - [Mid-Century Modern](entries/mid-century-modern.md) — cut-paper Bass, kidney shapes, earthed optimism
-- [Newspaper Editorial](entries/newspaper-editorial.md) — nameplates, column rules, deck hierarchy; the daily-paper wardrobe
-- [Fashion Editorial](entries/fashion-editorial.md) — didone display, type-photo interleave, luxury air
-- [Book Design](entries/book-design.md) — the page canon, chapter ceremony, running furniture
-- [Academic Paper](entries/academic-paper.md) — journal and Tufte registers; numbering, citations, sidenotes
-- [Menu Design](entries/menu-design.md) — dot leaders, price psychology, register wardrobe
-- [Instructional Manual](entries/instructional-manual.md) — one-action steps, arrow vocabulary, warning ladder
-- [Recipe Editorial](entries/recipe-editorial.md) — the two-zone contract, scaling, cook mode
-- [Knockout / Masked Typography](entries/knockout-typography.md) — type as window, hole, or path
-- [Grid Systems](entries/grid-systems.md) — columns, baselines, and the broken-grid statement
 - [Seasonal / Event Theming](entries/seasonal-theming.md) — temporary costumes with frozen-rules discipline
-- [Visible Accessibility Design](entries/visible-accessibility.md) — focus rings, forced colors, reduced motion as design language
 
 ## Layout
 Fronted by `LAYOUT.md` (the seven-variable matrix, coordinate table, tension table).
@@ -220,10 +244,11 @@ follow TEMPLATE.md, and index it here. Known gap clusters, in priority
 order (audited 2026-08):
 
 1. **UI component languages** (complete). Remaining candidate:
-   **AI-interface state language**: streaming text, thinking/working
-   states, tool-call traces, approval gates, chat composers — the emerging
-   pattern language of AI-native products (reference libraries:
-   beautifului.dev, transitions.dev's AI Agents tag).
+   **AI-interface state language**: streaming text, tool-call traces,
+   approval gates, chat composers — the emerging pattern language of
+   AI-native products (reference libraries: beautifului.dev,
+   transitions.dev's AI Agents tag). The presence/thinking-state half is
+   now covered by [ai-orb](entries/ai-orb.md) (added 2026-09).
 2. **Paint & drawing media**: watercolor (bleeds, blooms, reserved
    whites), oil/impasto, ink wash/sumi-e, airbrush.
 3. **Art movements & ornament** (complete).

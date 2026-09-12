@@ -1,6 +1,7 @@
 ---
 name: ornament-traditions
 title: Ornament Traditions
+summary: "Islamic geometric, Celtic knot, damask; rule-built pattern systems"
 category: pattern-and-texture
 aliases: [islamic geometric pattern, girih, arabesque, celtic knot, knotwork, damask, filigree, moroccan tile pattern, mandala pattern, decorative border, interlace, tessellation ornament, chinoiserie, acanthus, toile]
 media: [css, svg, canvas, webgl]

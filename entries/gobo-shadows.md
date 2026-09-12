@@ -1,6 +1,7 @@
 ---
 name: gobo-shadows
 title: Gobo / Dappled Light
+summary: "blinds, window frames, foliage shadows projected across scenes"
 category: light-and-depth
 aliases: [window light, blinds shadow, foliage shadow, dappled sunlight, light through leaves, venetian blind light, shadow pattern, gobo lighting, komorebi, lattice shadow]
 media: [css, svg, canvas, webgl]

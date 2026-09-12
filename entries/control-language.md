@@ -1,7 +1,8 @@
 ---
 name: control-language
 title: Control Language
-category: ui-foundations
+summary: "buttons, inputs, toggles, sliders as one designed family"
+category: components
 aliases: [buttons, inputs, form controls, toggle, switch, slider, checkbox, text field, button styles, input styles, button hierarchy, cta design]
 media: [css]
 ---

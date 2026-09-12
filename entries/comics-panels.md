@@ -1,6 +1,7 @@
 ---
 name: comics-panels
 title: Comics / Panel Layout
+summary: "panels, gutters, balloons; layout as time"
 category: layout
 aliases: [comic book layout, comic panels, speech bubbles, speech balloons, manga layout, graphic novel, panel grid, gutters, onomatopoeia, webtoon, sequential art]
 media: [css, svg]

@@ -1,6 +1,7 @@
 ---
 name: blueprint
 title: Blueprint / Technical Drawing
+summary: "cyanotype linework, dimensions, exploded views"
 category: pattern-and-texture
 aliases: [blueprint style, technical drawing, schematic, engineering drawing, cad look, wireframe aesthetic, patent drawing, exploded view, dimension lines, drafting]
 media: [css, svg, canvas, webgl]
@@ -69,4 +70,6 @@ measured, documented" and lends any product an air of precision.
 projection), [[grid-systems]] (visible structure), [[fui]] (the fictional
 descendant), [[border-stroke]] (line-weight grammar), [[terminal-aesthetic]]
 + [[brutalism]] (kin in exposed structure), [[scroll-choreography]]
-(scrubbed explosions), [[print-artifacts]] (reproduction wear).
+(scrubbed explosions), [[print-artifacts]] (reproduction wear),
+[[engineering-datasheet]] (the document to this drawing — shared title
+blocks, part numbers, revision tables).

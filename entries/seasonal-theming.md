@@ -1,7 +1,8 @@
 ---
 name: seasonal-theming
 title: Seasonal / Event Theming
-category: ui-foundations
+summary: "temporary costumes with frozen-rules discipline"
+category: wardrobe
 aliases: [holiday theme, christmas mode, halloween theme, seasonal skin, event skin, easter egg theme, anniversary theme, limited time look]
 media: [css, svg, canvas]
 ---

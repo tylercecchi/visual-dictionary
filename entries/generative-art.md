@@ -1,6 +1,7 @@
 ---
 name: generative-art
 title: Generative Art Styles
+summary: "flow fields, truchet, subdivision, plotter linework"
 category: pattern-and-texture
 aliases: [flow field, truchet, plotter art, pen plotter, creative coding, algorithmic art, generative patterns, perlin flow, recursive subdivision, 10print]
 media: [svg, canvas, webgl]

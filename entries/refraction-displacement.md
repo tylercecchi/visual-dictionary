@@ -1,6 +1,7 @@
 ---
 name: refraction-displacement
 title: Refraction / Displacement
+summary: "content bending behind glass/liquid"
 category: distortion-and-lens
 aliases: [liquid glass, lensing, warp, distortion map, heat haze, looking through water, bending light, displacement map]
 media: [svg, canvas, webgl]

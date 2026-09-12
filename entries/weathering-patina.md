@@ -1,6 +1,7 @@
 ---
 name: weathering-patina
 title: Weathering / Patina
+summary: "rust, verdigris, worn edges; aging as a placement system"
 category: surface-and-material
 aliases: [rust, patina, verdigris, tarnish, aged metal, worn, distressed, oxidized, weathered, corroded, sun faded, worn edges, antique finish]
 media: [css, svg, canvas, webgl]

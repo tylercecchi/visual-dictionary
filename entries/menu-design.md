@@ -1,7 +1,8 @@
 ---
 name: menu-design
 title: Menu Design
-category: ui-foundations
+summary: "dot leaders, price psychology, register wardrobe"
+category: editorial
 aliases: [restaurant menu, cafe menu, menu layout, dot leaders, price list, wine list, food menu, bistro menu, menu typography, prix fixe]
 media: [css]
 ---

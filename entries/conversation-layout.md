@@ -1,6 +1,7 @@
 ---
 name: conversation-layout
 title: Conversation Layout
+summary: "chat; bubbles vs rows, pinned composer, live bottom edge"
 category: layout
 aliases: [chat ui, chat layout, message bubbles, chat interface, messaging app, chat thread, ai chat, chatbot ui, dm layout, composer]
 media: [css]

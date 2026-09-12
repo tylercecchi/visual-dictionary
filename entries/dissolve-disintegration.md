@@ -1,6 +1,7 @@
 ---
 name: dissolve-disintegration
 title: Dissolve / Disintegration
+summary: "noise-eaten edges, burn rims, particle departure"
 category: motion
 aliases: [thanos effect, particle dissolve, disintegrate, burn away, noise reveal, dissolve transition, crumble, sand effect, fade to particles]
 media: [css, svg, canvas, webgl]

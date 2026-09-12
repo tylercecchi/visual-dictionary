@@ -1,6 +1,7 @@
 ---
 name: coach-marks
 title: Coach Marks / Onboarding Overlay
+summary: "spotlight cutouts, tours; the teaching surface"
 category: layout
 aliases: [product tour, onboarding tour, spotlight overlay, feature callout, walkthrough, first-run experience, tooltip tour, feature discovery, whats new popup, guide new users, guided tour, new user onboarding, show users how to use]
 media: [css]

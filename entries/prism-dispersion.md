@@ -1,6 +1,7 @@
 ---
 name: prism-dispersion
 title: Prism / Dispersion
+summary: "light split into ordered spectrum; projected rainbows"
 category: light-and-depth
 aliases: [prism rainbow, spectrum, dispersion, rainbow projection, cd diffraction, spectral colors, light splitting, crystal rainbow, dark side of the moon]
 media: [css, svg, canvas, webgl]

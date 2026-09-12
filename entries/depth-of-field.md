@@ -1,6 +1,7 @@
 ---
 name: depth-of-field
 title: Depth of Field / Tilt-Shift
+summary: "focal-plane sharpness, bokeh, miniature effect"
 category: light-and-depth
 aliases: [dof, bokeh, background blur, tilt-shift, miniature effect, focus, shallow depth, out of focus, lens blur]
 media: [css, canvas, webgl]

@@ -1,6 +1,7 @@
 ---
 name: layout-motion
 title: Layout Motion / Reflow Choreography
+summary: "FLIP, enter/exit, shared morphs; layouts rearranging as matter"
 category: motion
 aliases: [flip animation, auto animate, layout animation, reorder animation, shared layout, list transitions, enter exit animations, items shifting, smooth reflow, magic move]
 media: [css]

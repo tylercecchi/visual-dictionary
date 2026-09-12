@@ -1,6 +1,7 @@
 ---
 name: vignette
 title: Vignette
+summary: "edges darkening to pull focus center"
 category: light-and-depth
 aliases: [edge darkening, spotlight, framed light, faded corners, focus falloff, tunnel]
 media: [css, canvas, webgl]

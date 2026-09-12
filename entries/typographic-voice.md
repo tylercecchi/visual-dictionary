@@ -1,7 +1,8 @@
 ---
 name: typographic-voice
 title: Typographic Voice
-category: ui-foundations
+summary: "the personality carried by type"
+category: foundations
 aliases: [typography, font pairing, type scale, editorial, monospace, serif, tracking, letter spacing, type personality, font choice]
 media: [css]
 ---

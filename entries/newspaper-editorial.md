@@ -1,7 +1,8 @@
 ---
 name: newspaper-editorial
 title: Newspaper Editorial
-category: ui-foundations
+summary: "nameplates, column rules, deck hierarchy; the daily-paper wardrobe"
+category: editorial
 aliases: [newspaper style, broadsheet, masthead, nameplate, front page, tabloid, newsprint layout, column rules, dateline, extra extra, daily paper look]
 media: [css]
 ---

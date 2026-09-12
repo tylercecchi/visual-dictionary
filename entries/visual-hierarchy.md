@@ -1,7 +1,8 @@
 ---
 name: visual-hierarchy
 title: Visual Hierarchy
-category: ui-foundations
+summary: "contrast system ranking attention"
+category: foundations
 aliases: [emphasis, weight, dominance, what pops, focal point, contrast, scannable, flat, everything looks the same]
 media: [css]
 ---

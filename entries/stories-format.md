@@ -1,6 +1,7 @@
 ---
 name: stories-format
 title: Stories Format
+summary: "full-screen sequential media; segments, tap zones, hold-to-pause"
 category: layout
 aliases: [stories, story viewer, instagram stories, reels, full screen cards, tap through, story progress bars, vertical video feed, snap stories]
 media: [css]
