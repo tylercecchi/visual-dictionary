@@ -56,3 +56,4 @@ on pool floors.
 
 [[procedural-noise]] (the family it belongs to), [[liquid-ripple]] (caustics
 sit on water), [[shape-language]] (cellular = an organic shape statement).
+Also [[shatter]] (Voronoi cells as flying shards and crack webs).

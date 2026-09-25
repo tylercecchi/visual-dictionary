@@ -63,3 +63,4 @@ of a fade: matter, not opacity, departs.
 [[glow-bloom]] (the burn rim), [[fire-smoke]] (burning is dissolve + smoke),
 [[page-transitions]] (dissolves as route changes), [[glitch]] (digital
 destruction vs this physical destruction), [[morphing]] (transform vs destroy).
+Also [[shatter]] (the break, not the erosion) and [[liquid-reveal]] (the same threshold machinery arriving instead of leaving).

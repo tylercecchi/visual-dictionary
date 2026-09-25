@@ -61,3 +61,4 @@ point, standing waves across a surface, or blobby shapes that merge and split.
 [[refraction-displacement]] (ripple = animated displacement),
 [[procedural-noise]] (organic wobble source), [[shimmer-sheen]] (light on the
 moving surface), [[shape-language]] (goo is a shape-language statement).
+Also [[liquid-reveal]] (the gooey engine used as a page-reveal mask).

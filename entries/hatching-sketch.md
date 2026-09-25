@@ -60,3 +60,4 @@ grain — and the wobble of a human hand. The rendered-by-a-person look.
 cousin — dots vs strokes), [[film-grain]] (the paper), [[shape-language]]
 (wobble is a shape-language stance), [[typographic-voice]] (pairs with
 handwritten/humanist type).
+Also [[frame-rate-aesthetics]] (the boil as a deliberate frame-rate register).

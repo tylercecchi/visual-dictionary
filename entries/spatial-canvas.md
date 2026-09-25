@@ -96,3 +96,4 @@ grammars), [[cartographic-style]] (zoom semantics, minimaps),
 [[app-shell]] (the frame), [[interaction-feel]] + [[motion-ceremony]]
 (camera physics), [[chart-voice]] (edges/nodes as data), [[grid-systems]]
 (optional snap-to-grid inside the freedom).
+Also [[zoom-through]] (zoom as navigation and semantic zoom on the canvas).

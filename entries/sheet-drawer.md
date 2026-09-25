@@ -99,4 +99,5 @@ header) so users track it.
 (permanent drawers are shell panes), [[elevation]] + [[shape-language]]
 (surface treatment), [[popover-menu]] (the lighter anchored sibling),
 [[motion-ceremony]] (slide timing), [[visible-accessibility]] (gesture
-equivalents).
+equivalents), [[genie-warp]] (a dismissed sheet funneling into its
+trigger).

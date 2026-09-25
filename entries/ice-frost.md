@@ -74,3 +74,4 @@ sibling: snow falls, frost *grows*), [[duotone-gradient-map]] (the cold
 grade), [[dissolve-disintegration]] (accretion machinery reversed),
 [[caustics]] (light through thick ice), [[seasonal-theming]] (the December
 deployment).
+Also [[shatter]] (when the cracked surface finally breaks).

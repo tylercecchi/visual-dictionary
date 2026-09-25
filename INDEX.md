@@ -112,6 +112,11 @@ layout variable matrix that fronts the layout category.
 - [Motion Blur / Trails](entries/motion-blur-trails.md) — smears, afterimages, light-painting streaks
 - [Fire / Smoke / Fluid](entries/fire-smoke.md) — flames, fog, and fluid simulation registers
 - [Morphing / Shape Interpolation](entries/morphing.md) — one shape becoming another; shared-element continuity
+- [Genie / Warp Transitions](entries/genie-warp.md) — non-rigid transitions; an element funnels, slurps, or stretches toward a target
+- [Liquid / Ink Reveals](entries/liquid-reveal.md) — content arriving as a pour, bleed, or wave; the reveal edge behaves like fluid
+- [Shatter / Break-Apart](entries/shatter.md) — an element cracks into shards or tiles that fly, fall, or tumble away
+- [Frame-Rate Aesthetics / Stop-Motion](entries/frame-rate-aesthetics.md) — deliberately stepped motion; on twos, boil, sprite cycles, the hand-animated feel
+- [Zoom-Through / Portal Transitions](entries/zoom-through.md) — the camera dives into an element; a thumbnail becomes the page, a scene nests inside a scene
 - [Cursor / Pointer Effects](entries/cursor-effects.md) — followers, magnetism, spotlights, trails
 - [Page Transitions](entries/page-transitions.md) — navigation choreography; view transitions, wipes, shared elements
 - [Dissolve / Disintegration](entries/dissolve-disintegration.md) — noise-eaten edges, burn rims, particle departure
@@ -254,6 +259,7 @@ order (audited 2026-08):
 3. **Art movements & ornament** (complete).
 4. **Game-feel & time aesthetics**: impact feedback (screen shake,
    hit-stop, flash, shockwave), camera language (focal length, angle,
-   movement grammar), frame-rate aesthetics (stop-motion, on-twos).
+   movement grammar). Frame-rate aesthetics now covered by
+   [frame-rate-aesthetics](entries/frame-rate-aesthetics.md) (2026-09).
 5. **Niche materials & registers**: voxel/LEGO, wax/candle, foam/bubbles,
    graffiti/street lettering, rope/knots, tattoo linework, smoke rings.

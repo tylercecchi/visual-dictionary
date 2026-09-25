@@ -94,3 +94,4 @@ layout's own), [[motion-ceremony]] (timing law), [[page-transitions]]
 (the between-pages sibling), [[animated-numbers]] (the same
 change-narration idea for values), [[visible-accessibility]] (reduced-
 motion highlight).
+Also [[zoom-through]] (FLIP scale as the thumbnail-becomes-page move).

@@ -64,4 +64,6 @@ navigation as choreography.
 [[morphing]] (element-level continuity; this entry is the system),
 [[motion-ceremony]] (duration and budget law), [[progressive-blur]] +
 [[gradients]] (soft edges during moves), [[glitch]] (a cut *as* a statement),
-[[parallax]] (depth grammar during slides).
+[[parallax]] (depth grammar during slides), [[genie-warp]] (the non-rigid
+exit for close/minimize/send moments).
+Also [[zoom-through]] (navigation as a camera dive; the shared-element zoom).

@@ -71,4 +71,6 @@ retargeting, a logo dissolving into a menu. Continuity where a cut would do.
 [[motion-ceremony]] (morphs are ceremony spent on continuity),
 [[liquid-ripple]] (gooey handles topology), [[sdf-rendering]] (the
 correspondence-free engine), [[shape-language]] (morph style must match the
-geometry's personality), [[glitch]] (the anti-morph: cut violently instead).
+geometry's personality), [[glitch]] (the anti-morph: cut violently instead),
+[[genie-warp]] (warping one shape toward a point rather than into another
+shape).

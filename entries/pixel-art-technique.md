@@ -65,3 +65,4 @@ degrades high-res content): this is art authored at low resolution.
 version), [[crt-scanlines]] (period-correct display), [[color-roles]]
 (hue-shifted ramps), [[scene-staging]] + [[glow-bloom]] (HD-2D),
 [[motion-ceremony]] (held-frame timing is its own ceremony).
+Also [[frame-rate-aesthetics]] (sprite cycles and stepped timing).
