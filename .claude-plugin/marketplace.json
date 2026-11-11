@@ -1,0 +1,12 @@
+{
+  "name": "visual-dictionary",
+  "owner": { "name": "Tyler Cecchi", "url": "https://github.com/tylercecchi" },
+  "metadata": { "description": "UX/UI design-quality dictionary for coding agents" },
+  "plugins": [
+    {
+      "name": "visual-dictionary",
+      "description": "MCP server + router skill: resolve vague design and interaction language to dials, contracts, behavior rules, and vetted implementations",
+      "source": "./"
+    }
+  ]
+}

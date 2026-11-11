@@ -4,7 +4,7 @@
   "description": "UX/UI design-quality dictionary as an MCP server: ~222 entries mapping vague design language to canonical terms, dials, contracts, and implementation paths. Structure × wardrobe composition model.",
   "type": "module",
   "bin": { "visual-dictionary-mcp": "server.mjs" },
-  "files": ["server.mjs", "lib", "entries", "INDEX.md", "CLAUDE.md", "LAYOUT.md", "LIBRARIES.md", "TEMPLATE.md", "README.md"],
+  "files": ["server.mjs", "lib", "entries", "INDEX.md", "CLAUDE.md", "LAYOUT.md", "LIBRARIES.md", "REFERENCES.md", "TEMPLATE.md", "README.md", ".claude", ".claude-plugin"],
   "scripts": {
     "lint": "node tools/lint.mjs",
     "audit": "node tools/findability-audit.mjs",

@@ -100,18 +100,31 @@ const server = new McpServer(
   { name: "visual-dictionary", version: "0.2.0" },
   {
     instructions:
-      `A UX/UI design-quality dictionary: ${entries().length} entries mapping vague design ` +
-      "language to canonical terms, tunable dials, contracts, and vetted " +
-      "implementation paths. Fundamental model: compose every page as two " +
-      "independent picks — STRUCTURE (layout/editorial entry) x WARDROBE (aesthetic " +
-      "register, or a custom dial sheet over the foundation entries when no named " +
-      "wardrobe fits) — then fine-tune dials. Start with protocol(); resolve() routes a " +
-      "designer's phrase (one call per axis for structure-x-wardrobe briefs) and flags " +
-      "close calls — present those to the designer (the judgment split: the dictionary " +
-      "presents, the designer decides). compose() assembles the two picks; " +
-      "libraries_for() finds registered implementations and knowledge sources for an entry, " +
-      "each with its licence, paywall, and stack-rule terms — apply those before installing or " +
-      "drawing from a source; references() serves the knowledge sources' usage terms.",
+      `A UX/UI design-quality dictionary covering how interfaces LOOK and BEHAVE: ${entries().length} entries ` +
+      "mapping vague design language to canonical terms, tunable dials, layout/surface contracts, behavior " +
+      "rules, and vetted implementation paths with their licence and stack terms.\n\n" +
+      "USE IT WHENEVER the work is product interface design (screens, components, prototypes; not standalone " +
+      "print or logo work), and especially when the user: critiques vaguely ('feels off', 'too busy', 'looks " +
+      "cheap', 'the button gets lost', 'needs polish', 'feels clunky', 'the animation feels sluggish'); wants a " +
+      "feel ('premium', 'vintage', 'frosted', 'calm dev-tool look'); names an editorial register ('like a " +
+      "magazine', 'recipe card'), a layout or surface ('bento this', 'bottom sheet', 'dashboard'), or an effect " +
+      "or transition by vibe; or describes a behavior ('undo should be forgiving', 'the submenu closes when I " +
+      "move to it', 'drag and drop feels broken', 'add slash commands', 'infinite scroll', 'show who else is " +
+      "editing', 'voice mode', 'the AI should ask before deleting'). Plain UI-building ('build the settings " +
+      "page') also applies: the foundation entries set the quality floor.\n\n" +
+      "HOW: (1) resolve(phrase), one call per axis for 'X but Y' briefs; on a CLOSE CALL present the candidates " +
+      "and let the designer pick. Vague visual critique: diagnose against the foundation entries " +
+      "(visual-hierarchy, spacing-density, text-block-grammar, color-roles, elevation, motion-ceremony); vague " +
+      "behavior critique: against interaction-principles. (2) get_entry and read all of it: behavior entries " +
+      "have 'When not to use' (check it first); layout/surface entries have a content contract (check it " +
+      "against the real content; layout_system() for the matrix). (3) Inventory the project's stack, then take " +
+      "the cheapest technique that works within it. (4) libraries_for(entry) returns implementations and " +
+      "knowledge sources WITH TERMS: apply them. Structural additions (three.js, native models, new input " +
+      "paradigms) need user confirmation; 'no redistribution' means use and link, never copy; 'cite and link " +
+      "only' means read and cite; surface paywalls, including ship-time ones. (5) Build to explicit dial " +
+      "values with reduced-motion and keyboard paths, and report back in dial vocabulary so iteration stays " +
+      "precise. Page composition is STRUCTURE (layout/editorial) x WARDROBE (aesthetic register, or a custom " +
+      "dial sheet over the foundations); compose() assembles them. protocol() has the full rules.",
   }
 );
 

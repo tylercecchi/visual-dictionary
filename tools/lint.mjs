@@ -65,6 +65,16 @@ for (const [doc, re] of countDocs) {
 const tmpl = read("TEMPLATE.md").match(/category:\s*([^\n]+)/)?.[1] ?? "";
 for (const c of CATEGORIES) if (!tmpl.includes(c)) err(`TEMPLATE.md: category list missing '${c}'`);
 
+// Plugin manifest: version tracks package.json; MCP server and skill paths exist.
+if (existsSync(join(ROOT, ".claude-plugin", "plugin.json"))) {
+  const plug = JSON.parse(read(join(".claude-plugin", "plugin.json")));
+  const pkg = JSON.parse(read("package.json"));
+  if (plug.version !== pkg.version) err(`.claude-plugin/plugin.json: version ${plug.version} != package.json ${pkg.version}`);
+  if (!plug.mcpServers?.["visual-dictionary"]) err(".claude-plugin/plugin.json: missing the visual-dictionary MCP server");
+  for (const s of [].concat(plug.skills ?? [])) if (!existsSync(join(ROOT, s))) err(`.claude-plugin/plugin.json: skills path ${s} not found`);
+  for (const f of ["REFERENCES.md", "LIBRARIES.md", "LAYOUT.md", "INDEX.md"]) if (!pkg.files?.includes(f)) err(`package.json: "files" omits ${f}; the npx install would ship without it`);
+}
+
 // Registry staleness: registered/verified dates older than 6 months.
 const lib = read("LIBRARIES.md");
 const now = new Date();

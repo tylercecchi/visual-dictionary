@@ -26,7 +26,22 @@ The dictionary presents options; the designer decides.
 
 ## Install
 
-**MCP — one command, no clone, no npm (recommended).** Works in Claude
+**Claude Code plugin — MCP server + router skill in one install (recommended for Claude Code).**
+
+```sh
+/plugin marketplace add tylercecchi/visual-dictionary
+/plugin install visual-dictionary@visual-dictionary
+```
+
+The plugin bundles the MCP server and the skill that tells agents *when*
+to reach for the dictionary. On first start the server installs its two
+dependencies into the plugin folder (a few seconds, needs `npm`);
+later starts are instant. Bump `version` in both `package.json` and
+`.claude-plugin/plugin.json` to ship an update (lint checks they match).
+
+**MCP only — any client, one command, no clone (Claude Desktop, Cursor, others).** The server's
+instructions carry the routing triggers, so it works on its own; the
+skill is an optional extra (see below). Works in Claude
 Code, Claude Desktop, Cursor, or any MCP client; requires only Node ≥18.
 
 ```sh
