@@ -45,6 +45,7 @@ smooth ramps.
 - `postprocessing` / three.js community dither passes exist — verify currency
 - Obra Dinn developer (Lucas Pope) devlogs — canonical reference on making
   dithering stable under motion (the hard problem)
+- design.how Vault — [Spray burst](https://github.com/arla6ka/design.how/tree/main/vault/spray-burst) (WebGL shader, dithered spray edges; MIT; see LIBRARIES.md)
 
 ## Search queries
 

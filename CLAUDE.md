@@ -1,8 +1,12 @@
 # Visual Attribute Dictionary
 
-This repo is a dictionary of visual attributes — the named looks, effects, and
-qualities of UI and graphics — structured so an agent can translate a human
-description of a look into the right technique and library. **Its domain is
+This repo is a dictionary of visual attributes and interaction behaviors —
+the named looks, effects, and qualities of UI and graphics, and the
+mechanisms that make interfaces act (undo windows, drag-and-drop, hover
+intent, inline commands) — structured so an agent can translate a human
+description of a look *or a behavior* into the right technique and library.
+Looks and behaviors are one subject: a toast is a surface and a commit
+delay, a drop zone is a highlight and a contract. **Its domain is
 UX/UI design**: graphic-design entries (movements, editorial registers,
 wardrobes) serve as aesthetic and structural vocabulary *for product
 interfaces*, not as a standalone print/poster/branding toolkit. Its fundamental
@@ -41,8 +45,13 @@ split at the edges", "old-print texture", "soft light leaking off the button"):
    reference implementations) but these go stale. Also check `LIBRARIES.md` —
    the registry of cross-cutting libraries that implement many entries at
    once (e.g. Canvas UI's HTML-in-canvas effect components); the MCP
-   `libraries_for(entry)` tool returns just the registry rows that cover
-   one entry. Run the entry's
+   `libraries_for(entry)` tool returns the registry rows that cover
+   one entry *with each source's Terms* (install model, stack-rule class,
+   licence, paywall, cautions) and any knowledge sources from
+   `REFERENCES.md` (`references(entry)` returns those alone). Apply the
+   Terms before installing or drawing from a source: a licence that
+   forbids redistribution means link, never copy; a ship-time paywall is
+   surfaced to the user before they build on it. Run the entry's
    **search queries** against current sources (npm, GitHub, Shadertoy) and
    verify the library is maintained and fits the project's stack before
    recommending it.
@@ -76,6 +85,19 @@ the designer pick — never silently commit to one reading of an
 ambiguous brief. Same for taste-level dials: propose a setting, but
 frame it as the starting point of the iteration loop, not the verdict.
 
+
+For **behavior requests** ("undo should be forgiving", "the submenu
+closes when I move to it", "drag feels broken", "add slash commands"),
+resolve the same way: `behavior` entries carry *What it does*, *When to
+use*, and *When not to use* before the dials, so check the when-not list
+against the user's situation before building. Most behaviors have a
+visible face in another category (the undo window is a
+[[toast-notification]]; drop feedback is [[elevation]] plus a highlight),
+so read both halves. Diagnosing a behavior complaint with no named
+mechanism ("it feels clunky", "users keep making mistakes") goes through
+[[interaction-principles]] the way vague visual critique goes through
+the foundations. For behavior with no entry, consult `REFERENCES.md`:
+Interface Lineage may be read and cited, never copied.
 
 For **layout requests** ("bento this", "make it a dashboard", "more
 organic arrangement"), read `LAYOUT.md` first: resolve the request to a
@@ -130,9 +152,10 @@ reaches for. So when nothing fits:
 - `TEMPLATE.md` — the entry format. New entries must follow it.
 - `LAYOUT.md` — the layout matrix and interaction-surface contracts.
 - `LIBRARIES.md` — registry of cross-cutting libraries spanning many entries.
+- `REFERENCES.md` — knowledge sources consulted and cited, with their usage terms.
 - `entries/` — one file per attribute, flat; category lives in frontmatter
-  (`foundations`, `components`, `editorial`, `wardrobe`, `layout`, and the
-  effect/material categories).
+  (`foundations`, `components`, `behavior`, `editorial`, `wardrobe`,
+  `layout`, and the effect/material categories).
 - `lib/resolve.mjs` — the one resolver (parsing + scoring + synonym rules)
   shared by the MCP server, the audit, and the static site.
 - `tools/` — `lint.mjs` (structure, links, counts, registry staleness),

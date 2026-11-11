@@ -67,6 +67,7 @@ layout variable matrix that fronts the layout category.
 - [Rubber / Soft-Touch](entries/rubber-soft-touch.md) — matte elastomers; molded forms, damped squish
 - [Liquid Metal](entries/liquid-metal.md) — mercury blobs, chrome fluid, ferrofluid; metal that flows
 - [Ceramic / Glaze](entries/ceramic-glaze.md) — body-under-film optics; pooling, crackle, kintsugi
+- [Relief / Emboss / Deboss](entries/relief-emboss.md) — shapes pressed into or raised from a surface, lit along their bevel
 
 ## Distortion & lens
 - [Chromatic Aberration](entries/chromatic-aberration.md) — RGB channels splitting at edges
@@ -76,6 +77,7 @@ layout variable matrix that fronts the layout category.
 - [Video Feedback](entries/video-feedback.md) — output fed back as input; tunnels, echoes, Droste
 - [Forced Perspective / Anamorphosis](entries/forced-perspective.md) — perspective as a trick; impossible objects, trompe-l'œil
 - [Lenticular / Holographic Print](entries/lenticular.md) — tilt-flip frames, prismatic foil, depth cards
+- [Temporal Displacement (Rolling Shutter / Slit-Scan)](entries/temporal-displacement.md) — each slice of the frame shows a different moment; motion shears, stillness stays
 
 ## Color & tone
 - [Dithering](entries/dithering.md) — patterned pixels faking color depth; retro/1-bit
@@ -103,6 +105,7 @@ layout variable matrix that fronts the layout category.
 - [Ornament Traditions](entries/ornament-traditions.md) — Islamic geometric, Celtic knot, damask; rule-built pattern systems
 - [Woodcut / Linocut](entries/woodcut-linocut.md) — carved-block printmaking; white cuts out of black
 - [Circuit Board / PCB Traces](entries/pcb-circuit.md) — routed traces, vias, pulse choreography
+- [Ransom-Note Typography](entries/ransom-note-type.md) — every letter a different cut-out scrap; mismatched faces, papers, tilts
 
 ## Motion
 - [Shimmer / Sheen](entries/shimmer-sheen.md) — light band sweeping a surface; glints, loading shimmer
@@ -128,6 +131,8 @@ layout variable matrix that fronts the layout category.
 - [Animated Numbers](entries/animated-numbers.md) — count-ups, odometer rolls; digits as quantities in motion
 - [Layout Motion / Reflow Choreography](entries/layout-motion.md) — FLIP, enter/exit, shared morphs; layouts rearranging as matter
 - [Hover Response](entries/hover-response.md) — lift, zoom-within, tilt, magnify; how targets answer pointer attention
+- [Squash and Stretch](entries/squash-and-stretch.md) — deform along the motion axis, keep the volume; elastic, alive, cartoony
+- [UI State Transitions](entries/ui-state-transitions.md) — per-element transition grammar: open/close asymmetry, swaps, small moves, token scale
 
 ## Foundations
 The systems every UI has whether designed or not. The diagnosis path for
@@ -158,6 +163,29 @@ Component families: contracts, registers, and the small-matter layer.
 - [Chips, Badges & Avatars](entries/chips-badges-avatars.md) — the small-matter layer; status, tokens, identity
 - [Loading & Progress Language](entries/loading-language.md) — spinners, skeletons, and arrival choreography
 - [AI Orb / Presence Indicator](entries/ai-orb.md) — the assistant's animated sphere; idle, listening, thinking, speaking states
+
+## Behavior
+Interaction patterns — what a mechanism does, when to use it, when not. Each has a visible face elsewhere (the undo window is a toast; drop feedback is elevation plus highlight). Physics and hover feel live under Motion ([interaction-feel](entries/interaction-feel.md), [hover-response](entries/hover-response.md)). Cited reference: `REFERENCES.md`.
+- [Undo / Recovery](entries/undo-recovery.md) — undo windows, history stacks, soft delete, nondestructive edits; forgiveness over warnings
+- [Drag and Drop](entries/drag-and-drop.md) — carry, drop-target feedback, drop-to-invoke, handle reorder, auto-scroll, keyboard path
+- [Snap and Guides](entries/snap-and-guides.md) — snap-to-grid, smart alignment guides, magnetic edges, constrained placement
+- [Selection Model](entries/selection-model.md) — click/shift/cmd selection, marquee and lasso, select-then-act, bulk action bars
+- [Continuous Controls](entries/continuous-controls.md) — sliders, range sliders, XY pads, knobs, number scrubbing, fine-adjust modifiers
+- [Pointer Intent](entries/pointer-intent.md) — hover delays, submenu safe triangles, hover-to-reveal, forgiving hit targets, quasimodes
+- [Touch Gestures](entries/touch-gestures.md) — swipe-as-command, pull thresholds, long-press, pinch; gesture grammar
+- [Inline Commands & Shortcuts](entries/inline-commands.md) — slash commands, @mentions, #tags, keyboard shortcuts; typed accelerators
+- [Autocomplete / Typeahead](entries/autocomplete-typeahead.md) — suggestions as you type; combobox, ghost text, fuzzy match, empty states
+- [Live Feedback](entries/live-feedback.md) — inline validation timing, live preview, parse echo, optimistic UI with rollback
+- [Status Signals](entries/status-signals.md) — unsaved dots, sync state, unread badges, gauges, inboxes; persistent state at a glance
+- [Interaction Principles](entries/interaction-principles.md) — Fitts, Hick, memory limits, response-time bands, modes, undo; checks for UX
+- [Presence & Collaboration](entries/presence-collaboration.md) — live cursors, facepiles, follow mode, comment threads, sync and conflict state
+- [Feed Pagination](entries/feed-pagination.md) — infinite scroll vs pages vs load-more; caught-up endings, new-items pill
+- [Overview ↔ Detail Navigation](entries/overview-navigation.md) — semantic zoom, A–Z scrubbers, Miller columns, filter-in-place, priority+ nav
+- [Panes & Tiling](entries/panes-and-tiling.md) — split panes, draggable dividers, docking, collapsible sidebars, snap layouts
+- [AI Interaction Patterns](entries/ai-interaction.md) — prompt-first home, streaming, artifacts beside chat, inline AI edit, tool approval
+- [Block Editor](entries/block-editor.md) — notion-style blocks, slash menu, zoomable outlines, live embeds, views as queries
+- [Spatial Input](entries/spatial-input.md) — gaze-and-pinch, XR pointing, world-anchored vs head-locked UI, rotary controls
+- [Voice Interaction](entries/voice-interaction.md) — listen, think, speak states; push-to-talk vs open mic, interruption, transcript echo
 
 ## Editorial (structure)
 Document-structure registers — the default structural baseline. Most carry
@@ -201,6 +229,10 @@ calibration references.
 - [Surrealism](entries/surrealism.md) — one impossibility, rendered sincerely
 - [Mid-Century Modern](entries/mid-century-modern.md) — cut-paper Bass, kidney shapes, earthed optimism
 - [Seasonal / Event Theming](entries/seasonal-theming.md) — temporary costumes with frozen-rules discipline
+- [Calm Console (Cold Ink, Warm Is Trouble)](entries/calm-console.md) — cold, quiet agent/dev-tool console; hue names a kind, warm means trouble
+- [Mono Infra (Ruled, Square, One Yellow Action)](entries/mono-infra.md) — sharp ruled infra/data tool: mono caps labels, zero radius, one yellow action
+- [Warm Consumer (One Glowing Action)](entries/warm-consumer.md) — warm, light consumer/fintech app: warm greys, pill controls, one glowing lime action
+- [Pressable Glass (Glass Only on What You Press)](entries/pressable-glass.md) — compact ink-and-paper AI product; glass only on the one action you press
 
 ## Layout
 Fronted by `LAYOUT.md` (the seven-variable matrix, coordinate table, tension table).
@@ -242,6 +274,7 @@ Interaction surfaces (see LAYOUT.md's surface contract table):
 - [Command Palette](entries/command-palette.md) — ⌘K; keyboard-first, query-driven action surface
 - [Coach Marks / Onboarding Overlay](entries/coach-marks.md) — spotlight cutouts, tours; the teaching surface
 - [Media Player Chrome](entries/media-chrome.md) — controls over media; auto-hide, scrubbers, mini-players
+- [Image Cloud (3D Photo Gallery)](entries/image-cloud.md) — images floating on a sphere or depth field; drift, spin, click to focus
 
 ## Candidate future entries
 Grow on demand: when a request names a look with no entry, research it,

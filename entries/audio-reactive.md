@@ -47,6 +47,7 @@ dictionary with its dials wired to music. The visual admits it's listening.
 - MDN Web Audio visualization guide — the AnalyserNode canon
 - Shadertoy audio-input shaders (iChannel audio) — mapping ideas to steal
 - butterchurn (Milkdrop port) — the maximalist reference/embeddable
+- design.how Vault — [Voice wave](https://github.com/arla6ka/design.how/tree/main/vault/voice-wave) (WebGL2 shader + WebAudio; MIT; see LIBRARIES.md)
 
 ## Search queries
 

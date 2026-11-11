@@ -46,6 +46,7 @@ oil-slick, holographic-foil rainbows rather than a single fixed hue.
 - The pokemon-cards-css project (GitHub) — the canonical CSS holo-foil
   reference, worth reading even for non-card UI
 - Shadertoy: search "thin film interference", "iridescent"
+- design.how Vault — [Holo](https://github.com/arla6ka/design.how/tree/main/vault/holo) (CSS 3D holographic foil card; MIT; see LIBRARIES.md)
 
 ## Search queries
 

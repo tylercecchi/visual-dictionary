@@ -17,6 +17,7 @@ const names = new Set(entries.map((e) => e.name));
 
 const REQUIRED = ["You know it when you see", "Dials", "Techniques", "Search queries", "Related"];
 const LAYOUT_REQUIRED = ["Content contract", "Collapse behavior"];
+const BEHAVIOR_REQUIRED = ["What it does", "When to use", "When not to use"];
 // Layout *archetypes* (rows of LAYOUT.md's coordinate table) must carry the contract sections;
 // layout-category principles (visual-composition) need not.
 const archetypes = new Set([...(read("LAYOUT.md").split("## Interaction surfaces")[0].matchAll(/^\| \[\[([a-z0-9-]+)\]\]/gm))].map((m) => m[1]));
@@ -32,11 +33,12 @@ for (const e of entries) {
   for (const h of REQUIRED) if (!(h in e.sections)) err(`${e.name}: missing section '## ${h}'`);
   if (!("Starting points" in e.sections)) warn(`${e.name}: no '## Starting points' (optional, but entries with libraries should have it)`);
   if (e.category === "layout" && archetypes.has(e.name)) for (const h of LAYOUT_REQUIRED) if (!(h in e.sections)) err(`${e.name}: layout archetype missing '## ${h}'`);
+  if (e.category === "behavior") for (const h of BEHAVIOR_REQUIRED) if (!(h in e.sections)) err(`${e.name}: behavior entry missing '## ${h}'`);
   for (const l of e.links) if (!names.has(l)) err(`${e.name}: dangling link [[${l}]]`);
 }
 
 // Wiki-links in the doc files.
-for (const doc of ["INDEX.md", "LAYOUT.md", "LIBRARIES.md", "CLAUDE.md"]) {
+for (const doc of ["INDEX.md", "LAYOUT.md", "LIBRARIES.md", "REFERENCES.md", "CLAUDE.md"]) {
   const t = read(doc);
   for (const m of t.matchAll(/\[\[([a-z0-9-]+)\]\]/g)) if (!names.has(m[1])) err(`${doc}: dangling link [[${m[1]}]]`);
   for (const m of t.matchAll(/\(entries\/([a-z0-9-]+)\.md\)/g)) if (!names.has(m[1])) err(`${doc}: link to missing entries/${m[1]}.md`);
@@ -48,7 +50,11 @@ for (const e of entries) if (!index.includes(`(entries/${e.name}.md)`)) err(`IND
 
 // Entry-count drift in README / package.json.
 const n = entries.length;
-for (const [doc, re] of [["README.md", /~(\d+) entries/], ["package.json", /~(\d+) entries/]]) {
+// The router skill lives one level up (repo-root .claude/), outside this package.
+const SKILL = join("..", ".claude", "skills", "visual-dictionary", "SKILL.md");
+const countDocs = [["README.md", /~(\d+) entries/], ["package.json", /~(\d+) entries/]];
+if (existsSync(join(ROOT, SKILL))) countDocs.push([SKILL, /~(\d+)-entry/]);
+for (const [doc, re] of countDocs) {
   const m = read(doc).match(re);
   if (!m) warn(`${doc}: no '~N entries' count found`);
   else if (Number(m[1]) !== n) err(`${doc}: says ~${m[1]} entries, repo has ${n}`);

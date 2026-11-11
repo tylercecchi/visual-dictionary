@@ -14,7 +14,7 @@ const expect = (cond, msg) => { if (!cond) throw new Error(msg); };
 
 const tools = (await client.listTools()).tools.map((t) => t.name);
 console.log("tools:", tools.join(", "));
-for (const t of ["resolve", "get_entry", "browse", "compose", "libraries_for", "protocol", "layout_system", "libraries"]) expect(tools.includes(t), `missing tool ${t}`);
+for (const t of ["resolve", "get_entry", "browse", "compose", "libraries_for", "references", "protocol", "layout_system", "libraries"]) expect(tools.includes(t), `missing tool ${t}`);
 
 const r1 = await call("resolve", { query: "milky see-through panel" });
 expect(r1.startsWith("frosted-glass"), "resolve: frosted-glass should be first\n" + r1);
@@ -49,7 +49,19 @@ console.log("compose: named + custom ok");
 
 const r7 = await call("libraries_for", { entry: "ai-orb" });
 expect(r7.includes("Libraries.dev") || r7.includes("thinking-orbs"), "libraries_for('ai-orb') should find the registry rows\n" + r7);
-console.log("libraries_for: ok");
+const r7b = await call("libraries_for", { entry: "spatial-input" });
+expect(r7b.includes("Terms:") && /commercial release/i.test(r7b), "libraries_for('spatial-input') should carry the Models licence terms\n" + r7b);
+const r7c = await call("libraries_for", { entry: "toast-notification" });
+expect(r7c.includes("transitions.dev") && /redistribute/i.test(r7c), "libraries_for('toast-notification') should carry transitions.dev's no-redistribution term\n" + r7c.slice(0, 600));
+const r7d = await call("libraries_for", { entry: "undo-recovery" });
+expect(r7d.includes("Interface Lineage") && /cite and link/i.test(r7d), "libraries_for('undo-recovery') should surface Interface Lineage with its usage terms\n" + r7d);
+console.log("libraries_for: ok (rows + terms + knowledge sources)");
+
+const r7e = await call("references", { entry: "pointer-intent" });
+expect(r7e.includes("Interface Lineage") && /never copy/i.test(r7e), "references('pointer-intent') should return Interface Lineage terms\n" + r7e);
+const r7f = await call("get_entry", { name: "liquid-metal" });
+expect(r7f.includes("Coverage:") && r7f.includes("libraries_for('liquid-metal')"), "get_entry should end with a coverage pointer");
+console.log("references + get_entry coverage footer: ok");
 
 const r8 = await call("layout_system", {});
 expect(r8.includes("surface contract") && r8.includes("Structure × wardrobe tensions"), "LAYOUT missing sections");

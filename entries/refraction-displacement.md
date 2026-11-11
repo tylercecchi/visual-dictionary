@@ -48,6 +48,7 @@ light.
 - Shadertoy: search "refraction", "lens distortion"
 - Apple's "Liquid Glass" (2025 design language) — reference for the
   UI-panel-that-refracts look; community shader recreations exist on GitHub
+- design.how Vault — [Glass type](https://github.com/arla6ka/design.how/tree/main/vault/glass-type) (WebGL shader, rippled lens over type; MIT; see LIBRARIES.md)
 
 ## Search queries
 

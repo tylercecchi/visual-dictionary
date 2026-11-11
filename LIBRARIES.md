@@ -275,6 +275,191 @@ MCP server or `sitemap.xml` to enumerate the catalog.
 
 ---
 
+## design.how Vault — design.how/vault (registered 2026-11)
+
+**What:** 72 single-effect "visuals" by Arlan Marat (repo
+`arla6ka/design.how`, folder `vault/`), **MIT licensed**. Each visual is
+its own installable **agent skill**: a brief of what makes the effect,
+a list of **FIXED** steps (the load-bearing technique — keep them), a
+table of **VARIABLE** values (the safe knobs), a **React + TypeScript**
+template in `skill/assets/template/`, a `references/perf.md`, and a
+`scripts/check.mjs` that re-checks the copied code against the
+performance contract. The vault is heavy on moving type (about 30 of
+72); the rest is shader fields, print/pixel/glitch looks, materials and
+a few interface pieces. Live previews at `design.how/vault/<slug>`.
+
+**Install model:** `npx skills add https://design.how/vault/<slug>`
+(or copy the folder from GitHub) — installs the skill; the agent then
+copies the template into the project (vendored source you own, no npm
+package). React/TS only; the engines are framework-light, so porting
+off React means rewriting the card wrapper, not the effect.
+
+**Stack-rule class — per medium:**
+- **CSS/DOM, SVG, Canvas 2D, video (50 of 72): trivial** — no
+  dependencies beyond React; dependency-free engines.
+- **Raw WebGL / WebGL2 (19): trivial-to-moderate** — hand-written
+  fragment shaders on one full-screen quad/triangle, **no three.js,
+  no OGL/regl**; the cost is a WebGL code path and its no-WebGL
+  fallback, not a dependency.
+- **three.js (3: crystal-cluster, image-sphere, sandbox): check** —
+  these import three.js; in a project without it this is the
+  structural three.js decision (surface it to the user, as with
+  ThreeUI), and the sandbox/crystal-cluster shaders port to raw WebGL
+  if three.js isn't wanted.
+
+**Shared guarantees (registration-time, per the repo README):** every
+visual pauses off-screen and on a hidden tab, draws **one still frame
+under `prefers-reduced-motion`**, caps devicePixelRatio at **2** (some
+WebGL ones at 1.5), handles `webglcontextlost`, and disposes on
+unmount; type falls back to a system stack in `fonts.css`
+(`--visual-sans` etc. — put the project face first); photo/clip
+visuals ship placeholder media at the paths they read. The skill's
+`check.mjs` verifies the copy still honors this.
+
+**Coverage map.** Medium: **bold = a true fragment shader** (21
+visuals: 19 raw WebGL/WebGL2 + 2 three.js shaders); `three.js` alone =
+scene graph without a custom shader. Technique lines are this
+dictionary's summary, not the Vault's text.
+
+**1. Kinetic type — motion in Canvas 2D / DOM / SVG (22)**
+
+| Visual | Medium | Technique | Entries |
+|---|---|---|---|
+| [Stack type](https://github.com/arla6ka/design.how/tree/main/vault/stack-type) | Canvas 2D | Letters as columns stacked nine deep on a shallow drum, each column stepping to the solid middle row on its own beat; outer rows outlined and scrambled | [[kinetic-type]] |
+| [Roll type](https://github.com/arla6ka/design.how/tree/main/vault/roll-type) | Canvas 2D | Words roll off an unseen cylinder with overshoot; moving words seen through a glass-rod bend with colour fringe | [[kinetic-type]], [[refraction-displacement]], [[chromatic-aberration]] |
+| [Warp type](https://github.com/arla6ka/design.how/tree/main/vault/warp-type) | Canvas 2D | Each sentence's verb deforms its own glyphs (wave, echo stair, fold, sort) on hard half-second cuts | [[kinetic-type]], [[morphing]] |
+| [Flip type](https://github.com/arla6ka/design.how/tree/main/vault/flip-type) | Canvas 2D | Per-letter row drop on an extreme in-out curve while each glyph flickers through random letters (split-flap logic) | [[kinetic-type]] |
+| [Shutter type](https://github.com/arla6ka/design.how/tree/main/vault/shutter-type) | Canvas 2D | Rolling shutter: horizontal stripes each sample the scene slightly later, so moving type tears into bands and still type stays whole | [[kinetic-type]], [[glitch]], [[temporal-displacement]] |
+| [Pop type](https://github.com/arla6ka/design.how/tree/main/vault/pop-type) | Canvas 2D | Gravity drop with damped-spring squash per letter, a bulge-field swell and a pop into dashes, stepped at 10 fps | [[kinetic-type]], [[inflatable]], [[frame-rate-aesthetics]], [[squash-and-stretch]] |
+| [Verb type](https://github.com/arla6ka/design.how/tree/main/vault/verb-type) | Canvas 2D | Five verbs act out their meaning (move, skew, rotate, break, condense) with off-register ghosts and print mottle | [[kinetic-type]], [[print-artifacts]] |
+| [Flood type](https://github.com/arla6ka/design.how/tree/main/vault/flood-type) | Canvas 2D | Letters turn to face front, then rush the camera at heavy-tailed angles and depths until they overrun the frame, with a flat speed smear | [[kinetic-type]], [[zoom-through]], [[motion-blur-trails]] |
+| [Swing type](https://github.com/arla6ka/design.how/tree/main/vault/swing-type) | Canvas 2D | Pendulum row whose per-letter y-turn is proportional to screen x, faked with affine-sheared glyph bitmaps (3D letters with no WebGL), with detents | [[kinetic-type]], [[forced-perspective]] |
+| [Bond type](https://github.com/arla6ka/design.how/tree/main/vault/bond-type) | Canvas 2D | Bitmap-face words unfold into a molecule chain joined by stair-stepped pixel bonds on the font's grid | [[kinetic-type]], [[pixel-art-technique]] |
+| [Dash cascade](https://github.com/arla6ka/design.how/tree/main/vault/dash-cascade) | Canvas 2D | Glyphs built from rows of round-capped dashes scaling about one axis with a per-letter delay law, stepped at 10 fps | [[kinetic-type]], [[frame-rate-aesthetics]] |
+| [Wild type](https://github.com/arla6ka/design.how/tree/main/vault/wild-type) | Canvas 2D | Live-font outlines traced to vectors and inflated through one Catmull-Rom warp mesh, then collapsed exactly home; registration slip and grain | [[kinetic-type]], [[morphing]], [[print-artifacts]] |
+| [Loud burst](https://github.com/arla6ka/design.how/tree/main/vault/loud-burst) | Canvas 2D | Type-on with landing squash; one word's glyphs are scanned into ink runs that morph into flying darts with shockwave and camera kick | [[kinetic-type]], [[shatter]], [[squash-and-stretch]] |
+| [Stamp type](https://github.com/arla6ka/design.how/tree/main/vault/stamp-type) | Canvas 2D | Highlight-bar lines hop along stepped 10 Hz tracks, stamping short-lived flat silhouettes where they just were | [[kinetic-type]], [[frame-rate-aesthetics]], [[motion-blur-trails]] |
+| [Word carousel](https://github.com/arla6ka/design.how/tree/main/vault/word-carousel) | Canvas 2D | Four words on a slot conveyor that slams on fat-tailed eases, with velocity-proportional motion blur | [[kinetic-type]], [[carousel-filmstrip]], [[motion-blur-trails]] |
+| [Sunset slam](https://github.com/arla6ka/design.how/tree/main/vault/sunset-slam) | Canvas 2D | Squash then slam into an extrusion made of copies converging on a vanishing point, coloured by a window sliding over a dawn ramp | [[kinetic-type]], [[retro-futurism]], [[long-shadow-isometric]], [[squash-and-stretch]] |
+| [Kinetic typography](https://github.com/arla6ka/design.how/tree/main/vault/kinetic-typography) | Canvas 2D | One letter sliced into tiles, each sampling from an offset set by two crossed sine waves (cloth ripple); duotone, fringe, grain | [[kinetic-type]], [[duotone-gradient-map]], [[chromatic-aberration]] |
+| [Spike type](https://github.com/arla6ka/design.how/tree/main/vault/spike-type) | Canvas 2D | Knockout word whose traced outline grows hundreds of hand-drawn spikes on length-dependent springs under the pointer | [[knockout-typography]], [[kinetic-type]] |
+| [Reality split](https://github.com/arla6ka/design.how/tree/main/vault/reality-split) | Canvas 2D | Design-tool choreography: a selected word splits into letter objects with handles, is inspected letter by letter, pops back whole | [[kinetic-type]], [[layout-motion]] |
+| [Typer](https://github.com/arla6ka/design.how/tree/main/vault/typer) | CSS/DOM | Per-character state flicker (pill, inverse block, outline) on a wave before settling; same-state neighbours merge into one bar | [[kinetic-type]], [[terminal-aesthetic]] |
+| [Ransom note](https://github.com/arla6ka/design.how/tree/main/vault/ransom-note) | CSS/DOM | Each letter its own clip-path paper scrap with seeded face, ink, case and tilt, rising in one by one | [[kinetic-type]], [[collage-scatter]], [[paper-ephemera]], [[ransom-note-type]] |
+| [Design tiles](https://github.com/arla6ka/design.how/tree/main/vault/design-tiles) | SVG | Words on colour fields made of one measured rect per glyph, so each field steps to the letters' real heights | [[type-composition]], [[kinetic-type]] |
+
+**2. Shader type & reveals — WebGL (9, all true shaders)**
+
+| Visual | Medium | Technique | Entries |
+|---|---|---|---|
+| [Smear type](https://github.com/arla6ka/design.how/tree/main/vault/smear-type) | **WebGL shader** | Small pre-traced layer sequences played a frame at a time: a ground-coloured cloud with a hot edge uncovers type that smears where half-hidden, over churning ribbons | [[kinetic-type]], [[liquid-reveal]], [[motion-blur-trails]] |
+| [Cloud type](https://github.com/arla6ka/design.how/tree/main/vault/cloud-type) | **WebGL2 shader** | Letters arrive as soft noise puffs, sharpen one by one with a dithered edge, then dissolve back to cloud; pointer acts as breeze | [[kinetic-type]], [[procedural-noise]], [[dissolve-disintegration]] |
+| [Rush type](https://github.com/arla6ka/design.how/tree/main/vault/rush-type) | **WebGL shader** | Word swings toward camera and stretches ~12x; per-channel averaging of many vertical-scale samples tears it into coloured light streaks | [[kinetic-type]], [[motion-blur-trails]], [[chromatic-aberration]] |
+| [Glass type](https://github.com/arla6ka/design.how/tree/main/vault/glass-type) | **WebGL shader** | Serif type seen through a magnifier lens whose radius carries a sine ripple and whose rim fringes colour | [[refraction-displacement]], [[chromatic-aberration]], [[kinetic-type]] |
+| [Blur glow](https://github.com/arla6ka/design.how/tree/main/vault/blur-glow) | **WebGL shader** | Downsampled multi-pass gaussian bloom behind a crisp word, mapped through a five-stop ramp; letter-by-letter cross-dissolve | [[glow-bloom]], [[duotone-gradient-map]], [[film-grain]] |
+| [Chromatic glow](https://github.com/arla6ka/design.how/tree/main/vault/chroma-glow) | **WebGL shader** | Word blooms on a coloured wall and its halo splits into warm, cool and fringe copies that drift apart | [[chromatic-aberration]], [[glow-bloom]], [[vignette]] |
+| [Fade motion](https://github.com/arla6ka/design.how/tree/main/vault/fade-motion) | **WebGL shader** | Long-exposure trail from ~200 faint overlapping copies (coverage 1-(1-a)^k), computed per pixel in one pass rather than blurred | [[motion-blur-trails]], [[pixel-art-technique]] |
+| [Blur reveal](https://github.com/arla6ka/design.how/tree/main/vault/blur-reveal) | **WebGL shader** | Text dissolves in through a cloudy noise front, blurred at the front and sharp behind, with a faint edge glow | [[dissolve-disintegration]], [[depth-of-field]], [[procedural-noise]] |
+| [Text reveal](https://github.com/arla6ka/design.how/tree/main/vault/text-reveal) | **WebGL shader** | Fractal-noise front sweeps diagonally, un-blurring text into focus as it uncovers it; pointer wipes clear | [[dissolve-disintegration]], [[depth-of-field]], [[film-grain]] |
+
+**3. Fields, patterns & light (11)**
+
+| Visual | Medium | Technique | Entries |
+|---|---|---|---|
+| [Ripple grid](https://github.com/arla6ka/design.how/tree/main/vault/ripple-grid) | **WebGL shader** | Gaussian blob lattice evaluated as separable row x column sums, displaced into rings and a spiral and back | [[generative-art]], [[liquid-ripple]] |
+| [Voice wave](https://github.com/arla6ka/design.how/tree/main/vault/voice-wave) | **WebGL2 shader** | One glowing ribbon drawn four times slightly out of phase so it splits into colour where it bends; simulated voice or mic via WebAudio | [[audio-reactive]], [[ai-orb]], [[glow-bloom]] |
+| [Crystal cluster](https://github.com/arla6ka/design.how/tree/main/vault/crystal-cluster) | **three.js + shader** | Flat-shaded crystal with constant-width screen-space outline in a beam made of summed gaussian columns with flicker and rising bands | [[volumetric-light]], [[toon-outline]], [[scene-staging]] |
+| [Eclipse grid](https://github.com/arla6ka/design.how/tree/main/vault/eclipse-grid) | Canvas 2D | Eighty ring-over-disc cells parting into crescents on their own phases at 25 fps; pointer acts as a lamp | [[generative-art]], [[frame-rate-aesthetics]] |
+| [Phase table](https://github.com/arla6ka/design.how/tree/main/vault/phase-table) | Canvas 2D | Grid of Lissajous curves (row = x frequency, column = y), shaded as steel wire from exact normals on one shared phase | [[generative-art]], [[specular-metallic]] |
+| [Peak gradient](https://github.com/arla6ka/design.how/tree/main/vault/peak-gradient) | SVG | Row of heavily blurred columns sharing one vertical rainbow gradient, arranged tallest-in-centre and rising via scaleY | [[gradients]], [[mesh-gradient]], [[glow-bloom]] |
+| [Dot cut](https://github.com/arla6ka/design.how/tree/main/vault/dot-cut) | Canvas 2D | Lattice of touching circles drawn as one even-odd path; letters and patterns appear as removed circles with wipe/ripple/scatter transitions | [[knockout-typography]], [[generative-art]] |
+| [Dot globe](https://github.com/arla6ka/design.how/tree/main/vault/dot-globe) | Canvas 2D | Superquadric solids tiled with projected rounded squares, a bitmap symbol painted across tiles and passed along the row | [[pixel-art-technique]], [[generative-art]] |
+| [Checker conveyor](https://github.com/arla6ka/design.how/tree/main/vault/checker-conveyor) | Canvas 2D | Nine checker rows each whip one screen width a beat after the row above, carrying the next scene in | [[page-transitions]], [[generative-art]] |
+| [Slide stack](https://github.com/arla6ka/design.how/tree/main/vault/slide-stack) | Canvas 2D | Five blocks phase-offset into a travelling wave; the accent shape is their convex hull, plus motion blur | [[layout-motion]], [[motion-blur-trails]] |
+| [Tile field](https://github.com/arla6ka/design.how/tree/main/vault/tile-field) | Canvas 2D | Wordmark sampled into tiny tiles that swell and tint under an interference wave and a trailing pointer brush | [[cursor-effects]], [[generative-art]] |
+
+**4. Pixel, print & glitch (12)**
+
+| Visual | Medium | Technique | Entries |
+|---|---|---|---|
+| [Spray burst](https://github.com/arla6ka/design.how/tree/main/vault/spray-burst) | **WebGL shader** | Three flat inks per pixel; every edge a dithered spray fringe re-rolled at 24 fps across six geometric scenes | [[print-artifacts]], [[dithering]], [[frame-rate-aesthetics]] |
+| [Pixel threshold](https://github.com/arla6ka/design.how/tree/main/vault/pixel-threshold) | **WebGL shader** | Word thresholded into hard pixel blocks with staircased halo and block shadow on a printed moire/grain/dust plate; grid collapses between words | [[pixelation]], [[print-artifacts]], [[moire]] |
+| [Pixel scan](https://github.com/arla6ka/design.how/tree/main/vault/pixel-scan) | **WebGL shader** | Diagonal scan band breaks a word into jittered two-colour block spray, leaving it solid behind | [[pixelation]], [[dissolve-disintegration]], [[cursor-effects]] |
+| [Symbols effect (sandbox)](https://github.com/arla6ka/design.how/tree/main/vault/sandbox) | **three.js + shader** | Image/video snapped to cells, brightness bucketed into four bands, each band stamping its own tinted symbol | [[ascii-rendering]], [[halftone]], [[duotone-gradient-map]] |
+| [Brick reveal](https://github.com/arla6ka/design.how/tree/main/vault/brick-reveal) | **WebGL shader** | Picture restyled as toy bricks, voxels or cartoon, melting back to the photo in merging rounded blocks along a pointer trail | [[pixelation]], [[mosaic-tile]], [[image-treatment]] |
+| [Misprint type](https://github.com/arla6ka/design.how/tree/main/vault/misprint-type) | Canvas 2D | Fill, outline and foil prints of one word as tilting planes that never register; press-and-hold pulls them into register | [[print-artifacts]], [[iridescence]], [[kinetic-type]] |
+| [Ink flood](https://github.com/arla6ka/design.how/tree/main/vault/ink-flood) | Canvas 2D | Width-breathing pen scribble zooms to flood the frame and becomes the next ground, under a fixed halftone screen | [[halftone]], [[illustration-style]] |
+| [Pixel cycle](https://github.com/arla6ka/design.how/tree/main/vault/pixel-cycle) | Canvas 2D | Downscale-then-upscale with smoothing off along an eased ramp of block sizes (no shader); hover lifts blocks | [[pixelation]], [[pixel-art-technique]] |
+| [Pixel fire](https://github.com/arla6ka/design.how/tree/main/vault/pixel-fire) | Canvas 2D | 16x16 flipbook generated from a tiny heat simulation; the pointer edits the live pixel buffer | [[pixel-art-technique]], [[fire-smoke]] |
+| [Pixel brushes](https://github.com/arla6ka/design.how/tree/main/vault/pixel-brushes) | Canvas 2D | Square-cell stamps dropped along a path; spacing, jitter, scatter, follow and thinning make line vs ribbon vs spray, snapped to device pixels | [[pixel-art-technique]], [[illustration-style]] |
+| [Glitch word](https://github.com/arla6ka/design.how/tree/main/vault/glitch-word) | CSS/DOM | Stacked copies clipped into horizontal bands and shoved sideways in stepped Web Animations bursts, with lookalike-glyph flicker | [[glitch]], [[chips-badges-avatars]] |
+| [Datamosh](https://github.com/arla6ka/design.how/tree/main/vault/datamosh) | Canvas 2D | Falling colour columns stretched open through the centre and squeezed at the edges in a zig-zag — a stylised broken-decode loop, not real codec abuse | [[glitch]], [[video-feedback]] |
+
+**5. Materials & surfaces (9)**
+
+| Visual | Medium | Technique | Entries |
+|---|---|---|---|
+| [Liquid metal](https://github.com/arla6ka/design.how/tree/main/vault/liquid-metal) | **WebGL shader** | Word blurred into a two-scale height field; normals from its gradient look up a five-stop horizon ramp (matcap) tilted by the pointer | [[liquid-metal]], [[specular-metallic]], [[reflections]] |
+| [Realistic emboss](https://github.com/arla6ka/design.how/tree/main/vault/emboss) | **WebGL shader** | CPU-blurred height field from text/SVG, normals from slope, one-light highlight and shadow over a real plaster texture and grunge | [[concrete-plaster]], [[skeuomorphism]], [[rubber-soft-touch]], [[relief-emboss]] |
+| [Folder embroidery](https://github.com/arla6ka/design.how/tree/main/vault/folder-embroidery) | **WebGL shader** | Word-silhouette patches with satin lettering and merrowed border, lit through a fabric-weave bump and puff bevel; glint on hover, press-in | [[embroidery]], [[material-texture]], [[stickers-badges]] |
+| [Word stickers](https://github.com/arla6ka/design.how/tree/main/vault/word-stickers) | **WebGL shader** + DOM | Die-cut stickers as subdivided quads; a peel shader curls the grabbed one, thrown with momentum and friction | [[stickers-badges]], [[origami-fold]], [[interaction-feel]] |
+| [Holo](https://github.com/arla6ka/design.how/tree/main/vault/holo) | CSS/DOM (3D) | Pointer-tilted card with parallax rainbow foil layers that lag a beat, glare following the light, and a duotone image that flips polarity past a tilt | [[iridescence]], [[lenticular]], [[hover-response]] |
+| [Colour depth](https://github.com/arla6ka/design.how/tree/main/vault/color-depth) | CSS/DOM | Depth from stacked gradients and inset shadows on one pill — ten recipes (glossy, glowing, brushed metal, foil, glass, satin) | [[skeuomorphism]], [[control-language]], [[light-on-flat]] |
+| [Smooth corners (squircle)](https://github.com/arla6ka/design.how/tree/main/vault/squircle) | SVG | Superellipse path used as clip-path on a layered glossy button, so curvature ramps into the edge with no kink | [[shape-language]], [[control-language]] |
+| [Liquid UI](https://github.com/arla6ka/design.how/tree/main/vault/liquid-ui) | SVG | Smooth-union SDF of rounded boxes traced by marching squares + Chaikin into one path behind real DOM; one knob from inverse-rounded joints to gooey | [[sdf-rendering]], [[liquid-ripple]], [[card]] |
+| [Hover video button](https://github.com/arla6ka/design.how/tree/main/vault/hover-video) | Video (alpha WebM/HEVC) | Pill swaps to a pre-rendered transparent clip of its label inflating; a reversed clip rewinds from the same point on leave | [[inflatable]], [[hover-response]], [[control-language]] |
+
+**6. Interface pieces & presence (6)**
+
+| Visual | Medium | Technique | Entries |
+|---|---|---|---|
+| [AI lights](https://github.com/arla6ka/design.how/tree/main/vault/ai-lights) | CSS/DOM (+ canvas masks) | One body morphing between four agent surfaces; each change announced by a conic-gradient rim pulse on registered custom properties through blurred stroke masks | [[ai-orb]], [[border-stroke]], [[layout-motion]] |
+| [Vector editor](https://github.com/arla6ka/design.how/tree/main/vault/vector-editor) | SVG | Self-drawing selection frame with corner handles and live size badge around any element, plus a draggable bezier path rig | [[spatial-canvas]], [[control-language]] |
+| [Cursors](https://github.com/arla6ka/design.how/tree/main/vault/cursors) | CSS/DOM | Labelled collaborator cursors orbiting a frosted-glass word on slow ellipses, scattering from the real pointer | [[presence-collaboration]], [[frosted-glass]], [[cursor-effects]] |
+| [Orbit](https://github.com/arla6ka/design.how/tree/main/vault/orbit) | Canvas 2D | 26 labelled cursors on an invisible sphere, depth shown by scale/fade/focus only; spin with inertia, throwable | [[presence-collaboration]], [[radial-orbital]], [[depth-of-field]] |
+| [Badge trail](https://github.com/arla6ka/design.how/tree/main/vault/badge-trail) | CSS/DOM | Non-overlapping hue-walking badges slam in behind the pointer and flick out; ghost cursor when idle | [[cursor-effects]], [[chips-badges-avatars]] |
+| [Code trail](https://github.com/arla6ka/design.how/tree/main/vault/code-trail) | CSS/DOM | Staircase of code fragments on coloured bars, each row easing toward the one above as it chases the pointer | [[cursor-effects]], [[terminal-aesthetic]] |
+
+**7. Image & 3D galleries (3)**
+
+| Visual | Medium | Technique | Entries |
+|---|---|---|---|
+| [Image sphere](https://github.com/arla6ka/design.how/tree/main/vault/image-sphere) | three.js | Camera-facing photo planes on an invisible drifting sphere; flick-to-spin, hover enlarge, click glides to a lightbox | [[spatial-canvas]], [[carousel-filmstrip]], [[zoom-through]], [[image-cloud]] |
+| [Image galaxy](https://github.com/arla6ka/design.how/tree/main/vault/image-galaxy) | CSS/DOM (3D) | Photos at random depths under one perspective drift and wrap forever, fed by scroll and drag | [[parallax]], [[spatial-canvas]], [[image-cloud]] |
+| [Ghosty reveal](https://github.com/arla6ka/design.how/tree/main/vault/ghosty-reveal) | CSS/DOM | Oversized feathered gradient mask slid with `mask-position` so images bleed in out of fog, staggered over a scattered layout | [[liquid-reveal]], [[collage-scatter]], [[image-treatment]] |
+
+**Caveats:**
+- **Demo-shaped, not component-shaped.** Most visuals are a fixed-aspect
+  hero "card" playing a scripted loop (set words, scenes, colourways);
+  the reusable part is the FIXED technique, not the composition. Map the
+  VARIABLE table onto the entry's dials when reporting.
+- **Type-heavy and loud.** Many loops cut every 0.5-3 s; check against
+  [[motion-ceremony]] budgets — a vault loop belongs in a hero or empty
+  state, rarely in working UI. Reduced motion yields a still, not a calm
+  alternative layout.
+- **React-only templates.** Non-React projects port the engine by hand.
+- **WebGL fallback is on you.** The raw-WebGL visuals stop on context
+  loss but don't ship a CSS fallback; supply the entry's cheaper-medium
+  technique for no-WebGL contexts.
+- Verify MIT text, three.js version (for the three three.js visuals) and
+  the skill's current FIXED list at use time; this registry records
+  registration-time truth.
+
+**When to prefer it:** when the brief matches one of these specific
+looks and the project is React — the FIXED list is a vetted recipe with
+the perf contract already met, which beats hand-deriving a shader from
+the entry. Especially strong over hand-building for the true shaders in
+families 2, 4 and 5 ([[liquid-metal]], [[embroidery]], [[chromatic-aberration]],
+[[motion-blur-trails]] long-exposure, [[ascii-rendering]] symbol halftone)
+and for [[kinetic-type]], where it is the deepest registry source after
+React Bits. Prefer the entry's own techniques when the look needs to be
+a reusable component (not a hero loop), when the project isn't React,
+when a CSS technique in the entry suffices (cheapest medium first), or
+when the three.js visuals would introduce three.js. Prefer Radiant for
+ambient full-canvas backgrounds; ThreeUI for composed three.js scenes.
+
+---
+
 ## shadcn/ui — ui.shadcn.com (registered 2026-08) — the surface substrate
 
 **What:** the canonical React/Tailwind component system — accessible
@@ -299,62 +484,130 @@ present — inventory before adding anything that duplicates it.
 
 ---
 
-## AI-native interface kits — beautifului.dev + transitions.dev (registered 2026-08)
+## AI-native interface kits — beautifului.dev (registered 2026-08)
 
-Two small copy-paste libraries for the **AI-interface state language**
-(see INDEX candidates): streaming text, thinking/working states, tool-call
-traces, diff/records tables, approval and recommendation cards, chat
-composers (beautifului.dev — MIT, React, AI-product primitives); and
-state-transition micro-animations tagged for agent UIs — skeleton
-reveals, text swaps, success/error feedback, with performance notes
-(transitions.dev — freemium, CSS/React; notably ships its own coding-agent
-skill). **Use as:** the reference implementations when building AI-product
-UI, and the corpus to draw from when the AI-interface entry gets written;
-until then they pair with [[loading-language]] (thinking/streaming states
-are its newest register), [[kinetic-type]] (streaming text),
-[[timeline-feed]] (tool traces), [[motion-ceremony]]. **Cautions:**
-transitions.dev's pro tier paywall (surface it, per registry law);
-verify currency — this space is young and moving fast.
+A small copy-paste library for the **AI-interface state language**:
+streaming text, thinking/working states, tool-call traces, diff/records
+tables, approval and recommendation cards, chat composers (beautifului.dev
+— MIT, React, AI-product primitives). **Use as:** a reference
+implementation when building AI-product UI; pairs with
+[[ai-interaction]] (the behaviors), [[conversation-layout]],
+[[loading-language]] (thinking/streaming states), [[kinetic-type]]
+(streaming text), [[timeline-feed]] (tool traces). Its former sibling
+transitions.dev now has its own section below. **Caution:** verify
+currency — this space is young and moving fast.
 
 ---
 
-## Libraries.dev — libraries.dev (registered 2026-09-11)
+## transitions.dev — transitions.dev (registered 2026-08; verified 2026-11-11)
 
-**What:** five small, single-purpose React effect libraries by Jakub
-Antalik (with Alexandr Brinza, Martin Petercak), each a standalone npm
-package with zero runtime deps (except `img-fx`, which peers on three),
-~83 KB gzipped all together, MIT, React 18+. Built explicitly for
-coding agents: every library page has a **Copy prompt** button that
-hands the agent the install line, usage, and the full prop vocabulary.
-`theme="auto"` resolves data-theme / dark class / `prefers-color-scheme`
-live. Verified on npm at registration:
+**What:** Jakub Antalik's library of UI state transitions, 44 on the
+site (36 free in the public skill, the rest Pro), each a namespaced
+(`.t-*`) CSS snippet with a React variant, a `prefers-reduced-motion`
+guard, and values read from one shared motion-token scale (durations,
+easings, distances, scales, blurs). Around it: a coding-agent skill, a
+Builder, an MCP server, and the **Motion Agent** (registered under Craft
+Rules & Tuning Tools below). Repo: github.com/Jakubantalik/transitions.dev.
 
-| Package | What it does | Entries |
+**Licence — read before using.** The transitions and skills are free for
+unlimited personal and commercial use, including by agents, and may be
+modified and shipped in products. The restriction: **never redistribute
+the collection or a substantial part of it** as a library, pack, or kit.
+For this dictionary that means link and route to it, never copy its
+snippets into entries (the resilience policy's rule, enforced here by
+licence). Tooling (`agent/`, `cli/`) is MIT. Pro transitions and paid
+Agent features need a plan, and **company use of Pro requires Business,
+not Pro**: surface that to the user rather than pick a tier for them.
+
+**Install model:** copy-paste from a transition's code panel;
+`npx transitions-dev add --free` writes the free set to
+`./transitions/`; `npx skills add Jakubantalik/transitions.dev` installs
+the free skill. **Stack-rule class: trivial** (CSS, no runtime deps).
+
+**Coverage map** (free unless marked Pro):
+
+| Family | Transitions | Entries |
 |---|---|---|
-| `border-beam` 1.3.0 | rainbow glow riding any element's border | [[border-stroke]] (animated/border-beam register) |
-| `thinking-orbs` 0.3.1 | dotted thought-orb loaders for AI/agent UIs, nine tuned states, two sizes; React Native + SwiftUI ports in-repo (unpublished) | [[ai-orb]], [[loading-language]] |
-| `liquid-gooey` 0.2.1 | Morph (gooey merge, jelly shape change, contact dissolve) and Move effects | [[liquid-ripple]], [[morphing]], [[shape-language]] |
-| `metal-fx` 2.0.10 | liquid-metal WebGL rings, buttons, metal text and badges with glow | [[liquid-metal]], [[specular-metallic]], [[control-language]] |
-| `img-fx` 0.5.1 | WebGL image-generation / loader effect for cards | [[loading-language]], [[dissolve-disintegration]], [[pixelation]] |
+| Controls & feedback | toggle, checkbox check, icon swap, success check, error state shake, like button, learn-more hover, spinner→check (Pro), Get Pro glow (Pro), confetti burst (Pro) | [[control-language]], [[live-feedback]], [[hover-response]], [[particles]], [[ui-state-transitions]] |
+| Menus, overlays & panels | menu dropdown (origin-aware), dropdown morph, plus→menu morph, gooey plus menu (Pro), modal open/close, panel reveal, tooltip, accordion | [[popover-menu]], [[modal-dialog]], [[sheet-drawer]], [[disclosure]], [[pointer-intent]], [[morphing]], [[ui-state-transitions]] |
+| Notifications & status | toast open/close, banner stacking, notification badge | [[toast-notification]], [[status-signals]] |
+| Cards, images & lists | card resize, avatar group hover, 3D card tilt, card stack hover (Pro), image open tilt (Pro), smoky delete dissolve (Pro), drag & drop with physics (Pro) | [[layout-motion]], [[chips-badges-avatars]], [[hover-response]], [[dissolve-disintegration]], [[drag-and-drop]] |
+| Text & numbers | text states swap, text morph, text swap soft, texts reveal, input clear with dissolve, shimmer text, organic shimmer (Pro), number pop-in, spinning counter, number subtle change, donut chart | [[animated-numbers]], [[kinetic-type]], [[shimmer-sheen]], [[chart-voice]], [[ui-state-transitions]] |
+| Navigation | page side-by-side, tabs sliding | [[page-transitions]], [[navigation-language]], [[overview-navigation]] |
+| Loaders & AI states | skeleton loader and reveal, matrix dot loader, thinking states, reasoning stream, streaming text, image generation placeholder (Pro) | [[loading-language]], [[ai-interaction]], [[ai-orb]] |
 
-**Install model:** `npm install <package>` (or paste the prompt).
-**Stack-rule class: trivial** for four of them (zero-dep micro-libraries);
-`img-fx` is moderate-to-structural because it pulls three — apply the
-structural check in a project without WebGL.
+**Its decision rules are the useful part.** The skill routes by visible
+element, then verb: shared letters between labels → text morph; nothing
+shared → state swap; values changing under a view → soft swap; a
+number's change as event vs quiet update vs noticed → spinning counter
+vs subtle change vs pop-in. [[ui-state-transitions]] carries that
+grammar in our own words, with the token scale as its reference values.
 
-**Caveats:** the free libraries are MIT; **Pro** unlocks a "Studio"
-(deeper per-library configuration + config export) and presets — a
-paywall an agent can hit when the public playground's props aren't
-enough; surface it rather than work around. Same demo-calibration
-caveats as React Bits (check ceremony budgets, reduced motion). Its
-`thinking-orbs` sits alongside Orbkit, Murmur, and `orbloom` as the
-current [[ai-orb]] implementation set — compare materials (dotted vs
-glass vs shader) before picking.
+**When to prefer it:** any product UI needing open/close, swap, or
+feedback transitions with calibrated, consistent values. Prefer an
+entry's own technique when the project already has a motion system
+(Motion/framer-motion springs) the snippets would fight.
 
-**When to prefer it:** a React project wanting exactly one of these
-five effects with the smallest possible footprint and an agent-friendly
-install; prefer React Bits / Rare UI when the need is broader than the
-five, and the entry's own techniques when the project isn't React.
+---
+
+## Libraries.dev — libraries.dev (registered 2026-09-11; verified 2026-11-11)
+
+**What:** single-purpose effect libraries for AI interfaces by Jakub
+Antalik (with Alexandr Brinza, Martin Petercak), built to be installed
+by coding agents: every page has a **Copy prompt** button that hands the
+agent the install line, usage, and full prop vocabulary. React 18+,
+`theme="auto"` follows data-theme / dark class / `prefers-color-scheme`.
+Since registration it has grown voice libraries, bot avatars, a SwiftUI
+screen transition, and a **Models** section of on-device ML input.
+
+**Libraries:**
+
+| Package | Platforms | What it does | Entries |
+|---|---|---|---|
+| `border-beam` | React, SwiftUI, RN | rainbow glow riding any element's border | [[border-stroke]] |
+| `thinking-orbs` | React, SwiftUI, RN | dotted thought-orb loaders, nine tuned states | [[ai-orb]], [[loading-language]] |
+| `liquid-gooey` | React | gooey merge, jelly shape change, contact dissolve | [[liquid-ripple]], [[morphing]], [[shape-language]] |
+| `metal-fx` | React | liquid-metal WebGL rings, buttons, text, badges | [[liquid-metal]], [[specular-metallic]], [[control-language]] |
+| `img-fx` | React (peers on three) | WebGL image-generation loader for cards | [[loading-language]], [[dissolve-disintegration]], [[pixelation]] |
+| `voice-glow` | React, SwiftUI | audio-reactive glow rising from a chat input's bottom edge; travelling beam while processing | [[voice-interaction]], [[audio-reactive]], [[glow-bloom]] |
+| `voice-ring` | React (canvas + small WebGL lens pass), SwiftUI | voice-reactive ring: idle / listening / speaking / processing, eased between | [[voice-interaction]], [[ai-orb]], [[audio-reactive]] |
+| `bot-avatars` | React (canvas 2D), SwiftUI, RN (in repo) | 18 plush agent avatars with default / working / sleeping states, fur shading, pointer-following eyes | [[ai-orb]], [[chips-badges-avatars]], [[velvet-plush]], [[squash-and-stretch]] |
+| DistortionWavesKit | SwiftUI only (Metal); React "coming soon" | screen transition: a colour wave carries one screen into the next from the touched control | [[page-transitions]], [[liquid-reveal]], [[chromatic-aberration]] |
+
+**Models (on-device input, new):**
+
+| Model | Platforms | What it does | Entries |
+|---|---|---|---|
+| Magnetic UI (MagnetKit / `magnetkit`) | iOS 17+, Android 10+, RN dev builds; web only via the Magnet Bridge Android app | reads the magnetometer to locate a held magnet over the screen (position, height, presence, air taps) | [[spatial-input]] |
+| Voice position (VoicePositionKit, beta) | iPhone, iOS 17+, tested on 15 Pro | which side a voice comes from (left / ahead / right) via the stereo mics | [[voice-interaction]], [[spatial-input]] |
+
+**Install model:** `npm install <package>` (or paste the prompt); Swift
+Package Manager for the SwiftUI kits. Model files (`.mfxl`) are a
+separate download with a free account.
+
+**Stack-rule class:** trivial for the zero-dep React packages; `img-fx`
+is moderate-to-structural (three); the SwiftUI-only kits don't apply to
+web projects at all. The Models are **structural**: a new input
+paradigm and a native build.
+
+**Licensing — two regimes.** Library code is MIT (stated for the five
+originals and the Swift kits; the pages for `voice-glow` and
+`bot-avatars` don't state one, so verify on npm). The **Models** use the
+Libraries.dev Model License: free for development, prototypes, internal
+tools and non-commercial apps; a **commercial release needs a Pro,
+Business, or Enterprise plan**. That's a paywall at ship time, not at
+build time: surface it before the user builds on a model. **Pro** also
+unlocks the Studio (deeper config + export) and presets.
+
+**Caveats:** same demo-calibration caveats as React Bits (check
+ceremony budgets, reduced motion). `thinking-orbs`, `voice-ring` and
+`bot-avatars` sit alongside Orbkit, Murmur, and `orbloom` in the
+[[ai-orb]] implementation set; compare materials before picking.
+
+**When to prefer it:** a React or SwiftUI project wanting exactly one
+of these effects with a small footprint and an agent-friendly install;
+prefer React Bits / Rare UI when the need is broader, and the entry's
+own techniques when the project isn't React or Swift.
 
 ---
 
@@ -364,6 +617,27 @@ Not effect libraries — *quality-rule sets* and *dial-tuning tools*.
 They don't implement an entry; they enforce the foundation entries'
 laws or make an entry's dials adjustable live. Use them at the
 implementation and iteration steps of the protocol, not at resolution.
+
+## transitions.dev Motion Agent — a motion linter (registered 2026-11-11)
+
+**What:** `npx transitions-agent` scans a codebase locally and
+deterministically (no AI, no account) and prints a 0-100 motion score,
+each finding mapped to a transitions.dev recipe. Findings seen in its
+rules: overlays (modal, tooltip) appearing with no transition; hover
+that snaps because the base state has no transition; `transition: all`
+animating layout; hardcoded durations off the token scale; durations
+over ~1s; no `prefers-reduced-motion` guard. Fix modes (polish, revamp)
+open changes only after approval; a GitHub Action can gate PRs on a
+minimum score. Tooling MIT; hosted fixes are metered (free tier 10/month).
+
+**Use at:** the iteration step for [[motion-ceremony]] and
+[[ui-state-transitions]]: run the scan to find motion that breaks the
+grammar, then fix in dial vocabulary. **Stack-rule class: trivial**
+(dev-only CLI). **Caution:** the score is calibrated to its own token
+scale; a project with a deliberate different motion system will score
+low for reasons that aren't defects. Treat findings as prompts, not verdicts.
+
+---
 
 ## userinterface.wiki — a rules skill (registered 2026-09-11)
 

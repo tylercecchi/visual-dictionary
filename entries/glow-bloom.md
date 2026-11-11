@@ -45,6 +45,7 @@ lens or the eye would blur an overexposed source.
 - three.js `UnrealBloomPass` (postprocessing) — the standard scene bloom
 - `postprocessing` npm package (pmndrs) — better-performing bloom for three.js
 - Shadertoy: search "bloom" for single-pass approximations
+- design.how Vault — [Blur glow](https://github.com/arla6ka/design.how/tree/main/vault/blur-glow) (WebGL shader, multi-pass gaussian bloom; MIT; see LIBRARIES.md)
 
 ## Search queries
 

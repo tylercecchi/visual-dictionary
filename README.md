@@ -1,6 +1,6 @@
 # Visual Attribute Dictionary
 
-A UX/UI design-quality dictionary for AI agents: ~192 entries mapping vague
+A UX/UI design-quality dictionary for AI agents, covering looks and behaviors: ~222 entries mapping vague
 design language ("feels off", "make it frosted", "recipe card, but gothic")
 to canonical terms, tunable **dials**, layout/surface **contracts**, and
 vetted implementation paths.
@@ -14,8 +14,9 @@ The dictionary presents options; the designer decides.
 
 - `CLAUDE.md` — the agent protocol (resolution, diagnosis, stack rule, doctrine, custom wardrobes)
 - `entries/` — one file per attribute; summary + aliases + cues + dials + techniques
-- `INDEX.md` — category index (foundations · components · editorial · wardrobe · layout · effects)
+- `INDEX.md` — category index (foundations · components · behavior · editorial · wardrobe · layout · effects)
 - `LAYOUT.md` — the layout matrix, interaction-surface contracts, structure × wardrobe tensions
+- `REFERENCES.md` — knowledge sources (Interface Lineage, design.how) and their usage terms
 - `LIBRARIES.md` — resource registry (libraries / rules & tuning tools / discovery / galleries) + failure policy
 - `TEMPLATE.md` — entry format for growth
 - `lib/resolve.mjs` — the shared resolver (server, audit, and site all use it)

@@ -49,6 +49,7 @@ of a fade: matter, not opacity, departs.
 - The dissolve-shader pattern in game-engine tutorials (Godot/Unity write-ups
   port directly to GLSL)
 - html2canvas/html-to-image for the DOM-capture pipeline
+- design.how Vault — [Blur reveal](https://github.com/arla6ka/design.how/tree/main/vault/blur-reveal) and [Text reveal](https://github.com/arla6ka/design.how/tree/main/vault/text-reveal) (WebGL shader noise fronts; MIT; see LIBRARIES.md)
 
 ## Search queries
 

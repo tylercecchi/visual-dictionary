@@ -27,6 +27,43 @@ function entries() {
 const byName = (n) => entries().find((e) => e.name === n.trim().toLowerCase());
 const line = (e) => `${e.name}  (${e.category}) — ${e.summary || e.title}`;
 
+// The conditions an agent must see before using a source: the section's
+// install model, stack-rule class, licence/usage terms, cautions, and
+// paywall notes. Pulled from bold-labelled paragraphs so they travel with
+// every coverage row instead of staying buried in prose.
+const TERM_LABEL = /\*\*(install model|stack-rule class|licen[cs]e[^*]*|licensing[^*]*|usage[^*]*|caveats?|cautions?|pricing[^*]*|when to consult[^*]*)[:.]?\*\*/i;
+function sectionTerms(sec) {
+  const paras = sec.split(/\n\s*\n/).map((p) => p.trim());
+  const out = [];
+  paras.forEach((p, i) => {
+    if (p.startsWith("|") || p.startsWith("#") || !TERM_LABEL.test(p)) return;
+    let t = p.replace(/\s*\n\s*/g, " ");
+    // A term that ends "So:" / "means:" continues in the bullet list after it.
+    const next = paras[i + 1] ?? "";
+    if (t.endsWith(":") && next.startsWith("- ")) t += " " + next.split(/\n(?=- )/).map((b) => b.replace(/\s*\n\s*/g, " ")).join(" ");
+    out.push(t);
+  });
+  return out;
+}
+
+// entry → knowledge sources in REFERENCES.md that inform it.
+let refIndex = null;
+function referencesIndex() {
+  if (refIndex) return refIndex;
+  refIndex = new Map();
+  if (!existsSync(join(ROOT, "REFERENCES.md"))) return refIndex;
+  for (const sec of read("REFERENCES.md").split(/^(?=## )/m).slice(1)) {
+    const heading = sec.split("\n")[0].replace(/^## /, "").trim();
+    const terms = sectionTerms(sec);
+    for (const name of new Set([...sec.matchAll(/\[\[([a-z0-9-]+)\]\]/g)].map((m) => m[1]))) {
+      if (!refIndex.has(name)) refIndex.set(name, []);
+      refIndex.get(name).push({ heading, terms });
+    }
+  }
+  return refIndex;
+}
+const formatTerms = (terms) => (terms.length ? "\nTerms:\n" + terms.map((x) => "- " + x).join("\n") : "");
+
 // entry → registry sections that mention it (built once from LIBRARIES.md).
 let libIndex = null;
 function librariesIndex() {
@@ -38,10 +75,11 @@ function librariesIndex() {
     const heading = sec.split("\n")[0].replace(/^## /, "").trim();
     const rows = sec.split("\n").filter((l) => /^\|/.test(l) && !/^\|\s*-/.test(l) && !/^\|\s*(Component|Package|Catalog|Shader|Rule|Library)/i.test(l));
     const mentioned = new Set([...sec.matchAll(/\[\[([a-z0-9-]+)\]\]/g)].map((m) => m[1]));
+    const terms = sectionTerms(sec);
     for (const name of mentioned) {
       const hits = rows.filter((r) => r.includes(`[[${name}]]`));
       if (!libIndex.has(name)) libIndex.set(name, []);
-      libIndex.get(name).push({ heading, rows: hits });
+      libIndex.get(name).push({ heading, rows: hits, terms });
     }
   }
   return libIndex;
@@ -71,7 +109,9 @@ const server = new McpServer(
       "designer's phrase (one call per axis for structure-x-wardrobe briefs) and flags " +
       "close calls — present those to the designer (the judgment split: the dictionary " +
       "presents, the designer decides). compose() assembles the two picks; " +
-      "libraries_for() finds registered implementations for an entry.",
+      "libraries_for() finds registered implementations and knowledge sources for an entry, " +
+      "each with its licence, paywall, and stack-rule terms — apply those before installing or " +
+      "drawing from a source; references() serves the knowledge sources' usage terms.",
   }
 );
 
@@ -118,7 +158,15 @@ server.registerTool(
       const near = resolve(entries(), name.replace(/-/g, " "), 3).map((x) => x.name).join(", ");
       return text(`No entry '${name}'.${near ? ` Nearest: ${near}.` : ""} Use resolve() or browse().`);
     }
-    return text(e.text);
+    const libs = librariesIndex().get(e.name) ?? [];
+    const refs = referencesIndex().get(e.name) ?? [];
+    const foot = [];
+    if (libs.length) foot.push(`${libs.length} registry source${libs.length > 1 ? "s" : ""} (${libs.map((h) => h.heading.split(" — ")[0].split(" (")[0]).join(", ")})`);
+    if (refs.length) foot.push(`knowledge source${refs.length > 1 ? "s" : ""}: ${refs.map((r) => r.heading.split(" — ")[0]).join(", ")}`);
+    const tail = foot.length
+      ? `\n\n---\nCoverage: ${foot.join("; ")}. Call libraries_for('${e.name}') for rows and their licence/stack terms before installing anything.`
+      : `\n\n---\nNo registry coverage: build from the Techniques above.`;
+    return text(e.text + tail);
   }
 );
 
@@ -129,7 +177,7 @@ server.registerTool(
       `List entries with summaries, optionally by category: ${CATEGORIES.join(", ")}. ` +
       "'wardrobe' = aesthetic registers; 'editorial' + 'layout' = structure; " +
       "'foundations' = the systems every UI has (the diagnosis path and the custom-wardrobe dial sheet); " +
-      "'components' = component families. Empty = full INDEX.md.",
+      "'components' = component families; 'behavior' = interaction patterns (what a mechanism does, when to use it, when not). Empty = full INDEX.md.",
     inputSchema: { category: z.string().default("") },
   },
   async ({ category }) => {
@@ -206,12 +254,43 @@ server.registerTool(
     const n = entry.trim().toLowerCase();
     if (!byName(n)) return text(`No entry '${entry}'.`);
     const hits = librariesIndex().get(n) ?? [];
-    if (!hits.length) return text(`No registry coverage for '${n}'. Use the entry's own techniques and search queries; the entry is the durable layer.`);
+    const refs = referencesIndex().get(n) ?? [];
+    if (!hits.length && !refs.length) return text(`No registry coverage for '${n}'. Use the entry's own techniques and search queries; the entry is the durable layer.`);
+    const out = [];
+    if (hits.length)
+      out.push(
+        "# Implementations (LIBRARIES.md)\n\n" +
+          hits
+            .map((h) => `## ${h.heading}${h.rows.length ? "\n" + h.rows.join("\n") : "\n(mentioned in prose — read the section in libraries())"}${formatTerms(h.terms)}`)
+            .join("\n\n")
+      );
+    else out.push(`No registered implementation for '${n}'; build from the entry's techniques.`);
+    if (refs.length)
+      out.push("# Knowledge sources (REFERENCES.md) — consult and cite under these terms\n\n" + refs.map((r) => `## ${r.heading}${formatTerms(r.terms)}`).join("\n\n"));
     return text(
-      hits
-        .map((h) => `## ${h.heading}${h.rows.length ? "\n" + h.rows.join("\n") : "\n(mentioned in prose — read the section in libraries())"}`)
-        .join("\n\n") + "\n\nVerify currency, license, and stack fit before recommending (LIBRARIES.md resilience policy)."
+      out.join("\n\n") +
+        "\n\nBefore using anything above: apply the Terms (licence, paywall, stack-rule class), verify currency and stack fit (LIBRARIES.md resilience policy), and confirm structural additions with the user."
     );
+  }
+);
+
+server.registerTool(
+  "references",
+  {
+    description:
+      "REFERENCES.md: knowledge sources the dictionary consults and cites (e.g. Interface Lineage for " +
+      "interaction patterns, design.how) with their USAGE TERMS — what may be quoted, adapted, or must " +
+      "only be linked. Pass an entry name to get just the sources that inform it. Read the terms before " +
+      "drawing from a source.",
+    inputSchema: { entry: z.string().default("") },
+  },
+  async ({ entry }) => {
+    if (!entry.trim()) return text(read("REFERENCES.md"));
+    const n = entry.trim().toLowerCase();
+    if (!byName(n)) return text(`No entry '${entry}'.`);
+    const refs = referencesIndex().get(n) ?? [];
+    if (!refs.length) return text(`No knowledge source registered for '${n}'. Call libraries_for('${n}') for implementations.`);
+    return text(refs.map((r) => `## ${r.heading}${formatTerms(r.terms)}`).join("\n\n") + "\n\nFull text: references().");
   }
 );
 

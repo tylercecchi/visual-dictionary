@@ -57,6 +57,6 @@ choreography that make a product feel snappy, fluid, playful, or solemn.
 
 ## Related
 
-[[visual-hierarchy]] (motion allocates attention), [[shimmer-sheen]] and
+[[ui-state-transitions]] (the per-element grammar and reference values under this personality), [[visual-hierarchy]] (motion allocates attention), [[shimmer-sheen]] and
 [[liquid-ripple]] (effects whose firing rate is a ceremony decision),
 [[shape-language]] (geometry and motion must share a personality).

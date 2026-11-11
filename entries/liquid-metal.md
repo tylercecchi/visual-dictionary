@@ -62,6 +62,10 @@ everywhere in type and hero design.
   attractor distance, or displacement on a dark glossy plane; audio-driven
   spikes are a beloved [[audio-reactive]] register
 
+## Starting points
+
+- design.how Vault — [Liquid metal](https://github.com/arla6ka/design.how/tree/main/vault/liquid-metal) (WebGL shader; MIT; see LIBRARIES.md)
+
 ## Search queries
 
 - `sdf metaballs matcap chrome shader webgl`

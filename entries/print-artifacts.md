@@ -49,6 +49,7 @@ zine/DIY/editorial-craft aesthetic, distinct from clean [[halftone]] dots.
 - Spot-color/overprint tutorials from the riso-print community
 - Shadertoy: search "photocopy", "print misregistration" (sparser; the CSS/
   canvas recipes above are the mainline)
+- design.how Vault — [Misprint type](https://github.com/arla6ka/design.how/tree/main/vault/misprint-type) (Canvas 2D misregistration; MIT; see LIBRARIES.md)
 
 ## Search queries
 

@@ -47,6 +47,7 @@ UI that claims physical existence — controls rendered as real objects
 - Apple's pre-iOS7 HIG and current visionOS materials — the two poles of
   Apple physicality to reference
 - Josh Comeau's shadow/3D-button articles — the tasteful middle register
+- design.how Vault — [Colour depth](https://github.com/arla6ka/design.how/tree/main/vault/color-depth) (CSS gradient/inset-shadow button recipes; MIT; see LIBRARIES.md)
 
 ## Search queries
 

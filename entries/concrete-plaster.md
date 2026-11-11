@@ -57,6 +57,10 @@ whatever sits on them.
   ([[procedural-noise]]); architectural scenes get real lighting response
   and [[gobo-shadows]] for free
 
+## Starting points
+
+- design.how Vault — [Realistic emboss](https://github.com/arla6ka/design.how/tree/main/vault/emboss) (WebGL shader, debossed plaster; MIT; see LIBRARIES.md)
+
 ## Search queries
 
 - `css subtle concrete texture gradients noise`

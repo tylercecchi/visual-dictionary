@@ -51,6 +51,7 @@ degrades high-res content): this is art authored at low resolution.
 - Lospec — palettes and the pixel-art tutorial canon
 - "The Pixel Art Tutorial" (Derek Yu / classic writeups) for cluster/ramp craft
 - Octopath Traveler analyses for the HD-2D recipe
+- design.how Vault — [Pixel fire](https://github.com/arla6ka/design.how/tree/main/vault/pixel-fire) and [Pixel brushes](https://github.com/arla6ka/design.how/tree/main/vault/pixel-brushes) (Canvas 2D; MIT; see LIBRARIES.md)
 
 ## Search queries
 

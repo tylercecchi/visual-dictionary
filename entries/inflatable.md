@@ -51,6 +51,7 @@ register where everything looks squeezable.
 - Balloon-type lettering references (searchable: "inflatable type
   specimen" — several famous display faces)
 - drei/three.js softbody & clearcoat examples
+- design.how Vault — [Pop type](https://github.com/arla6ka/design.how/tree/main/vault/pop-type) (Canvas 2D) and [Hover video button](https://github.com/arla6ka/design.how/tree/main/vault/hover-video) (alpha video; MIT; see LIBRARIES.md)
 
 ## Search queries
 

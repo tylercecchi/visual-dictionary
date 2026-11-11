@@ -47,6 +47,7 @@ past an occluder, the dusty beam of a projector.
 - GPU Gems 3 ch. 13 (volumetric light scattering as a post-process) — the
   canonical reference the shader world copies
 - `postprocessing` (pmndrs) `GodRaysEffect` for three.js
+- design.how Vault — [Crystal cluster](https://github.com/arla6ka/design.how/tree/main/vault/crystal-cluster) (three.js + shader light beam; MIT; see LIBRARIES.md)
 
 ## Search queries
 

@@ -45,6 +45,7 @@ cheap lens splits colors — red/cyan or rainbow fringes at edges.
 - `postprocessing` (pmndrs) `ChromaticAberrationEffect` for three.js
 - Shadertoy: search "chromatic aberration" — the 3-sample pattern is ~5 lines
 - gl-transitions and glfx.js contain reference implementations
+- design.how Vault — [Chromatic glow](https://github.com/arla6ka/design.how/tree/main/vault/chroma-glow) (WebGL shader; MIT; see LIBRARIES.md)
 
 ## Search queries
 

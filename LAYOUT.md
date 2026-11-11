@@ -146,6 +146,10 @@ bending either pick. Absent from this table = no known pressure.
 | [[paper-ephemera]] | object shapes (tickets, receipts) fix aspect ratios; resists fluid width | [[card]] anatomy, collapse |
 | [[type-composition]] | (structure that behaves like a wardrobe) — type as material overrides the wardrobe's type voice | [[typographic-voice]] |
 | [[soft-aesthetics]] | large radii and low contrast soften [[table-design]] and dense data | [[shape-language]] radius on data surfaces |
+| [[calm-console]] | no stat-card grids and no hero; wants an app-shell list or list-detail with one h1 and a table; fights [[dashboard-tiles]] / [[bento-grid]] | stats strip instead of tiles |
+| [[mono-infra]] | rules instead of boxes, zero radius, no elevation; turns [[card]] / [[bento-grid]] hierarchies into ruled frames, and any rounded borrowed component breaks it | [[border-stroke]], [[shape-language]] |
+| [[warm-consumer]] | a narrow single column with a sticky bottom action and one primary per view; resists dense [[table-design]], [[dashboard-tiles]] and multi-action admin layouts | [[focus-page]], [[spacing-density]] |
+| [[pressable-glass]] | small self-contained cards with the one action inline; no shadows, so it fights [[elevation]] layering, card-in-card and equal-tile [[bento-grid]] | glass budget dial, [[card]] anatomy |
 | [[historical-ornate]] / [[art-nouveau]] | ornament consumes the whitespace dense layouts need | ornament budget dial |
 | [[bauhaus-swiss]] | demands a visible grid; fights `scattered` placement | [[grid-systems]] |
 | [[skeuomorphism]] | object-realism needs room per control; fights `dense` forms | [[control-language]] density |

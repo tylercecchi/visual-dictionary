@@ -78,6 +78,7 @@ crafted, playful, or retro — the opposite of the smooth 60fps default.
 - MDN `steps()` timing function; sprite-sheet packers (TexturePacker,
   free-tex-packer)
 - Lottie (with frame-rate capped exports) for complex hand-drawn cycles
+- design.how Vault — [Stamp type](https://github.com/arla6ka/design.how/tree/main/vault/stamp-type), [Pop type](https://github.com/arla6ka/design.how/tree/main/vault/pop-type) (stepped 10 fps Canvas 2D; MIT; see LIBRARIES.md)
 
 ## Search queries
 

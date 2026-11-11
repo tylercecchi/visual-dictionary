@@ -50,6 +50,7 @@ SDFs aren't a look themselves; they're the likely implementation when you see:
 - The Book of Shaders ch. 7 (shapes) for the 2D on-ramp
 - `msdf-bmfont` / three.js MSDF text tooling for SDF type
 - Shadertoy: nearly everything 3D there is raymarched SDFs — read winners
+- design.how Vault — [Liquid UI](https://github.com/arla6ka/design.how/tree/main/vault/liquid-ui) (SVG smooth-union SDF + marching squares; MIT; see LIBRARIES.md)
 
 ## Search queries
 
