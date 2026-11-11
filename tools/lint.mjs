@@ -50,10 +50,11 @@ for (const e of entries) if (!index.includes(`(entries/${e.name}.md)`)) err(`IND
 
 // Entry-count drift in README / package.json.
 const n = entries.length;
-// The router skill lives one level up (repo-root .claude/), outside this package.
-const SKILL = join("..", ".claude", "skills", "visual-dictionary", "SKILL.md");
+// The router skill ships in this repo; a missing skill is an error, not a skip.
+const SKILL = join(".claude", "skills", "visual-dictionary", "SKILL.md");
 const countDocs = [["README.md", /~(\d+) entries/], ["package.json", /~(\d+) entries/]];
 if (existsSync(join(ROOT, SKILL))) countDocs.push([SKILL, /~(\d+)-entry/]);
+else err(`${SKILL}: router skill missing`);
 for (const [doc, re] of countDocs) {
   const m = read(doc).match(re);
   if (!m) warn(`${doc}: no '~N entries' count found`);

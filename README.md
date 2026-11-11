@@ -46,6 +46,13 @@ Notes:
   it and install `github:tylercecchi/visual-dictionary#v0.1.0`.
 
 
+**The router skill** (`.claude/skills/visual-dictionary/SKILL.md`)
+tells an agent *when* to reach for the dictionary (vague critique, named
+looks, behaviors, layouts) and how to use the MCP tools. It loads
+automatically in this repo. To use it in another project, copy the
+folder into that project's `.claude/skills/`, or into
+`~/.claude/skills/` for every project, alongside the MCP install above.
+
 **Claude Code (working in this repo):** clone; sessions here pick up
 `CLAUDE.md` automatically. The MCP tools expose the same protocol on
 demand from any other project.
