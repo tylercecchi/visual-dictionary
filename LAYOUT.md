@@ -5,7 +5,9 @@ resolve the coordinate first (from the named archetype, or from content
 intent), check the tension table, then read the matching entry in
 `entries/`. Layout entries carry three extra sections: an ASCII diagram, a
 **content contract** (what the layout demands of its content), and
-**collapse behavior** (how it degrades at narrow widths).
+**collapse behavior** (how it degrades at narrow widths). Interaction surfaces
+(card, modal, sheet, popover, toast…) are `components` entries; their
+four-variable surface contracts live in this file, below.
 
 ## The seven variables
 
@@ -146,6 +148,16 @@ bending either pick. Absent from this table = no known pressure.
 | [[paper-ephemera]] | object shapes (tickets, receipts) fix aspect ratios; resists fluid width | [[card]] anatomy, collapse |
 | [[type-composition]] | (structure that behaves like a wardrobe) — type as material overrides the wardrobe's type voice | [[typographic-voice]] |
 | [[soft-aesthetics]] | large radii and low contrast soften [[table-design]] and dense data | [[shape-language]] radius on data surfaces |
+| [[calm-console]] | no stat-card grids and no hero; wants an app-shell list or list-detail with one h1 and a table; fights [[dashboard-tiles]] / [[bento-grid]] | stats strip instead of tiles |
+| [[mono-infra]] | rules instead of boxes, zero radius, no elevation; turns [[card]] / [[bento-grid]] hierarchies into ruled frames, and any rounded borrowed component breaks it | [[border-stroke]], [[shape-language]] |
+| [[warm-consumer]] | a narrow single column with a sticky bottom action and one primary per view; resists dense [[table-design]], [[dashboard-tiles]] and multi-action admin layouts | [[focus-page]], [[spacing-density]] |
+| [[pressable-glass]] | small self-contained cards with the one action inline; no shadows, so it fights [[elevation]] layering, card-in-card and equal-tile [[bento-grid]] | glass budget dial, [[card]] anatomy |
+| [[austurbane]] | sparse, one-idea-per-view; fights dense [[dashboard-tiles]] and [[table-design]] data walls | [[spacing-density]], [[color-roles]] accent budget |
+| [[clean-girl-brutalism]] | wants a visible grid and oversized type; a soft centred layout ([[centered-stack]]) erases the brutalist half | [[grid-systems]], [[typographic-voice]] |
+| [[asian-chic]] | asymmetric, space-heavy compositions; crowded [[bento-grid]] or symmetric card walls lose the ma | [[visual-composition]], [[spacing-density]] |
+| [[neobrutalism]] | every surface outlined and shadowed, so dense layouts turn into a wall of boxes; wants fewer, bigger cards | [[border-stroke]], [[spacing-density]] |
+| [[luxury-minimal]] | one image and idea per view; fights dense [[dashboard-tiles]], [[faceted-browse]] filter walls and [[table-design]] | [[spacing-density]], [[product-detail]] |
+| [[kidcore]] | scatter and clutter compete with dense content; give reading zones calm, keep chaos at the edges | [[visual-hierarchy]], [[collage-scatter]] |
 | [[historical-ornate]] / [[art-nouveau]] | ornament consumes the whitespace dense layouts need | ornament budget dial |
 | [[bauhaus-swiss]] | demands a visible grid; fights `scattered` placement | [[grid-systems]] |
 | [[skeuomorphism]] | object-realism needs room per control; fights `dense` forms | [[control-language]] density |

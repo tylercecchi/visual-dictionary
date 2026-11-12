@@ -78,6 +78,7 @@ arriving side of the material-transition family ([[genie-warp]] and
   vendored routes; Radiant's noise shaders for the displacement source
 - GSAP + `clip-path` for the CSS wave route
 - Scanned ink blots and watercolor edges as threshold maps
+- design.how Vault — [Ghosty reveal](https://github.com/arla6ka/design.how/tree/main/vault/ghosty-reveal) (CSS mask-position) and [Smear type](https://github.com/arla6ka/design.how/tree/main/vault/smear-type) (WebGL; MIT; see LIBRARIES.md)
 
 ## Search queries
 

@@ -48,6 +48,7 @@ design equivalent of a laptop lid.
 - `feMorphology` dilate outline pattern (SVG; searchable recipe)
 - The stacked drop-shadow contour trick (documented widely; no library)
 - Embroidery/patch and foil textures: asset packs or [[material-texture]] recipes
+- design.how Vault — [Word stickers](https://github.com/arla6ka/design.how/tree/main/vault/word-stickers) (WebGL peel shader; MIT; see LIBRARIES.md)
 
 ## Search queries
 

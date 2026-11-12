@@ -3,7 +3,7 @@ name: iridescence
 title: Iridescence / Holographic
 summary: "angle-shifting rainbow; oil slick, holo foil"
 category: surface-and-material
-aliases: [holographic, oil slick, soap bubble, pearlescent, thin film, rainbow sheen, foil, opalescent, y2k chrome]
+aliases: [oil slick, soap bubble, pearlescent, thin film, rainbow sheen, opalescent, y2k chrome, thin film interference, oil slick rainbow]
 media: [css, canvas, webgl]
 ---
 
@@ -46,6 +46,7 @@ oil-slick, holographic-foil rainbows rather than a single fixed hue.
 - The pokemon-cards-css project (GitHub) — the canonical CSS holo-foil
   reference, worth reading even for non-card UI
 - Shadertoy: search "thin film interference", "iridescent"
+- design.how Vault — [Holo](https://github.com/arla6ka/design.how/tree/main/vault/holo) (CSS 3D holographic foil card; MIT; see LIBRARIES.md)
 
 ## Search queries
 
@@ -56,6 +57,6 @@ oil-slick, holographic-foil rainbows rather than a single fixed hue.
 
 ## Related
 
-[[specular-metallic]] (iridescence usually rides on a reflective base),
+[[holographic-foil]] (diffraction rainbows: bandier, tilt-driven foil), [[specular-metallic]] (iridescence usually rides on a reflective base),
 [[shimmer-sheen]] (the moving highlight without the rainbow),
 [[procedural-noise]] (breaks up the bands organically).

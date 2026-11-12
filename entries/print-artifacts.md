@@ -1,9 +1,9 @@
 ---
 name: print-artifacts
-title: Print Artifacts (Riso / Photocopy / Misregistration)
-summary: "riso, photocopy, misregistration; the zine aesthetic"
+title: Print Artifacts (Photocopy / Misregistration / Zine)
+summary: "photocopy, misregistration, ink bleed; the zine aesthetic (riso has its own entry)"
 category: color-and-tone
-aliases: [risograph, photocopy, xerox, zine, misregistration, ink bleed, offset print, screen print texture, overprint, punk flyer, grunge, punk collage, distressed texture]
+aliases: [photocopy, xerox, zine, misregistration, ink bleed, offset print, screen print texture, overprint, punk flyer, grunge, punk collage, distressed texture]
 media: [css, svg, canvas, webgl]
 ---
 
@@ -49,6 +49,7 @@ zine/DIY/editorial-craft aesthetic, distinct from clean [[halftone]] dots.
 - Spot-color/overprint tutorials from the riso-print community
 - Shadertoy: search "photocopy", "print misregistration" (sparser; the CSS/
   canvas recipes above are the mainline)
+- design.how Vault — [Misprint type](https://github.com/arla6ka/design.how/tree/main/vault/misprint-type) (Canvas 2D misregistration; MIT; see LIBRARIES.md)
 
 ## Search queries
 
@@ -59,7 +60,7 @@ zine/DIY/editorial-craft aesthetic, distinct from clean [[halftone]] dots.
 
 ## Related
 
-[[halftone]] (the dot structure inside real print), [[film-grain]] (per-ink
+[[risograph]] (the spot-ink stencil process in full), [[halftone]] (the dot structure inside real print), [[film-grain]] (per-ink
 coverage noise), [[material-texture]] (the paper it lives on),
 [[duotone-gradient-map]] (plate separation), [[hatching-sketch]] (the drawn
 sibling of DIY), [[chromatic-aberration]] (misregistration's screen-native

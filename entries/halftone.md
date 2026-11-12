@@ -44,6 +44,7 @@ the language of print: newsprint, comics, screen printing.
 - Shadertoy: search "halftone", "cmyk halftone"
 - three.js has a community `HalftonePass` — verify it's still maintained
 - glfx.js `dotScreen` — reference implementation of the classic dot screen
+- design.how Vault — [Symbols effect](https://github.com/arla6ka/design.how/tree/main/vault/sandbox) (three.js shader, symbol-per-band halftone; MIT; see LIBRARIES.md)
 
 ## Search queries
 

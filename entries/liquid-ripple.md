@@ -48,6 +48,7 @@ point, standing waves across a surface, or blobby shapes that merge and split.
 - three.js water examples (`Water`, `Reflector`) for literal water surfaces
 - SVG gooey: the Lucas Bebber / CSS-Tricks gooey-effect pattern
 - Spring wobble: framer-motion / react-spring / GSAP
+- design.how Vault — [Liquid UI](https://github.com/arla6ka/design.how/tree/main/vault/liquid-ui) (SVG gooey card fusion; MIT; see LIBRARIES.md)
 
 ## Search queries
 

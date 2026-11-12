@@ -105,7 +105,7 @@ not polish.
 
 ## Related
 
-[[terminal-aesthetic]] (the all-mono neighbor — this register keeps mono
+[[tech-spec]] (the consumer-hardware product-spec register), [[terminal-aesthetic]] (the all-mono neighbor — this register keeps mono
 for data only), [[blueprint]] (the drawing to this entry's document —
 title blocks and revision tables shared), [[table-design]] (the
 mechanics of every table here), [[bauhaus-swiss]] (the grotesque

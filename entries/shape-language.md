@@ -46,6 +46,7 @@ the corners, containers, and forms are, applied consistently.
   squircle math explained
 - Íñigo Quílez 2D SDF functions — every shape, GLSL-ready
 - Blob generators (blobmaker-style) for organic SVG paths
+- design.how Vault — [Smooth corners](https://github.com/arla6ka/design.how/tree/main/vault/squircle) (SVG superellipse clip-path; MIT; see LIBRARIES.md)
 
 ## Search queries
 

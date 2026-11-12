@@ -64,6 +64,10 @@ and restraint.
   set resolving left-to-right; monospace ([[terminal-aesthetic]]) hides
   width jitter, or reserve final width.
 
+## Starting points
+
+- design.how Vault — [Warp type](https://github.com/arla6ka/design.how/tree/main/vault/warp-type), [Stack type](https://github.com/arla6ka/design.how/tree/main/vault/stack-type), [Swing type](https://github.com/arla6ka/design.how/tree/main/vault/swing-type), [Flip type](https://github.com/arla6ka/design.how/tree/main/vault/flip-type) and ~25 more type loops (Canvas 2D / DOM, a few WebGL; MIT; see LIBRARIES.md)
+
 ## Search queries
 
 - `split text stagger animation css custom property delay`

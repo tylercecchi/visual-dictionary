@@ -45,6 +45,7 @@ Imagery quantized into large uniform blocks — deliberate low resolution, from
 - three.js community `RenderPixelatedPass` — pixel-art rendering of 3D
   scenes with normal-edge outlines; verify currency
 - No library needed for the canvas or GLSL patterns
+- design.how Vault — [Pixel cycle](https://github.com/arla6ka/design.how/tree/main/vault/pixel-cycle) (Canvas 2D) and [Pixel threshold](https://github.com/arla6ka/design.how/tree/main/vault/pixel-threshold) (WebGL shader; MIT; see LIBRARIES.md)
 
 ## Search queries
 

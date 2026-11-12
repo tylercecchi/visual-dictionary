@@ -17,9 +17,12 @@ const names = new Set(entries.map((e) => e.name));
 
 const REQUIRED = ["You know it when you see", "Dials", "Techniques", "Search queries", "Related"];
 const LAYOUT_REQUIRED = ["Content contract", "Collapse behavior"];
+const BEHAVIOR_REQUIRED = ["What it does", "When to use", "When not to use"];
 // Layout *archetypes* (rows of LAYOUT.md's coordinate table) must carry the contract sections;
 // layout-category principles (visual-composition) need not.
 const archetypes = new Set([...(read("LAYOUT.md").split("## Interaction surfaces")[0].matchAll(/^\| \[\[([a-z0-9-]+)\]\]/gm))].map((m) => m[1]));
+// Interaction surfaces (rows of LAYOUT.md's surface contract table) are components with contracts.
+const surfaces = new Set([...((read("LAYOUT.md").split("## Interaction surfaces")[1] ?? "").split("## Tension table")[0].matchAll(/^\| \[\[([a-z0-9-]+)\]\]/gm))].map((m) => m[1]));
 
 for (const e of entries) {
   const fmName = e.text.match(/^name:\s*(\S+)/m)?.[1];
@@ -32,11 +35,16 @@ for (const e of entries) {
   for (const h of REQUIRED) if (!(h in e.sections)) err(`${e.name}: missing section '## ${h}'`);
   if (!("Starting points" in e.sections)) warn(`${e.name}: no '## Starting points' (optional, but entries with libraries should have it)`);
   if (e.category === "layout" && archetypes.has(e.name)) for (const h of LAYOUT_REQUIRED) if (!(h in e.sections)) err(`${e.name}: layout archetype missing '## ${h}'`);
+  if (surfaces.has(e.name)) {
+    if (e.category !== "components") err(`${e.name}: interaction surface (LAYOUT.md surface table) should be category 'components', is '${e.category}'`);
+    for (const h of LAYOUT_REQUIRED) if (!(h in e.sections)) err(`${e.name}: interaction surface missing '## ${h}'`);
+  }
+  if (e.category === "behavior") for (const h of BEHAVIOR_REQUIRED) if (!(h in e.sections)) err(`${e.name}: behavior entry missing '## ${h}'`);
   for (const l of e.links) if (!names.has(l)) err(`${e.name}: dangling link [[${l}]]`);
 }
 
 // Wiki-links in the doc files.
-for (const doc of ["INDEX.md", "LAYOUT.md", "LIBRARIES.md", "CLAUDE.md"]) {
+for (const doc of ["INDEX.md", "LAYOUT.md", "LIBRARIES.md", "REFERENCES.md", "CLAUDE.md"]) {
   const t = read(doc);
   for (const m of t.matchAll(/\[\[([a-z0-9-]+)\]\]/g)) if (!names.has(m[1])) err(`${doc}: dangling link [[${m[1]}]]`);
   for (const m of t.matchAll(/\(entries\/([a-z0-9-]+)\.md\)/g)) if (!names.has(m[1])) err(`${doc}: link to missing entries/${m[1]}.md`);
@@ -48,7 +56,12 @@ for (const e of entries) if (!index.includes(`(entries/${e.name}.md)`)) err(`IND
 
 // Entry-count drift in README / package.json.
 const n = entries.length;
-for (const [doc, re] of [["README.md", /~(\d+) entries/], ["package.json", /~(\d+) entries/]]) {
+// The router skill ships in this repo; a missing skill is an error, not a skip.
+const SKILL = join(".claude", "skills", "visual-dictionary", "SKILL.md");
+const countDocs = [["README.md", /~(\d+) entries/], ["package.json", /~(\d+) entries/]];
+if (existsSync(join(ROOT, SKILL))) countDocs.push([SKILL, /~(\d+)-entry/]);
+else err(`${SKILL}: router skill missing`);
+for (const [doc, re] of countDocs) {
   const m = read(doc).match(re);
   if (!m) warn(`${doc}: no '~N entries' count found`);
   else if (Number(m[1]) !== n) err(`${doc}: says ~${m[1]} entries, repo has ${n}`);
@@ -57,6 +70,16 @@ for (const [doc, re] of [["README.md", /~(\d+) entries/], ["package.json", /~(\d
 // TEMPLATE category list matches the resolver's.
 const tmpl = read("TEMPLATE.md").match(/category:\s*([^\n]+)/)?.[1] ?? "";
 for (const c of CATEGORIES) if (!tmpl.includes(c)) err(`TEMPLATE.md: category list missing '${c}'`);
+
+// Plugin manifest: version tracks package.json; MCP server and skill paths exist.
+if (existsSync(join(ROOT, ".claude-plugin", "plugin.json"))) {
+  const plug = JSON.parse(read(join(".claude-plugin", "plugin.json")));
+  const pkg = JSON.parse(read("package.json"));
+  if (plug.version !== pkg.version) err(`.claude-plugin/plugin.json: version ${plug.version} != package.json ${pkg.version}`);
+  if (!plug.mcpServers?.["visual-dictionary"]) err(".claude-plugin/plugin.json: missing the visual-dictionary MCP server");
+  for (const s of [].concat(plug.skills ?? [])) if (!existsSync(join(ROOT, s))) err(`.claude-plugin/plugin.json: skills path ${s} not found`);
+  for (const f of ["REFERENCES.md", "LIBRARIES.md", "LAYOUT.md", "INDEX.md"]) if (!pkg.files?.includes(f)) err(`package.json: "files" omits ${f}; the npx install would ship without it`);
+}
 
 // Registry staleness: registered/verified dates older than 6 months.
 const lib = read("LIBRARIES.md");

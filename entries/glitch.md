@@ -46,6 +46,7 @@ compression artifacts used as aesthetic. Distinct from the analog wing
 - `postprocessing` (pmndrs) `GlitchEffect` for three.js
 - CSS glitch-text patterns are well-documented (no library needed)
 - Shadertoy: search "glitch" — study the trigger-gating, not just the displacement
+- design.how Vault — [Glitch word](https://github.com/arla6ka/design.how/tree/main/vault/glitch-word) (CSS/DOM band-shove) and [Datamosh](https://github.com/arla6ka/design.how/tree/main/vault/datamosh) (Canvas 2D; MIT; see LIBRARIES.md)
 
 ## Search queries
 

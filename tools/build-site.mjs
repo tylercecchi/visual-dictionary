@@ -94,7 +94,7 @@ const data = {
 };
 const CAT_LABEL = {
   "light-and-depth": "Light & depth", "surface-and-material": "Surface & material", "distortion-and-lens": "Distortion & lens",
-  "color-and-tone": "Color & tone", "pattern-and-texture": "Pattern & texture", motion: "Motion", foundations: "Foundations",
+  "color-and-tone": "Color & tone", "pattern-and-texture": "Pattern & texture", motion: "Motion", behavior: "Behavior", foundations: "Foundations",
   components: "Components", editorial: "Editorial (structure)", wardrobe: "Wardrobe", layout: "Layout",
 };
 // Resolver source, inlined as a plain script (strip ESM exports).

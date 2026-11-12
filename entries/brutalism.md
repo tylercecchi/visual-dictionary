@@ -1,9 +1,9 @@
 ---
 name: brutalism
 title: Brutalism / Anti-Design
-summary: "raw structure and hard shadows; neo and true registers"
+summary: "raw structure, defaults, anti-design; the umbrella (neo register has its own entry)"
 category: wardrobe
-aliases: [brutalist, neo-brutalism, neubrutalism, anti-design, raw web, default styling, ugly on purpose, punk web, web 1.0 revival]
+aliases: [brutalist, anti-design, raw web, default styling, ugly on purpose, punk web, web 1.0 revival, true brutalism, brutalist web, raw html]
 media: [css]
 ---
 
@@ -60,7 +60,7 @@ neo-brutalism (the commercial flavor: thick borders, hard shadows, loud flats).
 
 ## Related
 
-[[border-stroke]] + [[elevation]] (the softness it deletes),
+[[neobrutalism]] (the commercial thick-border, hard-shadow UI register in full), [[border-stroke]] + [[elevation]] (the softness it deletes),
 [[typographic-voice]] (max commitment), [[print-artifacts]] +
 [[stickers-badges]] (zine/punk kin), [[shape-language]] (radius zero as a
 stance), [[crt-scanlines]] + [[ascii-rendering]] (retro-terminal wing),

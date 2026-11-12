@@ -1,6 +1,6 @@
 # Visual Attribute Dictionary
 
-A UX/UI design-quality dictionary for AI agents: ~192 entries mapping vague
+A UX/UI design-quality dictionary for AI agents, covering looks and behaviors: ~236 entries mapping vague
 design language ("feels off", "make it frosted", "recipe card, but gothic")
 to canonical terms, tunable **dials**, layout/surface **contracts**, and
 vetted implementation paths.
@@ -14,8 +14,9 @@ The dictionary presents options; the designer decides.
 
 - `CLAUDE.md` — the agent protocol (resolution, diagnosis, stack rule, doctrine, custom wardrobes)
 - `entries/` — one file per attribute; summary + aliases + cues + dials + techniques
-- `INDEX.md` — category index (foundations · components · editorial · wardrobe · layout · effects)
+- `INDEX.md` — category index (foundations · components · behavior · editorial · wardrobe · layout · effects)
 - `LAYOUT.md` — the layout matrix, interaction-surface contracts, structure × wardrobe tensions
+- `REFERENCES.md` — knowledge sources (Interface Lineage, design.how) and their usage terms
 - `LIBRARIES.md` — resource registry (libraries / rules & tuning tools / discovery / galleries) + failure policy
 - `TEMPLATE.md` — entry format for growth
 - `lib/resolve.mjs` — the shared resolver (server, audit, and site all use it)
@@ -25,7 +26,22 @@ The dictionary presents options; the designer decides.
 
 ## Install
 
-**MCP — one command, no clone, no npm (recommended).** Works in Claude
+**Claude Code plugin — MCP server + router skill in one install (recommended for Claude Code).**
+
+```sh
+/plugin marketplace add tylercecchi/visual-dictionary
+/plugin install visual-dictionary@visual-dictionary
+```
+
+The plugin bundles the MCP server and the skill that tells agents *when*
+to reach for the dictionary. On first start the server installs its two
+dependencies into the plugin folder (a few seconds, needs `npm`);
+later starts are instant. Bump `version` in both `package.json` and
+`.claude-plugin/plugin.json` to ship an update (lint checks they match).
+
+**MCP only — any client, one command, no clone (Claude Desktop, Cursor, others).** The server's
+instructions carry the routing triggers, so it works on its own; the
+skill is an optional extra (see below). Works in Claude
 Code, Claude Desktop, Cursor, or any MCP client; requires only Node ≥18.
 
 ```sh
@@ -44,6 +60,13 @@ Notes:
 - Untagged, users run the latest default branch. To pin a release, tag
   it and install `github:tylercecchi/visual-dictionary#v0.1.0`.
 
+
+**The router skill** (`.claude/skills/visual-dictionary/SKILL.md`)
+tells an agent *when* to reach for the dictionary (vague critique, named
+looks, behaviors, layouts) and how to use the MCP tools. It loads
+automatically in this repo. To use it in another project, copy the
+folder into that project's `.claude/skills/`, or into
+`~/.claude/skills/` for every project, alongside the MCP install above.
 
 **Claude Code (working in this repo):** clone; sessions here pick up
 `CLAUDE.md` automatically. The MCP tools expose the same protocol on

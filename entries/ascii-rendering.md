@@ -44,6 +44,7 @@ glyph whose density (or shape) matches what was there.
 - three.js `AsciiEffect` example — quickest 3D demo
 - Shadertoy: search "ascii" — the glyph-atlas bucket technique in ~30 lines
 - ANSI/petscii art communities (16colo.rs) — reference for the colored style
+- design.how Vault — [Symbols effect](https://github.com/arla6ka/design.how/tree/main/vault/sandbox) (three.js shader, glyph-per-brightness-band; MIT; see LIBRARIES.md)
 
 ## Search queries
 

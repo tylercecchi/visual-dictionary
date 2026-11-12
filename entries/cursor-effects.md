@@ -50,6 +50,7 @@ signature-per-effort, and high risk of novelty tax.
 - Spring libraries (framer-motion/GSAP) for followers/magnetism
 - The spotlight-card pattern (widely documented; no library)
 - codrops — the archive of cursor experiment references
+- design.how Vault — [Badge trail](https://github.com/arla6ka/design.how/tree/main/vault/badge-trail) and [Code trail](https://github.com/arla6ka/design.how/tree/main/vault/code-trail) (CSS/DOM; MIT; see LIBRARIES.md)
 
 ## Search queries
 

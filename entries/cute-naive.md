@@ -1,9 +1,9 @@
 ---
 name: cute-naive
-title: Cute / Naive (Kawaii / Kidcore)
-summary: "kawaii, kidcore, rubberhose; disciplined innocence"
+title: Cute / Naive (Kawaii / Naive / Rubberhose)
+summary: "kawaii, naive art, rubberhose; disciplined innocence (kidcore has its own entry)"
 category: wardrobe
-aliases: [kawaii, kidcore, kitsch, naive art, rubberhose, cute mascot, childlike drawing, crayon style, sticker aesthetic, playful cute, chibi, doodle characters]
+aliases: [kawaii, kitsch, naive art, rubberhose, cute mascot, childlike drawing, crayon style, sticker aesthetic, playful cute, chibi, doodle characters]
 media: [css, svg, canvas]
 ---
 
@@ -55,7 +55,7 @@ means.
 
 ## Related
 
-[[illustration-style]] (the parent system; these are its extreme
+[[kidcore]] (loud 90s-childhood nostalgia, in full), [[illustration-style]] (the parent system; these are its extreme
 registers), [[stickers-badges]] + [[collage-scatter]] (kidcore
 machinery), [[inflatable]] + [[shape-language]] (roundness),
 [[motion-ceremony]] + [[interaction-feel]] (bounce license),

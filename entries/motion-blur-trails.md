@@ -50,6 +50,7 @@ afterimages, or persistent light streaks. Speed made visible.
   `AfterimagePass` example
 - Shadertoy: search "motion blur velocity", "feedback"
 - Canvas trail pattern needs no library
+- design.how Vault — [Fade motion](https://github.com/arla6ka/design.how/tree/main/vault/fade-motion) (WebGL shader, long-exposure accumulation; MIT; see LIBRARIES.md)
 
 ## Search queries
 

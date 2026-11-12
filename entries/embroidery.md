@@ -55,6 +55,7 @@ warmth and handmade-time encoded as texture.
 - ambientCG-class fabric normal maps for the relief register
 - The dashed-border stitch and knit-gradient CSS recipes (searchable, no
   library)
+- design.how Vault — [Folder embroidery](https://github.com/arla6ka/design.how/tree/main/vault/folder-embroidery) (WebGL shader; MIT; see LIBRARIES.md)
 
 ## Search queries
 
