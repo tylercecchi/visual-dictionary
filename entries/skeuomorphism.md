@@ -3,7 +3,7 @@ name: skeuomorphism
 title: Skeuomorphism / Neumorphism
 summary: "object-realism as a system; soft emboss, clay"
 category: wardrobe
-aliases: [skeuomorphic, neumorphism, soft ui, realistic controls, physical buttons, embossed, debossed, 3d buttons, claymorphism]
+aliases: [skeuomorphic, neumorphism, soft ui, realistic controls, physical buttons, embossed, debossed, 3d buttons]
 media: [css, webgl]
 ---
 
@@ -58,7 +58,7 @@ UI that claims physical existence — controls rendered as real objects
 
 ## Related
 
-[[elevation]] (the shared light-source physics), [[material-texture]] (what
+[[claymorphism]] (coloured clay surfaces that float, the readable sibling of neumorphism), [[elevation]] (the shared light-source physics), [[material-texture]] (what
 full skeuomorphism is made of), [[shape-language]] (clay = radius maxed),
 [[motion-ceremony]] (press springs), [[specular-metallic]] +
 [[frosted-glass]] (hardware finishes), [[border-stroke]] (bevel lips).

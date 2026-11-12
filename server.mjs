@@ -190,7 +190,7 @@ server.registerTool(
       `List entries with summaries, optionally by category: ${CATEGORIES.join(", ")}. ` +
       "'wardrobe' = aesthetic registers; 'editorial' + 'layout' = structure; " +
       "'foundations' = the systems every UI has (the diagnosis path and the custom-wardrobe dial sheet); " +
-      "'components' = component families; 'behavior' = interaction patterns (what a mechanism does, when to use it, when not). Empty = full INDEX.md.",
+      "'components' = component families AND interaction surfaces (card, modal, sheet, popover, toast, disclosure, command palette…; their surface contracts are in layout_system()); 'layout' = page-structure archetypes; 'behavior' = interaction patterns (what a mechanism does, when to use it, when not). Empty = full INDEX.md.",
     inputSchema: { category: z.string().default("") },
   },
   async ({ category }) => {

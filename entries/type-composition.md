@@ -103,7 +103,7 @@ survives even when absolute sizes drop — that gap is the register.
 
 ## Related
 
-[[typographic-voice]] (the voice being composed), [[knockout-typography]]
+[[experimental-type]] (distorting the letters themselves), [[eighties-editorial]], [[typographic-voice]] (the voice being composed), [[knockout-typography]]
 (treatments), [[kinetic-type]] (this composition in motion),
 [[text-block-grammar]] (the anchor block's rules), [[visual-composition]]
 (the balance law — type blocks are masses), [[grid-systems]] (felt

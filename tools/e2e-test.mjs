@@ -39,6 +39,8 @@ const r5 = await call("browse", {});
 expect(r5.includes("Editorial cluster"), "INDEX missing");
 const r5b = await call("browse", { category: "wardrobe" });
 expect(r5b.includes("art-deco") && r5b.includes(" — "), "browse('wardrobe') should list wardrobes with summaries");
+const r5c = await call("browse", { category: "components" });
+expect(r5c.includes("modal-dialog") && r5c.includes("toast-notification") && r5c.includes("table-design"), "browse('components') should list families and surfaces");
 console.log("browse: ok");
 
 const r6 = await call("compose", { structure: "recipe-editorial", wardrobe: "historical-ornate" });

@@ -21,6 +21,8 @@ const BEHAVIOR_REQUIRED = ["What it does", "When to use", "When not to use"];
 // Layout *archetypes* (rows of LAYOUT.md's coordinate table) must carry the contract sections;
 // layout-category principles (visual-composition) need not.
 const archetypes = new Set([...(read("LAYOUT.md").split("## Interaction surfaces")[0].matchAll(/^\| \[\[([a-z0-9-]+)\]\]/gm))].map((m) => m[1]));
+// Interaction surfaces (rows of LAYOUT.md's surface contract table) are components with contracts.
+const surfaces = new Set([...((read("LAYOUT.md").split("## Interaction surfaces")[1] ?? "").split("## Tension table")[0].matchAll(/^\| \[\[([a-z0-9-]+)\]\]/gm))].map((m) => m[1]));
 
 for (const e of entries) {
   const fmName = e.text.match(/^name:\s*(\S+)/m)?.[1];
@@ -33,6 +35,10 @@ for (const e of entries) {
   for (const h of REQUIRED) if (!(h in e.sections)) err(`${e.name}: missing section '## ${h}'`);
   if (!("Starting points" in e.sections)) warn(`${e.name}: no '## Starting points' (optional, but entries with libraries should have it)`);
   if (e.category === "layout" && archetypes.has(e.name)) for (const h of LAYOUT_REQUIRED) if (!(h in e.sections)) err(`${e.name}: layout archetype missing '## ${h}'`);
+  if (surfaces.has(e.name)) {
+    if (e.category !== "components") err(`${e.name}: interaction surface (LAYOUT.md surface table) should be category 'components', is '${e.category}'`);
+    for (const h of LAYOUT_REQUIRED) if (!(h in e.sections)) err(`${e.name}: interaction surface missing '## ${h}'`);
+  }
   if (e.category === "behavior") for (const h of BEHAVIOR_REQUIRED) if (!(h in e.sections)) err(`${e.name}: behavior entry missing '## ${h}'`);
   for (const l of e.links) if (!names.has(l)) err(`${e.name}: dangling link [[${l}]]`);
 }

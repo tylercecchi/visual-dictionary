@@ -2,7 +2,7 @@
 name: media-chrome
 title: Media Player Chrome
 summary: "controls over media; auto-hide, scrubbers, mini-players"
-category: layout
+category: components
 aliases: [video player, player controls, playback controls, scrubber, video ui, audio player, mini player, media overlay, play button, timeline scrubber]
 media: [css]
 ---

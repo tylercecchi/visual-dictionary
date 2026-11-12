@@ -54,7 +54,7 @@ The register where restraint and drama coexist.
 
 ## Related
 
-[[magazine-spread]] (the mechanics; this is the glossy register),
+[[luxury-minimal]] (the sparser fashion-house web register), [[magazine-spread]] (the mechanics; this is the glossy register),
 [[knockout-typography]] (the interleave), [[image-treatment]] +
 [[scene-staging]] + [[rim-light]] (the photography), [[typographic-voice]]
 (didones), [[spacing-density]] + [[visual-composition]] (luxury air),

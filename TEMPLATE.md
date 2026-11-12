@@ -68,11 +68,20 @@ its URL to Starting points — but its terms forbid copying its text or
 rebuilding its corpus, so never paraphrase an entry of theirs section by
 section. See `REFERENCES.md`.
 
+## Interaction-surface entries
+
+Surfaces (the containers content lives in: card, panel, modal, sheet,
+popover, toast, disclosure, command palette…) use category `components`
+and require **Content contract** and **Collapse behavior** sections, like
+layout archetypes. Register each in LAYOUT.md's surface contract table
+(attachment, blocking, persistence, elevation tier); lint keys the
+requirement off that table.
+
 ## Layout entries
 
 **Categories.** `foundations` = the systems every UI has (color roles,
 spacing, hierarchy…) — the diagnosis path and the custom-wardrobe dial
-sheet. `components` = component families with contracts. `editorial` and
+sheet. `components` = component families and interaction surfaces (cards, modals, sheets, popovers, toasts…), all with contracts. `editorial` and
 `layout` = structure. `wardrobe` = aesthetic registers (preset dial bundles
 over the foundations). The effect/material categories are attributes any
 wardrobe can reach for. `behavior` = interaction patterns — how an

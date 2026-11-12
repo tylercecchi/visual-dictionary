@@ -2,7 +2,7 @@
 name: disclosure
 title: Disclosure
 summary: "accordions, trees, show-more; content revealed in place"
-category: layout
+category: components
 aliases: [accordion, expand collapse, collapsible, details summary, tree view, show more, expandable section, faq accordion, toggle section, progressive disclosure]
 media: [css]
 ---

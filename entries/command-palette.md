@@ -2,7 +2,7 @@
 name: command-palette
 title: Command Palette
 summary: "⌘K; keyboard-first, query-driven action surface"
-category: layout
+category: components
 aliases: [cmd-k, cmdk, command menu, omnibox, quick switcher, spotlight search, action menu, launcher, fuzzy finder, keyboard palette]
 media: [css]
 ---

@@ -106,7 +106,10 @@ content intent), check the tension table for content/layout mismatches,
 then read the matching `layout`-category entry. Layout entries carry three
 extra sections — ASCII diagram, content contract, collapse behavior — and
 the content contract is the first thing to check against the actual
-content.
+content. **Surface requests** ("add a bottom sheet", "make this a modal")
+work the same way through LAYOUT.md's surface contract table; the
+surfaces themselves are `components` entries with the same content
+contract and collapse sections.
 
 **The structure × wardrobe doctrine.** Page composition is two
 independent picks: **structure** (a layout or editorial entry — how
@@ -150,7 +153,7 @@ reaches for. So when nothing fits:
 
 - `INDEX.md` — all entries grouped by category. Keep it updated when adding entries.
 - `TEMPLATE.md` — the entry format. New entries must follow it.
-- `LAYOUT.md` — the layout matrix and interaction-surface contracts.
+- `LAYOUT.md` — the layout matrix (structure) and the interaction-surface contracts (the surfaces themselves are `components` entries).
 - `LIBRARIES.md` — registry of cross-cutting libraries spanning many entries.
 - `REFERENCES.md` — knowledge sources consulted and cited, with their usage terms.
 - `entries/` — one file per attribute, flat; category lives in frontmatter

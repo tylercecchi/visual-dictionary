@@ -2,7 +2,7 @@
 name: card
 title: Card
 summary: "the repeating content container; anatomy, boundary, click model"
-category: layout
+category: components
 aliases: [card component, content card, tile, card anatomy, card design, clickable card, media card, card hover, card grid item]
 media: [css]
 ---

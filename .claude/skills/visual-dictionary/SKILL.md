@@ -5,7 +5,7 @@ description: Design-quality reference for UX and UI design: how product interfac
 
 # Visual Attribute Dictionary
 
-A ~222-entry dictionary of visual attributes **and interaction
+A ~236-entry dictionary of visual attributes **and interaction
 behaviors** (github.com/tylercecchi/visual-dictionary). It maps described
 looks and behaviors → canonical terms → tunable dials → implementation
 techniques → registered libraries and knowledge sources, each with its
